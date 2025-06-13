@@ -1,0 +1,14 @@
+---
+title: "Resumen"
+author:
+  - Carlos Eduardo Chacón
+date: "junio de 2025"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+---
+
+Esta tesis presenta un modelo con ecuaciones diferenciales con retardo para el control de la diabetes tipo 2...
+

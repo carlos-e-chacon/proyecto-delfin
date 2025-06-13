@@ -1,0 +1,22 @@
+# _quarto.yml
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Modelado de la Diabetes Tipo 2"
+  author:
+    - Carlos Eduardo Chacón
+  date: "junio 2025"
+  chapters:
+    - index.qmd
+    - resumen.qmd
+    #- objetivos.qmd
+    #- modelo.qmd
+    #- resultados.qmd
+    #- conclusiones.qmd
+
+  sidebar:
+    logo: unach-logo.png
+    search: true
+    style: "floating"
