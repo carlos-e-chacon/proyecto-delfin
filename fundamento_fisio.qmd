@@ -1,5 +1,5 @@
 ---
-title: "Fundamento fisiológico tipo 'reacción química'"
+title: "Fundamento fisiológico"
 format: html
 editor: visual
 ---
