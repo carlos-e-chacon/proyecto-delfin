@@ -1,7 +1,5 @@
 ---
 title: "Resumen"
-author: Carlos Eduardo Chacón Rodríguez
-date: "junio de 2025"
 format:
   html:
     toc: true
@@ -9,21 +7,21 @@ format:
     number-sections: true
 ---
 
-## 🔄 Interacción entre glucosa e insulina
+## Interacción entre glucosa e insulina
 
 La interacción entre la glucosa y la insulina en el cuerpo humano constituye un sistema de **retroalimentación negativa**, esencial para mantener la **homeostasis glucémica**, es decir, niveles adecuados de glucosa en sangre.
 
-### 1. Entrada de glucosa al organismo
+### Entrada de glucosa al organismo
 
 - Ocurre principalmente tras la **ingesta de alimentos**, especialmente ricos en carbohidratos.
 - Esto provoca un **aumento en la concentración de glucosa** en sangre (*hiperglucemia*).
 
-### 2. Respuesta del páncreas
+### Respuesta del páncreas
 
 - Las **células beta** del páncreas detectan el aumento de glucosa.
 - Como respuesta, **secretan insulina** al torrente sanguíneo.
 
-### 3. Acción de la insulina
+### Acción de la insulina
 
 - La insulina permite que:
   - Las células del **músculo**, **tejido adiposo** y **hígado** absorban glucosa.
@@ -31,13 +29,13 @@ La interacción entre la glucosa y la insulina en el cuerpo humano constituye un
   - Se **inhiba la producción de glucosa** en el hígado.
 - El efecto neto es una **reducción de la glucosa** en sangre.
 
-### 4. Retroalimentación negativa
+### Retroalimentación negativa
 
 - Cuando la glucosa vuelve a niveles normales o bajos:
   - Disminuye la secreción de insulina.
   - Si la glucosa es muy baja, otras hormonas como el **glucagón** actúan para **elevarla**.
 
-### 5. Diabetes tipo 2: disrupción del sistema
+### Diabetes tipo 2: disrupción del sistema
 
 - En esta enfermedad, el sistema falla por dos razones principales:
   - Las células **responden mal a la insulina** (*resistencia a la insulina*).

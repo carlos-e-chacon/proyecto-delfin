@@ -5,30 +5,30 @@ editor: visual
 ---
 
 
-## 1. Fundamento fisiológico tipo "reacción química"
+## Fundamento fisiológico tipo "reacción química"
 
 Pensamos en las interacciones entre glucosa e insulina como si fueran **reacciones químicas**, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:
 
 ---
 
-### (a) Eliminación natural de glucosa
+### Eliminación natural de glucosa
 
 La glucosa se elimina del organismo por mecanismos basales como la absorción en células musculares, el sistema nervioso central y los riñones.
 
 ---
 
-### (b) Acción de la insulina sobre la glucosa
+### Acción de la insulina sobre la glucosa
 
 La insulina potencia la captación de glucosa en tejidos sensibles como el hígado, músculos y tejido adiposo.
 
 ---
 
-### (c) Producción de insulina dependiente de glucosa (con retardo)
+### Producción de insulina dependiente de glucosa (con retardo)
 
 La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un **retardo** \( \tau \) debido al tiempo de procesamiento hormonal.
 
 ---
 
-### (d) Degradación de insulina
+### Degradación de insulina
 
 La insulina se degrada naturalmente, principalmente en el hígado y los riñones, o se elimina del torrente sanguíneo por otros mecanismos fisiológicos.

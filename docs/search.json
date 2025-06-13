@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Modelado de la Diabetes Tipo 2",
     "section": "",
-    "text": "1 Introducción\nEste sitio forma parte del proyecto de investigación Delfín 2025. Se presenta un modelo basado en ecuaciones diferenciales con retardo para describir la evolución de la glucosa en sangre en pacientes con diabetes tipo 2.\n\n\n2 Objetivo general\nDesarrollar un modelo matemático que represente la dinámica de la glucosa en sangre y evaluar estrategias de control basadas en parámetros clínicos y fisiológicos.",
+    "text": "1 Introducción\nEste sitio forma parte del proyecto de investigación Delfín 2025. Se presenta un modelo basado en ecuaciones diferenciales con retardo para describir la evolución de la glucosa en sangre en pacientes con diabetes tipo 2.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Modelado de la Diabetes Tipo 2</span>"
     ]
@@ -14,7 +14,7 @@
     "href": "resumen.html",
     "title": "2  Resumen",
     "section": "",
-    "text": "2.1 🔄 Interacción entre glucosa e insulina\nLa interacción entre la glucosa y la insulina en el cuerpo humano constituye un sistema de retroalimentación negativa, esencial para mantener la homeostasis glucémica, es decir, niveles adecuados de glucosa en sangre.",
+    "text": "2.1 Interacción entre glucosa e insulina\nLa interacción entre la glucosa y la insulina en el cuerpo humano constituye un sistema de retroalimentación negativa, esencial para mantener la homeostasis glucémica, es decir, niveles adecuados de glucosa en sangre.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Resumen</span>"
     ]
@@ -24,7 +24,7 @@
     "href": "resumen.html#interacción-entre-glucosa-e-insulina",
     "title": "2  Resumen",
     "section": "",
-    "text": "2.1.1 1. Entrada de glucosa al organismo\n\nOcurre principalmente tras la ingesta de alimentos, especialmente ricos en carbohidratos.\nEsto provoca un aumento en la concentración de glucosa en sangre (hiperglucemia).\n\n\n\n2.1.2 2. Respuesta del páncreas\n\nLas células beta del páncreas detectan el aumento de glucosa.\nComo respuesta, secretan insulina al torrente sanguíneo.\n\n\n\n2.1.3 3. Acción de la insulina\n\nLa insulina permite que:\n\nLas células del músculo, tejido adiposo y hígado absorban glucosa.\nSe estimule la conversión de glucosa en glucógeno (almacenamiento hepático).\nSe inhiba la producción de glucosa en el hígado.\n\nEl efecto neto es una reducción de la glucosa en sangre.\n\n\n\n2.1.4 4. Retroalimentación negativa\n\nCuando la glucosa vuelve a niveles normales o bajos:\n\nDisminuye la secreción de insulina.\nSi la glucosa es muy baja, otras hormonas como el glucagón actúan para elevarla.\n\n\n\n\n2.1.5 5. Diabetes tipo 2: disrupción del sistema\n\nEn esta enfermedad, el sistema falla por dos razones principales:\n\nLas células responden mal a la insulina (resistencia a la insulina).\nCon el tiempo, el páncreas produce menos insulina.\n\nEsto provoca un estado crónico de hiperglucemia, que puede dañar órganos y tejidos.",
+    "text": "2.1.1 Entrada de glucosa al organismo\n\nOcurre principalmente tras la ingesta de alimentos, especialmente ricos en carbohidratos.\nEsto provoca un aumento en la concentración de glucosa en sangre (hiperglucemia).\n\n\n\n2.1.2 Respuesta del páncreas\n\nLas células beta del páncreas detectan el aumento de glucosa.\nComo respuesta, secretan insulina al torrente sanguíneo.\n\n\n\n2.1.3 Acción de la insulina\n\nLa insulina permite que:\n\nLas células del músculo, tejido adiposo y hígado absorban glucosa.\nSe estimule la conversión de glucosa en glucógeno (almacenamiento hepático).\nSe inhiba la producción de glucosa en el hígado.\n\nEl efecto neto es una reducción de la glucosa en sangre.\n\n\n\n2.1.4 Retroalimentación negativa\n\nCuando la glucosa vuelve a niveles normales o bajos:\n\nDisminuye la secreción de insulina.\nSi la glucosa es muy baja, otras hormonas como el glucagón actúan para elevarla.\n\n\n\n\n2.1.5 Diabetes tipo 2: disrupción del sistema\n\nEn esta enfermedad, el sistema falla por dos razones principales:\n\nLas células responden mal a la insulina (resistencia a la insulina).\nCon el tiempo, el páncreas produce menos insulina.\n\nEsto provoca un estado crónico de hiperglucemia, que puede dañar órganos y tejidos.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Resumen</span>"
     ]
@@ -34,7 +34,7 @@
     "href": "fundamento_fisio.html",
     "title": "3  Fundamento fisiológico tipo ‘reacción química’",
     "section": "",
-    "text": "3.1 1. Fundamento fisiológico tipo “reacción química”\nPensamos en las interacciones entre glucosa e insulina como si fueran reacciones químicas, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:",
+    "text": "3.1 Fundamento fisiológico tipo “reacción química”\nPensamos en las interacciones entre glucosa e insulina como si fueran reacciones químicas, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamento fisiológico tipo 'reacción química'</span>"
     ]
@@ -44,7 +44,7 @@
     "href": "fundamento_fisio.html#fundamento-fisiológico-tipo-reacción-química",
     "title": "3  Fundamento fisiológico tipo ‘reacción química’",
     "section": "",
-    "text": "3.1.1 (a) Eliminación natural de glucosa\nLa glucosa se elimina del organismo por mecanismos basales como la absorción en células musculares, el sistema nervioso central y los riñones.\n\n\n\n3.1.2 (b) Acción de la insulina sobre la glucosa\nLa insulina potencia la captación de glucosa en tejidos sensibles como el hígado, músculos y tejido adiposo.\n\n\n\n3.1.3 (c) Producción de insulina dependiente de glucosa (con retardo)\nLa presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un retardo ( ) debido al tiempo de procesamiento hormonal.\n\n\n\n3.1.4 (d) Degradación de insulina\nLa insulina se degrada naturalmente, principalmente en el hígado y los riñones, o se elimina del torrente sanguíneo por otros mecanismos fisiológicos.",
+    "text": "3.1.1 Eliminación natural de glucosa\nLa glucosa se elimina del organismo por mecanismos basales como la absorción en células musculares, el sistema nervioso central y los riñones.\n\n\n\n3.1.2 Acción de la insulina sobre la glucosa\nLa insulina potencia la captación de glucosa en tejidos sensibles como el hígado, músculos y tejido adiposo.\n\n\n\n3.1.3 Producción de insulina dependiente de glucosa (con retardo)\nLa presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un retardo ( ) debido al tiempo de procesamiento hormonal.\n\n\n\n3.1.4 Degradación de insulina\nLa insulina se degrada naturalmente, principalmente en el hígado y los riñones, o se elimina del torrente sanguíneo por otros mecanismos fisiológicos.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamento fisiológico tipo 'reacción química'</span>"
     ]
