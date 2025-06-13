@@ -5,7 +5,7 @@ editor: visual
 ---
 
 
-## Fundamento fisiológico tipo "reacción química"
+## Fundamento fisiológico
 
 Pensamos en las interacciones entre glucosa e insulina como si fueran **reacciones químicas**, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:
 
