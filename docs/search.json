@@ -6,7 +6,7 @@
     "section": "",
     "text": "1 Introducción\nEste sitio forma parte del proyecto de investigación Delfín 2025. Se presenta un modelo basado en ecuaciones diferenciales con retardo para describir la evolución de la glucosa en sangre en pacientes con diabetes tipo 2.\n\n\n2 Objetivo general\nDesarrollar un modelo matemático que represente la dinámica de la glucosa en sangre y evaluar estrategias de control basadas en parámetros clínicos y fisiológicos.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Proyecto Delfín: Modelado de la Diabetes Tipo 2</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Modelado de la Diabetes Tipo 2</span>"
     ]
   },
   {

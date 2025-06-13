@@ -1,14 +1,6 @@
 ---
 title: "Resumen"
-author:
-  - name: Carlos Eduardo Chacón Rodríguez
-    email: carlos.chacon78@unach.mx
-    corresponding: true
-  - name: Yofre Hernán García Gómez
-    degrees: PhD
-    email: yofre.garcia@unach.mx
-    roles: investigador
-    corresponding: true
+author: Carlos Eduardo Chacón Rodríguez
 date: "junio de 2025"
 format:
   html:
