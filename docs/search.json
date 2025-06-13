@@ -14,7 +14,17 @@
     "href": "resumen.html",
     "title": "2  Resumen",
     "section": "",
-    "text": "Esta tesis presenta un modelo con ecuaciones diferenciales con retardo para el control de la diabetes tipo 2…",
+    "text": "2.1 🔄 Interacción entre glucosa e insulina\nLa interacción entre la glucosa y la insulina en el cuerpo humano constituye un sistema de retroalimentación negativa, esencial para mantener la homeostasis glucémica, es decir, niveles adecuados de glucosa en sangre.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Resumen</span>"
+    ]
+  },
+  {
+    "objectID": "resumen.html#interacción-entre-glucosa-e-insulina",
+    "href": "resumen.html#interacción-entre-glucosa-e-insulina",
+    "title": "2  Resumen",
+    "section": "",
+    "text": "2.1.1 1. Entrada de glucosa al organismo\n\nOcurre principalmente tras la ingesta de alimentos, especialmente ricos en carbohidratos.\nEsto provoca un aumento en la concentración de glucosa en sangre (hiperglucemia).\n\n\n\n2.1.2 2. Respuesta del páncreas\n\nLas células beta del páncreas detectan el aumento de glucosa.\nComo respuesta, secretan insulina al torrente sanguíneo.\n\n\n\n2.1.3 3. Acción de la insulina\n\nLa insulina permite que:\n\nLas células del músculo, tejido adiposo y hígado absorban glucosa.\nSe estimule la conversión de glucosa en glucógeno (almacenamiento hepático).\nSe inhiba la producción de glucosa en el hígado.\n\nEl efecto neto es una reducción de la glucosa en sangre.\n\n\n\n2.1.4 4. Retroalimentación negativa\n\nCuando la glucosa vuelve a niveles normales o bajos:\n\nDisminuye la secreción de insulina.\nSi la glucosa es muy baja, otras hormonas como el glucagón actúan para elevarla.\n\n\n\n\n2.1.5 5. Diabetes tipo 2: disrupción del sistema\n\nEn esta enfermedad, el sistema falla por dos razones principales:\n\nLas células responden mal a la insulina (resistencia a la insulina).\nCon el tiempo, el páncreas produce menos insulina.\n\nEsto provoca un estado crónico de hiperglucemia, que puede dañar órganos y tejidos.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Resumen</span>"
     ]
