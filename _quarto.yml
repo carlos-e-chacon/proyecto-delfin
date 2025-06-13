@@ -6,7 +6,14 @@ project:
 book:
   title: "Modelado de la Diabetes Tipo 2"
   author:
-    - Carlos Eduardo Chacón
+  - name: Carlos Eduardo Chacón Rodríguez
+    email: carlos.chacon78@unach.mx
+    corresponding: true
+  - name: Yofre Hernán García Gómez
+    degrees: PhD
+    email: yofre.garcia@unach.mx
+    roles: investigador
+    corresponding: true
   date: "junio 2025"
   chapters:
     - index.qmd
@@ -17,6 +24,6 @@ book:
     #- conclusiones.qmd
 
   sidebar:
-    logo: unach-logo.png
+    #logo: unach-logo.png
     search: true
     style: "floating"
