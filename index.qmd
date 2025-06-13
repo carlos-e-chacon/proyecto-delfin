@@ -23,4 +23,3 @@ Este sitio forma parte del proyecto de investigación Delfín 2025. Se presenta 
 # Objetivo general
 
 Desarrollar un modelo matemático que represente la dinámica de la glucosa en sangre y evaluar estrategias de control basadas en parámetros clínicos y fisiológicos.
-
