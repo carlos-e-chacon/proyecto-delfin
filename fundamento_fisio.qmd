@@ -25,7 +25,7 @@ La insulina potencia la captación de glucosa en tejidos sensibles como el híga
 
 ### Producción de insulina dependiente de glucosa (con retardo)
 
-La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de **retardo** \( \tau \) debido al tiempo de procesamiento hormonal.
+La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de **retardo** $\tau$ debido al tiempo de procesamiento hormonal.
 
 ---
 
