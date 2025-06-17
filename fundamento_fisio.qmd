@@ -25,10 +25,19 @@ La insulina potencia la captación de glucosa en tejidos sensibles como el híga
 
 ### Producción de insulina dependiente de glucosa (con retardo)
 
-La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un **retardo** \( \tau \) debido al tiempo de procesamiento hormonal.
+La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de **retardo** \( \tau \) debido al tiempo de procesamiento hormonal.
 
 ---
 
 ### Degradación de insulina
 
 La insulina se degrada naturalmente, principalmente en el hígado y los riñones, o se elimina del torrente sanguíneo por otros mecanismos fisiológicos.
+
+
+| Órgano   | Tipo de células principales      | Función principal respecto a la glucosa     | ¿Sintetiza? | ¿Degrada? |
+|----------|----------------------------------|---------------------------------------------|-------------|-----------|
+| Páncreas | Células β (islotes de Langerhans) | Detectan glucosa y secretan insulina        | Sí (insulina) | No        |
+| Hígado   | Hepatocitos                      | Almacenan glucosa como glucógeno; producen glucosa en ayuno | Sí (glucógeno/glucosa) | Sí (glucógeno → glucosa) |
+| Músculo  | Miocitos                         | Captan glucosa e inducen su uso como energía o almacenamiento como glucógeno | Sí (glucógeno) | Sí        |
+| Riñón    | Células tubulares renales        | Reabsorben glucosa; en ayuno prolongado sintetizan glucosa (gluconeogénesis) | Sí (glucosa) | Sí        |
+| Cerebro  | Neuronas                         | Consumen glucosa como fuente principal de energía | No          | Sí        |
