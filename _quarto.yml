@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "Modelado de la Diabetes Tipo 2"
+  title: "Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con retardo"
   author:
     - name: Carlos Eduardo Chacón Rodríguez
       email: carlos.chacon78@unach.mx
