@@ -38,6 +38,7 @@ book:
 
 format:
   html:
+    favicon: figuras/logo-DELFIN.png
     theme: darkly
      # light: cosmo
       #dark: darkly
