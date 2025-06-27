@@ -667,6 +667,105 @@ G(t) = 90 + 20 e^{-0.03 t}.
 <li>Diseño de sistemas de control (páncreas artificial).</li>
 </ul>
 </section>
+<section id="intentando-hallar-solución-analítica" class="level3" data-number="4.3.4">
+<h3 data-number="4.3.4" class="anchored" data-anchor-id="intentando-hallar-solución-analítica"><span class="header-section-number">4.3.4</span> Intentando hallar solución analítica</h3>
+<p>Se supone que el sistema alcanza un equilibrio <span class="math inline">\((G^*, X^*, I^*)\)</span> donde:</p>
+<p><span class="math display">\[
+\frac{dG}{dt} = \frac{dX}{dt} = \frac{dI}{dt} = 0
+\]</span></p>
+<p>Suponemos también que <span class="math inline">\(D(t) = D^*\)</span> es constante. Luego, definimos nuevas variables como desviaciones respecto al equilibrio:</p>
+<p><span class="math display">\[
+\begin{aligned}
+g(t) &amp;= G(t) - G^* \\
+x(t) &amp;= X(t) - X^* \\
+i(t) &amp;= I(t) - I^*
+\end{aligned}
+\]</span></p>
+<p>Después, aproximamos las funciones no lineales por su expansión lineal de Taylor en el punto de equilibrio:</p>
+<p><span class="math display">\[
+\begin{aligned}
+f(X(t)) &amp;\approx f(X^*) + f'(X^*) x(t) \\
+\sigma(I(t - \tau_1)) &amp;\approx \sigma(I^*) + \sigma'(I^*) i(t - \tau_1) \\
+\varphi(G(t - \tau_2)) &amp;\approx \varphi(G^*) + \varphi'(G^*) g(t - \tau_2)
+\end{aligned}
+\]</span></p>
+<p>Simplificamos, nuestras ecuaciones, así para la ecuación de la glucosa se tiene que: <span class="math display">\[
+\begin{aligned}
+\frac{dG}{dt} &amp;= -p_1 G(t) - f(X(t)) G(t) + D^* \\
+&amp;= -p_1(G^* + g(t)) - [f^* + f'_X x(t)](G^* + g(t)) + D^*
+\end{aligned}
+\]</span></p>
+<p>Desarrollamos y descartamos términos constantes (que se anulan en equilibrio):</p>
+<p><span class="math display">\[
+\frac{dg}{dt} = - (p_1 + f^*) g(t) - f'_X G^* x(t)
+\]</span></p>
+<p>Ahora para la acción remota de la insulina: <span class="math display">\[
+\begin{aligned}
+\frac{dX}{dt} &amp;= -p_2 X(t) + p_3 \sigma(I(t - \tau_1)) \\
+\Rightarrow \frac{dx}{dt} &amp;= -p_2 x(t) + p_3 \sigma'_I i(t - \tau_1)
+\end{aligned}
+\]</span></p>
+<p>Y finalmente para la ecuación de la insulina plasmática (en la sangre): <span class="math display">\[
+\begin{aligned}
+\frac{dI}{dt} &amp;= -p_4 I(t) + p_5 \varphi(G(t - \tau_2)) \\
+\Rightarrow \frac{di}{dt} &amp;= -p_4 i(t) + p_5 \varphi'_G g(t - \tau_2)
+\end{aligned}
+\]</span></p>
+<p>De este modo el sistema linealizado es:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{dg}{dt} &amp;= - (p_1 + f^*) g(t) - f'_X G^* x(t) \\
+\frac{dx}{dt} &amp;= -p_2 x(t) + p_3 \sigma'_I i(t - \tau_1) \\
+\frac{di}{dt} &amp;= -p_4 i(t) + p_5 \varphi'_G g(t - \tau_2)
+\end{aligned}
+\]</span></p>
+<p>Para representarlo matricialmente hacemos <span class="math inline">\(y(t) = \displaystyle \begin{bmatrix} g(t) \\ x(t) \\ i(t) \end{bmatrix}\)</span>, entonces:</p>
+<p><span class="math display">\[
+\frac{d}{dt} y(t) = A_0 y(t) + A_1 y(t - \tau_1) + A_2 y(t - \tau_2)
+\]</span></p>
+<p>Donde:</p>
+<p><span class="math display">\[
+A_0 =
+\begin{bmatrix}
+-(p_1 + f^*) &amp; -f'_X G^* &amp; 0 \\
+0 &amp; -p_2 &amp; 0 \\
+0 &amp; 0 &amp; -p_4
+\end{bmatrix}, \quad
+A_1 =
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; p_3 \sigma'_I \\
+0 &amp; 0 &amp; 0
+\end{bmatrix}, \quad
+A_2 =
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 \\
+p_5 \varphi'_G &amp; 0 &amp; 0
+\end{bmatrix}
+\]</span></p>
+<p>Existe una solución formal del tipo:</p>
+<p><span class="math display">\[
+y(t) = e^{\lambda t} v
+\]</span></p>
+<p>Al sustituir esta forma en la ecuación, obtenemos la <strong>ecuación característica trascendental</strong>:</p>
+<p><span class="math display">\[
+\lambda v = A_0 v + A_1 e^{-\lambda \tau_1} v + A_2 e^{-\lambda \tau_2} v
+\]</span></p>
+<p>Lo cual lleva a la condición:</p>
+<p><span class="math display">\[
+\det\left( \lambda I - A_0 - A_1 e^{-\lambda \tau_1} - A_2 e^{-\lambda \tau_2} \right) = 0
+\]</span></p>
+<p>Este determinante define una <strong>función trascendental</strong> en <span class="math inline">\(\lambda\)</span>, difícil de resolver de forma cerrada.</p>
+<section id="dificultades-que-surgen" class="level4" data-number="4.3.4.1">
+<h4 data-number="4.3.4.1" class="anchored" data-anchor-id="dificultades-que-surgen"><span class="header-section-number">4.3.4.1</span> Dificultades que surgen</h4>
+<ul>
+<li>La ecuación característica no es un polinomio (como en sistemas sin retardo), sino una combinación de funciones exponenciales con retardos.</li>
+<li>No se puede encontrar una expresión explícita de <span class="math inline">\(\lambda\)</span> en general.</li>
+<li>Incluso si se determinan los valores de <span class="math inline">\(\lambda\)</span>, se requiere conocer funciones iniciales <span class="math inline">\(y(t)\)</span> para <span class="math inline">\(t \in [-\tau_{\max}, 0]\)</span> para construir la solución completa.</li>
+</ul>
+</section>
+</section>
 </section>
 <section id="glosario-de-unidades-de-medida" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="glosario-de-unidades-de-medida"><span class="header-section-number">4.4</span> Glosario de unidades de medida</h2>

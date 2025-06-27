@@ -293,6 +293,129 @@ donde:
 - Estudio de diabetes tipo 2.
 - Diseño de sistemas de control (páncreas artificial).
 
+### Intentando hallar solución analítica
+Se supone que el sistema alcanza un equilibrio $(G^*, X^*, I^*)$ donde:
+
+$$
+\frac{dG}{dt} = \frac{dX}{dt} = \frac{dI}{dt} = 0
+$$
+
+Suponemos también que $D(t) = D^*$ es constante. Luego, definimos nuevas variables como desviaciones respecto al equilibrio:
+
+$$
+\begin{aligned}
+g(t) &= G(t) - G^* \\
+x(t) &= X(t) - X^* \\
+i(t) &= I(t) - I^*
+\end{aligned}
+$$
+
+Después, aproximamos las funciones no lineales por su expansión lineal de Taylor en el punto de equilibrio:
+
+$$
+\begin{aligned}
+f(X(t)) &\approx f(X^*) + f'(X^*) x(t) \\
+\sigma(I(t - \tau_1)) &\approx \sigma(I^*) + \sigma'(I^*) i(t - \tau_1) \\
+\varphi(G(t - \tau_2)) &\approx \varphi(G^*) + \varphi'(G^*) g(t - \tau_2)
+\end{aligned}
+$$
+
+Simplificamos, nuestras ecuaciones, así para la ecuación de la glucosa se tiene que:
+$$
+\begin{aligned}
+\frac{dG}{dt} &= -p_1 G(t) - f(X(t)) G(t) + D^* \\
+&= -p_1(G^* + g(t)) - [f^* + f'_X x(t)](G^* + g(t)) + D^*
+\end{aligned}
+$$
+
+Desarrollamos y descartamos términos constantes (que se anulan en equilibrio):
+
+$$
+\frac{dg}{dt} = - (p_1 + f^*) g(t) - f'_X G^* x(t)
+$$
+
+Ahora para la acción remota de la insulina:
+$$
+\begin{aligned}
+\frac{dX}{dt} &= -p_2 X(t) + p_3 \sigma(I(t - \tau_1)) \\
+\Rightarrow \frac{dx}{dt} &= -p_2 x(t) + p_3 \sigma'_I i(t - \tau_1)
+\end{aligned}
+$$
+
+Y finalmente para la ecuación de la insulina plasmática (en la sangre):
+$$
+\begin{aligned}
+\frac{dI}{dt} &= -p_4 I(t) + p_5 \varphi(G(t - \tau_2)) \\
+\Rightarrow \frac{di}{dt} &= -p_4 i(t) + p_5 \varphi'_G g(t - \tau_2)
+\end{aligned}
+$$
+
+De este modo el sistema linealizado es:
+
+$$
+\begin{aligned}
+\frac{dg}{dt} &= - (p_1 + f^*) g(t) - f'_X G^* x(t) \\
+\frac{dx}{dt} &= -p_2 x(t) + p_3 \sigma'_I i(t - \tau_1) \\
+\frac{di}{dt} &= -p_4 i(t) + p_5 \varphi'_G g(t - \tau_2)
+\end{aligned}
+$$
+
+Para representarlo matricialmente hacemos $y(t) = \displaystyle \begin{bmatrix} g(t) \\ x(t) \\ i(t) \end{bmatrix}$, entonces:
+
+$$
+\frac{d}{dt} y(t) = A_0 y(t) + A_1 y(t - \tau_1) + A_2 y(t - \tau_2)
+$$
+
+Donde:
+
+$$
+A_0 =
+\begin{bmatrix}
+-(p_1 + f^*) & -f'_X G^* & 0 \\
+0 & -p_2 & 0 \\
+0 & 0 & -p_4
+\end{bmatrix}, \quad
+A_1 =
+\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 0 & p_3 \sigma'_I \\
+0 & 0 & 0
+\end{bmatrix}, \quad
+A_2 =
+\begin{bmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+p_5 \varphi'_G & 0 & 0
+\end{bmatrix}
+$$
+
+Existe una solución formal del tipo:
+
+$$
+y(t) = e^{\lambda t} v
+$$
+
+Al sustituir esta forma en la ecuación, obtenemos la **ecuación característica trascendental**:
+
+$$
+\lambda v = A_0 v + A_1 e^{-\lambda \tau_1} v + A_2 e^{-\lambda \tau_2} v
+$$
+
+Lo cual lleva a la condición:
+
+$$
+\det\left( \lambda I - A_0 - A_1 e^{-\lambda \tau_1} - A_2 e^{-\lambda \tau_2} \right) = 0
+$$
+
+Este determinante define una **función trascendental** en $\lambda$, difícil de resolver de forma cerrada.
+
+#### Dificultades que surgen
+
+- La ecuación característica no es un polinomio (como en sistemas sin retardo), sino una combinación de funciones exponenciales con retardos.
+- No se puede encontrar una expresión explícita de $\lambda$ en general.
+- Incluso si se determinan los valores de $\lambda$, se requiere conocer funciones iniciales $y(t)$ para $t \in [-\tau_{\max}, 0]$ para construir la solución completa.
+
+
 
 ## Glosario de unidades de medida
 

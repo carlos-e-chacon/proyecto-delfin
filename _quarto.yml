@@ -41,7 +41,7 @@ format:
   html:
     favicon: figuras/logo-DELFIN.png
     theme: darkly
-     # light: cosmo
+      #light: cosmo
       #dark: darkly
     toc: true
     toc-depth: 3
