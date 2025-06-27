@@ -28,6 +28,9 @@ book:
     collapse-level: 1
     pinned: true
 
+  downloads: 
+    - pdf
+
   page-navigation: true
   page-footer:
     left: "© 2025 Carlos Eduardo Chacón Rodríguez"
@@ -47,3 +50,10 @@ format:
     css: styles.css
   pdf:
     documentclass: book
+    include-in-header: latex/preamble.tex
+    toc: true
+    number-sections: true
+    mainfont: Latin Modern Roman
+    fontsize: 12pt
+    geometry: a4paper
+    output-file: proyecto_delfin
