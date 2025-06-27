@@ -1,43 +1,92 @@
 ---
 title: "Fundamento fisiológico"
-format: html
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
 editor: visual
 ---
-
-
-## Fundamento fisiológico
 
 Pensamos en las interacciones entre glucosa e insulina como si fueran **reacciones químicas**, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:
 
 ---
 
-### Eliminación natural de glucosa
+## Generalidades
 
-La glucosa se elimina del organismo por mecanismos basales como la absorción en células musculares, el sistema nervioso central y los riñones.
+Las células realizan dos tipos fundamentales de reacciones químicas:
+
+- **Síntesis (anabolismo):** Construcción de moléculas complejas a partir de simples, usando energía.
+- **Degradación (catabolismo):** Descomposición de moléculas complejas para liberar energía.
+
+En el contexto de la glucosa, estos procesos permiten mantener la **homeostasis glucémica**.
 
 ---
 
-### Acción de la insulina sobre la glucosa
+## Papel del hígado
 
-La insulina potencia la captación de glucosa en tejidos sensibles como el hígado, músculos y tejido adiposo.
+El **hígado** actúa como regulador clave de la glucemia, alternando entre almacenamiento y liberación de glucosa.
+
+### Síntesis en el hígado
+
+- **Glucogénesis** (formación de glucógeno):
+
+$$
+\text{Glucosa} \xrightarrow{\text{glucógeno sintasa}} \text{Glucógeno}
+$$
+
+- **Gluconeogénesis** (formación de glucosa a partir de compuestos no glucídicos):
+
+$$
+\text{Piruvato / Lactato / Alanina} \rightarrow \text{Glucosa}
+$$
+
+### Degradación en el hígado
+
+- **Glucogenólisis** (degradación de glucógeno para liberar glucosa):
+
+$$
+\text{Glucógeno} \xrightarrow{\text{glucógeno fosforilasa}} \text{Glucosa}
+$$
 
 ---
 
-### Producción de insulina dependiente de glucosa (con retardo)
+## Papel del páncreas
 
+El **páncreas endocrino** regula la glucosa mediante la producción de hormonas, pero no la metaboliza directamente.
+
+### Síntesis en el páncreas
+
+- **Síntesis de insulina (células β):**
+
+$$
+\text{ADN} \rightarrow \text{ARNm} \rightarrow \text{Preproinsulina} \rightarrow \text{Insulina activa}
+$$
 La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de **retardo** $\tau$ debido al tiempo de procesamiento hormonal.
 
----
 
-### Degradación de insulina
+- **Síntesis de glucagón (células α):**
 
-La insulina se degrada naturalmente, principalmente en el hígado y los riñones, o se elimina del torrente sanguíneo por otros mecanismos fisiológicos.
+$$
+\text{Glucagón} \rightarrow \text{Activa glucogenólisis y gluconeogénesis hepática}
+$$
+
+### Degradación en el páncreas
+
+El páncreas no degrada glucosa directamente, pero la **insulina** que secreta estimula la degradación de glucosa en otros órganos (glucólisis).
 
 
-| Órgano   | Tipo de células principales      | Función principal respecto a la glucosa     | ¿Sintetiza? | ¿Degrada? |
-|----------|----------------------------------|---------------------------------------------|-------------|-----------|
-| Páncreas | Células β (islotes de Langerhans) | Detectan glucosa y secretan insulina        | Sí (insulina) | No        |
-| Hígado   | Hepatocitos                      | Almacenan glucosa como glucógeno; producen glucosa en ayuno | Sí (glucógeno/glucosa) | Sí (glucógeno → glucosa) |
-| Músculo  | Miocitos                         | Captan glucosa e inducen su uso como energía o almacenamiento como glucógeno | Sí (glucógeno) | Sí        |
-| Riñón    | Células tubulares renales        | Reabsorben glucosa; en ayuno prolongado sintetizan glucosa (gluconeogénesis) | Sí (glucosa) | Sí        |
-| Cerebro  | Neuronas                         | Consumen glucosa como fuente principal de energía | No          | Sí        |
+## Papel de distintos órganos en el metabolismo de la glucosa
+
+| Órgano   | Reacción      | Ruta principal                    | Molécula clave producida / consumida |
+|----------|---------------|-----------------------------------|--------------------------------------|
+| Hígado   | Síntesis      | Glucogénesis                      | Glucógeno                            |
+| Hígado   | Síntesis      | Gluconeogénesis                   | Glucosa                              |
+| Hígado   | Degradación   | Glucogenólisis                    | Glucosa                              |
+| Páncreas | Síntesis      | Traducción hormonal               | Insulina / Glucagón                  |
+| Páncreas | Regulación    | Estímulo a degradación            | (Indirecta vía insulina)             |
+| Músculo  | Síntesis      | Glucogénesis muscular             | Glucógeno                            |
+| Músculo  | Degradación   | Glucólisis                        | ATP (energía)                        |
+| Riñón    | Síntesis      | Gluconeogénesis renal             | Glucosa                              |
+| Riñón    | Degradación   | Reabsorción y consumo             | Glucosa                              |
+| Cerebro  | Degradación   | Glucólisis neuronal               | ATP (uso inmediato de glucosa)       |

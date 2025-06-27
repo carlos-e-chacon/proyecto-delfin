@@ -12,21 +12,21 @@
   {
     "objectID": "resumen.html",
     "href": "resumen.html",
-    "title": "2  Resumen",
+    "title": "2  Preliminares",
     "section": "",
     "text": "2.1 Interacción entre glucosa e insulina\nLa interacción entre la glucosa y la insulina en el cuerpo humano constituye un sistema de retroalimentación negativa, esencial para mantener la homeostasis glucémica, es decir, niveles adecuados de glucosa en sangre.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Resumen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Preliminares</span>"
     ]
   },
   {
     "objectID": "resumen.html#interacción-entre-glucosa-e-insulina",
     "href": "resumen.html#interacción-entre-glucosa-e-insulina",
-    "title": "2  Resumen",
+    "title": "2  Preliminares",
     "section": "",
-    "text": "2.1.1 Entrada de glucosa al organismo\n\nOcurre principalmente tras la ingesta de alimentos, especialmente ricos en carbohidratos.\nEsto provoca un aumento en la concentración de glucosa en sangre (hiperglucemia).\n\n\n\n2.1.2 Respuesta del páncreas\n\nLas células beta del páncreas detectan el aumento de glucosa.\nComo respuesta, secretan insulina al torrente sanguíneo.\n\n\n\n2.1.3 Acción de la insulina\n\nLa insulina permite que:\n\nLas células del músculo, tejido adiposo y hígado absorban glucosa.\nSe estimule la conversión de glucosa en glucógeno (almacenamiento hepático).\nSe inhiba la producción de glucosa en el hígado.\n\nEl efecto neto es una reducción de la glucosa en sangre.\n\n\n\n2.1.4 Retroalimentación negativa\n\nCuando la glucosa vuelve a niveles normales o bajos:\n\nDisminuye la secreción de insulina.\nSi la glucosa es muy baja, otras hormonas como el glucagón actúan para elevarla.\n\n\n\n\n2.1.5 Diabetes tipo 2: disrupción del sistema\n\nEn esta enfermedad, el sistema falla por dos razones principales:\n\nLas células responden mal a la insulina (resistencia a la insulina).\nCon el tiempo, el páncreas produce menos insulina.\n\nEsto provoca un estado crónico de hiperglucemia, que puede dañar órganos y tejidos.",
+    "text": "2.1.1 Entrada de glucosa al organismo\n\nOcurre principalmente tras la ingesta de alimentos, especialmente ricos en carbohidratos.\nEsto provoca un aumento en la concentración de glucosa en sangre (hiperglucemia).\n\n\n\n2.1.2 Respuesta del páncreas\n\nLas células beta del páncreas detectan el aumento de glucosa.\nComo respuesta, secretan insulina al torrente sanguíneo.\n\n\n\n\n\nRespuesta del páncreas\n\n\n\n\n\n2.1.3 Acción de la insulina\n\nLa insulina permite que:\n\nLas células del músculo, tejido adiposo y hígado absorban glucosa.\nSe estimule la conversión de glucosa en glucógeno (almacenamiento hepático).\nSe inhiba la producción de glucosa en el hígado.\n\nEl efecto neto es una reducción de la glucosa en sangre.\n\n\n\n2.1.4 Retroalimentación negativa\n\nCuando la glucosa vuelve a niveles normales o bajos:\n\nDisminuye la secreción de insulina.\nSi la glucosa es muy baja, otras hormonas como el glucagón actúan para elevarla.\n\n\n\n\n2.1.5 Diabetes tipo 2: disrupción del sistema\n\nEn esta enfermedad, el sistema falla por dos razones principales:\n\nLas células beta responden mal a la insulina (resistencia a la insulina).\nCon el tiempo, el páncreas produce menos insulina.\n\nEsto provoca un estado crónico de hiperglucemia, que puede dañar órganos y tejidos.\n\n\n2.1.5.1 Órganos afectados por la hiperglucemia crónica\n\nCerebro: mayor riesgo de deterioro cognitivo y accidente cerebrovascular.\nOjos: daño a la retina (retinopatía diabética), que puede conducir a ceguera.\nCorazón y vasos sanguíneos: enfermedad cardiovascular, hipertensión y arteriosclerosis.\nExtremidades: mala circulación, infecciones frecuentes y riesgo de amputaciones.\nRiñones: daño progresivo (nefropatía diabética) que puede llevar a insuficiencia renal.\nNervios: neuropatía diabética, que provoca dolor, pérdida de sensibilidad o disfunción autonómica.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Resumen</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Preliminares</span>"
     ]
   },
   {
@@ -34,19 +34,99 @@
     "href": "fundamento_fisio.html",
     "title": "3  Fundamento fisiológico",
     "section": "",
-    "text": "3.1 Fundamento fisiológico\nPensamos en las interacciones entre glucosa e insulina como si fueran reacciones químicas, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:",
+    "text": "3.1 Generalidades\nPensamos en las interacciones entre glucosa e insulina como si fueran reacciones químicas, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:\nLas células realizan dos tipos fundamentales de reacciones químicas:\nEn el contexto de la glucosa, estos procesos permiten mantener la homeostasis glucémica.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamento fisiológico</span>"
     ]
   },
   {
-    "objectID": "fundamento_fisio.html#fundamento-fisiológico",
-    "href": "fundamento_fisio.html#fundamento-fisiológico",
+    "objectID": "fundamento_fisio.html#generalidades",
+    "href": "fundamento_fisio.html#generalidades",
     "title": "3  Fundamento fisiológico",
     "section": "",
-    "text": "3.1.1 Eliminación natural de glucosa\nLa glucosa se elimina del organismo por mecanismos basales como la absorción en células musculares, el sistema nervioso central y los riñones.\n\n\n\n3.1.2 Acción de la insulina sobre la glucosa\nLa insulina potencia la captación de glucosa en tejidos sensibles como el hígado, músculos y tejido adiposo.\n\n\n\n3.1.3 Producción de insulina dependiente de glucosa (con retardo)\nLa presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de retardo \\(\\tau\\) debido al tiempo de procesamiento hormonal.\n\n\n\n3.1.4 Degradación de insulina\nLa insulina se degrada naturalmente, principalmente en el hígado y los riñones, o se elimina del torrente sanguíneo por otros mecanismos fisiológicos.\n\n\n\n\n\n\n\n\n\n\nÓrgano\nTipo de células principales\nFunción principal respecto a la glucosa\n¿Sintetiza?\n¿Degrada?\n\n\n\n\nPáncreas\nCélulas β (islotes de Langerhans)\nDetectan glucosa y secretan insulina\nSí (insulina)\nNo\n\n\nHígado\nHepatocitos\nAlmacenan glucosa como glucógeno; producen glucosa en ayuno\nSí (glucógeno/glucosa)\nSí (glucógeno → glucosa)\n\n\nMúsculo\nMiocitos\nCaptan glucosa e inducen su uso como energía o almacenamiento como glucógeno\nSí (glucógeno)\nSí\n\n\nRiñón\nCélulas tubulares renales\nReabsorben glucosa; en ayuno prolongado sintetizan glucosa (gluconeogénesis)\nSí (glucosa)\nSí\n\n\nCerebro\nNeuronas\nConsumen glucosa como fuente principal de energía\nNo\nSí",
+    "text": "Síntesis (anabolismo): Construcción de moléculas complejas a partir de simples, usando energía.\nDegradación (catabolismo): Descomposición de moléculas complejas para liberar energía.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamento fisiológico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamento_fisio.html#papel-del-hígado",
+    "href": "fundamento_fisio.html#papel-del-hígado",
+    "title": "3  Fundamento fisiológico",
+    "section": "3.2 Papel del hígado",
+    "text": "3.2 Papel del hígado\nEl hígado actúa como regulador clave de la glucemia, alternando entre almacenamiento y liberación de glucosa.\n\n3.2.1 Síntesis en el hígado\n\nGlucogénesis (formación de glucógeno):\n\n\\[\n\\text{Glucosa} \\xrightarrow{\\text{glucógeno sintasa}} \\text{Glucógeno}\n\\]\n\nGluconeogénesis (formación de glucosa a partir de compuestos no glucídicos):\n\n\\[\n\\text{Piruvato / Lactato / Alanina} \\rightarrow \\text{Glucosa}\n\\]\n\n\n3.2.2 Degradación en el hígado\n\nGlucogenólisis (degradación de glucógeno para liberar glucosa):\n\n\\[\n\\text{Glucógeno} \\xrightarrow{\\text{glucógeno fosforilasa}} \\text{Glucosa}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamento fisiológico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamento_fisio.html#papel-del-páncreas",
+    "href": "fundamento_fisio.html#papel-del-páncreas",
+    "title": "3  Fundamento fisiológico",
+    "section": "3.3 Papel del páncreas",
+    "text": "3.3 Papel del páncreas\nEl páncreas endocrino regula la glucosa mediante la producción de hormonas, pero no la metaboliza directamente.\n\n3.3.1 Síntesis en el páncreas\n\nSíntesis de insulina (células β):\n\n\\[\n\\text{ADN} \\rightarrow \\text{ARNm} \\rightarrow \\text{Preproinsulina} \\rightarrow \\text{Insulina activa}\n\\] La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de retardo \\(\\tau\\) debido al tiempo de procesamiento hormonal.\n\nSíntesis de glucagón (células α):\n\n\\[\n\\text{Glucagón} \\rightarrow \\text{Activa glucogenólisis y gluconeogénesis hepática}\n\\]\n\n\n3.3.2 Degradación en el páncreas\nEl páncreas no degrada glucosa directamente, pero la insulina que secreta estimula la degradación de glucosa en otros órganos (glucólisis).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamento fisiológico</span>"
+    ]
+  },
+  {
+    "objectID": "fundamento_fisio.html#papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa",
+    "href": "fundamento_fisio.html#papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa",
+    "title": "3  Fundamento fisiológico",
+    "section": "3.4 Papel de distintos órganos en el metabolismo de la glucosa",
+    "text": "3.4 Papel de distintos órganos en el metabolismo de la glucosa\n\n\n\n\n\n\n\n\n\nÓrgano\nReacción\nRuta principal\nMolécula clave producida / consumida\n\n\n\n\nHígado\nSíntesis\nGlucogénesis\nGlucógeno\n\n\nHígado\nSíntesis\nGluconeogénesis\nGlucosa\n\n\nHígado\nDegradación\nGlucogenólisis\nGlucosa\n\n\nPáncreas\nSíntesis\nTraducción hormonal\nInsulina / Glucagón\n\n\nPáncreas\nRegulación\nEstímulo a degradación\n(Indirecta vía insulina)\n\n\nMúsculo\nSíntesis\nGlucogénesis muscular\nGlucógeno\n\n\nMúsculo\nDegradación\nGlucólisis\nATP (energía)\n\n\nRiñón\nSíntesis\nGluconeogénesis renal\nGlucosa\n\n\nRiñón\nDegradación\nReabsorción y consumo\nGlucosa\n\n\nCerebro\nDegradación\nGlucólisis neuronal\nATP (uso inmediato de glucosa)",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamento fisiológico</span>"
+    ]
+  },
+  {
+    "objectID": "modelos.html",
+    "href": "modelos.html",
+    "title": "4  Modelos clásicos",
+    "section": "",
+    "text": "4.1 Modelo de Bolie (1961)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Modelos clásicos</span>"
+    ]
+  },
+  {
+    "objectID": "modelos.html#modelo-de-bolie-1961",
+    "href": "modelos.html#modelo-de-bolie-1961",
+    "title": "4  Modelos clásicos",
+    "section": "",
+    "text": "4.1.1 Estructura\nEl modelo es un sistema lineal sin retardos, dado por:\n\\[\n\\begin{aligned}\n\\displaystyle \\frac{dG}{dt} &= -a G(t) - b I(t) + u(t) \\\\\n\\displaystyle \\frac{dI}{dt} &= -c I(t) + d G(t)\n\\end{aligned}\n\\]\ndonde:\n\n\n\n\n\n\n\n\n\nInterpretación\nUnidades\n\n\n\n\n\\(G(t)\\)\nGlucosa en sangre\nmg/dL\n\n\n\\(I(t)\\)\nInsulina en plasma\nµU/mL\n\n\n\\(u(t)\\)\nAporte externo de glucosa\nmg/dL·min⁻¹\n\n\n\\(a\\)\nTasa de eliminación basal de glucosa\nmin⁻¹\n\n\n\\(b\\)\nEfecto de la insulina sobre la glucosa\nmin⁻¹·(µU/mL)⁻¹\n\n\n\\(c\\)\nTasa de eliminación de insulina\nmin⁻¹\n\n\n\\(d\\)\nProducción de insulina por glucosa\nµU·mL⁻¹·min⁻¹·(mg/dL)⁻¹\n\n\n\n\n\n4.1.2 Características\n\nModelo lineal de primer orden.\nParámetros constantes.\nSin retardos ni saturaciones.\nSe puede resolver analíticamente mediante transformadas de Laplace.\n\n\n\n4.1.3 Aplicaciones\n\nModelado básico y análisis teórico inicial.\nBase para estudio de estabilidad local.\n\n\n\n4.1.4 Ejemplo\nConsideremos los siguientes parámetros y condiciones iniciales:\n\n\n\nParámetro\nValor\nUnidad\n\n\n\n\n\\(a\\)\n0.1\nmin⁻¹\n\n\n\\(b\\)\n0.02\nmin⁻¹·(µU/mL)⁻¹\n\n\n\\(c\\)\n0.3\nmin⁻¹\n\n\n\\(d\\)\n0.5\nµU·mL⁻¹·min⁻¹·(mg/dL)⁻¹\n\n\n\\(G_0\\)\n90\nmg/dL\n\n\n\\(I_0\\)\n10\nµU/mL\n\n\n\\(u(t)\\)\n\\(10 e^{-0.05 t}\\)\nmg/dL·min⁻¹\n\n\n\nLlamemos:\n\\[\n\\mathcal{L}\\{G(t)\\} = \\hat{G}(s)\n\\] \\[\n\\mathcal{L}\\{I(t)\\} = \\hat{I}(s)\n\\] \\[\n\\mathcal{L}\\{u(t)\\} = \\hat{u}(s)\n\\]\nSabemos:\n\\[\n\\mathcal{L}\\{10 e^{-0.05t}\\} = \\frac{10}{s + 0.05}\n\\]\nAplicando la transformada de Laplace al sistema:\n\\[\ns\\hat{G}(s) - G_0 = -a \\hat{G}(s) - b \\hat{I}(s) + \\frac{10}{s + 0.05}\n\\]\n\\[\ns\\hat{I}(s) - I_0 = -c \\hat{I}(s) + d \\hat{G}(s)\n\\]\nSustituyendo valores:\n\\[\n(s + 0.1)\\hat{G}(s) + 0.02 \\hat{I}(s) = 90 + \\frac{10}{s + 0.05} \\tag{1}\n\\]\n\\[\n-0.5 \\hat{G}(s) + (s + 0.3)\\hat{I}(s) = 10 \\tag{2}\n\\]\nDespejamos \\(\\hat{I}(s)\\) de (2):\n\\[\n\\hat{I}(s) = \\frac{0.5 \\hat{G}(s) + 10}{s + 0.3}\n\\]\nSustituimos en (1):\n\\[\n(s + 0.1) \\hat{G}(s) + 0.02 \\cdot \\frac{0.5 \\hat{G}(s) + 10}{s + 0.3} = 90 + \\frac{10}{s + 0.05}\n\\]\nMultiplicamos ambos lados por \\((s + 0.3)\\) para eliminar denominador:\n\\[\n(s + 0.1)(s + 0.3) \\hat{G}(s) + 0.01 \\hat{G}(s) + 0.2 = (90 + \\frac{10}{s + 0.05})(s + 0.3)\n\\]\nAgrupamos términos para aislar \\(\\hat{G}(s)\\):\n\\[\n\\hat{G}(s) = \\frac{(90 + \\frac{10}{s + 0.05})(s + 0.3) - 0.2}{(s + 0.1)(s + 0.3) + 0.01}\n\\]\nAhora descomponiendo en fracciones parciales:\n\\[\n\\hat{G}(s) = \\frac{-21.111}{s + 0.2} + \\frac{2.133}{(s + 0.2)^2} + \\frac{111.111}{s + 0.05}\n\\]\nAplicando transformadas inversas:\n\\[\n\\mathcal{L}^{-1}\\left\\{\\frac{1}{s + \\alpha}\\right\\} = e^{-\\alpha t}, \\quad \\mathcal{L}^{-1}\\left\\{\\frac{1}{(s + \\alpha)^2}\\right\\} = t e^{-\\alpha t}\n\\]\nSe obtiene:\n\\[\nG(t) = -21.111\\, e^{-0.2 t} + 2.133\\, t e^{-0.2 t} + 111.111\\, e^{-0.05 t}\n\\]\nAnálogamente se puede obtener \\(I(t)\\).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Modelos clásicos</span>"
+    ]
+  },
+  {
+    "objectID": "modelos.html#modelo-de-bergman-1981-modelo-minimal",
+    "href": "modelos.html#modelo-de-bergman-1981-modelo-minimal",
+    "title": "4  Modelos clásicos",
+    "section": "4.2 Modelo de Bergman (1981) – Modelo Minimal",
+    "text": "4.2 Modelo de Bergman (1981) – Modelo Minimal\n\n4.2.1 Estructura\n\\[\n\\begin{aligned}\n\\displaystyle \\frac{dG}{dt} &= - (S_G + X(t)) G(t) + G_b S_G + u(t) \\\\\n\\displaystyle \\frac{dX}{dt} &= -p_2 X(t) + p_3 (I(t) - I_b) \\\\\n\\displaystyle \\frac{dI}{dt} &= -n I(t) + r(t)\n\\end{aligned}\n\\]\ndonde:\n\n\n\n\n\n\n\n\n\nInterpretación\nUnidades\n\n\n\n\n\\(G(t)\\)\nGlucosa en plasma\nmg/dL\n\n\n\\(X(t)\\)\nAcción efectiva de la insulina\nmin⁻¹\n\n\n\\(I(t)\\)\nInsulina en plasma\nµU/mL\n\n\n\\(G_b\\)\nGlucosa basal\nmg/dL\n\n\n\\(I_b\\)\nInsulina basal\nµU/mL\n\n\n\\(S_G\\)\nTasa de eliminación basal de glucosa\nmin⁻¹\n\n\n\\(p_2\\)\nTasa de desaparición de la acción insulínica\nmin⁻¹\n\n\n\\(p_3\\)\nSensibilidad de acción insulínica a insulina\nmin⁻²·(µU/mL)⁻¹\n\n\n\\(n\\)\nTasa de eliminación de insulina\nmin⁻¹\n\n\n\\(u(t)\\)\nEntrada de glucosa\nmg/dL·min⁻¹\n\n\n\\(r(t)\\)\nEntrada de insulina (endógena o exógena)\nµU/mL·min⁻¹\n\n\n\n\n\n4.2.2 Características\n\nNo linealidad leve por producto \\(X(t) G(t)\\).\nSin retardos explícitos.\nPermite análisis mediante convolución.\nParámetros fisiológicos estimables clínicamente.\n\n\n\n4.2.3 Aplicaciones\n\nEvaluación clínica (IVGTT).\nModelado para diagnóstico y seguimiento.\n\n\n\n4.2.4 Ejemplo\n\n\n\nParámetro\nValor\nUnidad\n\n\n\n\n\\(p_1\\)\n0.03\nmin⁻¹\n\n\n\\(p_2\\)\n0.025\nmin⁻¹\n\n\n\\(p_3\\)\n0.00013\nmin⁻²·(µU/mL)⁻¹\n\n\n\\(G_b\\)\n90\nmg/dL\n\n\n\\(I_b\\)\n15\nµU/mL\n\n\n\nCondiciones iniciales: \\[G(0) = 110\\] \\[X(0) = 0\\]\nSupongamos que la insulina es constante: \\(I(t) = I\\_b\\) (sin estímulo externo).\n\\[\n\\frac{dG}{dt} = - (X(t) + 0.03) G(t) + 0.03 \\cdot 90\n\\]\nComo \\(I(t) = I_b\\), su diferencia es 0:\n\\[\n\\frac{dX}{dt} = -0.025 X(t)\n\\]\nLa solución para \\(X(t)\\) es inmediata:\n\\[\nX(t) = 0 \\Rightarrow \\text{el sistema queda: } \\frac{dG}{dt} = -0.03 G(t) + 2.7\n\\]\nResolvemos la EDO:\n\\[\n\\frac{dG}{dt} + 0.03 G = 2.7\n\\]\nUsamos el método del factor integrante:\nMultiplicamos por \\(\\mu(t) = e^{0.03 t}\\):\n\\[\n\\frac{d}{dt} \\left( e^{0.03 t} G(t) \\right) = 2.7 e^{0.03 t}\n\\]\nIntegrando:\n\\[\ne^{0.03 t} G(t) = \\int 2.7 e^{0.03 t} dt = \\frac{2.7}{0.03} e^{0.03 t} + C\n\\]\nDespejando:\n\\[\nG(t) = 90 + C e^{-0.03 t}\n\\]\nCon \\(G(0) = 110\\):\n\\[\n110 = 90 + C \\Rightarrow C = 20\n\\] Finalmente: \\[\nG(t) = 90 + 20 e^{-0.03 t}.\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Modelos clásicos</span>"
+    ]
+  },
+  {
+    "objectID": "modelos.html#modelo-de-cobelli-1997-modelo-con-retardos-y-no-linealidades",
+    "href": "modelos.html#modelo-de-cobelli-1997-modelo-con-retardos-y-no-linealidades",
+    "title": "4  Modelos clásicos",
+    "section": "4.3 Modelo de Cobelli (1997) – Modelo con Retardos y No Linealidades",
+    "text": "4.3 Modelo de Cobelli (1997) – Modelo con Retardos y No Linealidades\n\n4.3.1 Estructura\n\\[\n\\begin{aligned}\n\\displaystyle \\frac{dG}{dt} &= -p_1 G(t) - f(X(t)) G(t) + D(t) \\\\\n\\displaystyle \\frac{dX}{dt} &= -p_2 X(t) + p_3 \\sigma(I(t - \\tau_1)) \\\\\n\\displaystyle \\frac{dI}{dt} &= -p_4 I(t) + p_5 \\varphi(G(t - \\tau_2))\n\\end{aligned}\n\\]\ndonde:\n\n\n\n\n\n\n\n\n\nInterpretación\nUnidades\n\n\n\n\n\\(G(t)\\)\nGlucosa en plasma\nmg/dL\n\n\n\\(I(t)\\)\nInsulina en plasma\nµU/mL\n\n\n\\(X(t)\\)\nAcción insulínica\nmin⁻¹\n\n\n\\(D(t)\\)\nEntrada exógena de glucosa\nmg/dL·min⁻¹\n\n\n\\(\\tau_1, \\tau_2\\)\nRetardos temporales fisiológicos\nminutos\n\n\n\\(p_1\\)\nTasa de eliminación basal de glucosa\nmin⁻¹\n\n\n\\(p_2\\)\nDecaimiento de la acción insulínica\nmin⁻¹\n\n\n\\(p_3\\)\nGanancia de respuesta de \\(X\\) a \\(\\sigma(I)\\)\nmin⁻²\n\n\n\\(p_4\\)\nTasa de eliminación de insulina\nmin⁻¹\n\n\n\\(p_5\\)\nProducción de insulina inducida por glucosa\nµU·mL⁻¹·min⁻¹\n\n\n\\(K, M\\)\nConstantes de saturación para funciones sigmoides\nµU/mL (K), mg/dL (M)\n\n\n\n\n\n4.3.2 Características\n\nModelo no lineal con retardos.\nDescribe saturación y memoria fisiológica.\nSoluciones requieren análisis funcional y métodos numéricos.\n\n\n\n4.3.3 Aplicaciones\n\nModelado fisiológico detallado.\nEstudio de diabetes tipo 2.\nDiseño de sistemas de control (páncreas artificial).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Modelos clásicos</span>"
+    ]
+  },
+  {
+    "objectID": "modelos.html#glosario-de-unidades-de-medida",
+    "href": "modelos.html#glosario-de-unidades-de-medida",
+    "title": "4  Modelos clásicos",
+    "section": "4.4 Glosario de unidades de medida",
+    "text": "4.4 Glosario de unidades de medida\n\n\n\nUnidad\nSignificado\n\n\n\n\nmg/dL\nmiligramos por decilitro (concentración)\n\n\nµU/mL\nmicro-unidades por mililitro (concentración)\n\n\nmin⁻¹\npor minuto (frecuencia o tasa de cambio)\n\n\nmin⁻²\npor minuto al cuadrado\n\n\nmg/dL·min⁻¹\nentrada de glucosa por minuto\n\n\nµU/mL·min⁻¹\nentrada de insulina por minuto\n\n\nµU·mL⁻¹·min⁻¹\nproducción de insulina por concentración y tiempo",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Modelos clásicos</span>"
     ]
   }
 ]

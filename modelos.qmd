@@ -1,0 +1,307 @@
+---
+title: "Modelos clásicos"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+---
+
+## Modelo de Bolie (1961)
+
+### Estructura
+
+El modelo es un sistema lineal sin retardos, dado por:
+
+$$
+\begin{aligned}
+\displaystyle \frac{dG}{dt} &= -a G(t) - b I(t) + u(t) \\
+\displaystyle \frac{dI}{dt} &= -c I(t) + d G(t)
+\end{aligned}
+$$
+
+donde:
+
+|         | Interpretación                         | Unidades                     |
+|---------|----------------------------------------|------------------------------|
+| $G(t)$  | Glucosa en sangre                     | mg/dL                        |
+| $I(t)$  | Insulina en plasma                    | µU/mL                        |
+| $u(t)$  | Aporte externo de glucosa             | mg/dL·min⁻¹                  |
+| $a$     | Tasa de eliminación basal de glucosa   | min⁻¹                        |
+| $b$     | Efecto de la insulina sobre la glucosa | min⁻¹·(µU/mL)⁻¹              |
+| $c$     | Tasa de eliminación de insulina        | min⁻¹                        |
+| $d$     | Producción de insulina por glucosa     | µU·mL⁻¹·min⁻¹·(mg/dL)⁻¹      |
+
+### Características
+
+- Modelo lineal de primer orden.
+- Parámetros constantes.
+- Sin retardos ni saturaciones.
+- Se puede resolver analíticamente mediante transformadas de Laplace.
+
+### Aplicaciones
+
+- Modelado básico y análisis teórico inicial.
+- Base para estudio de estabilidad local.
+
+### Ejemplo
+Consideremos los siguientes parámetros y condiciones iniciales:
+
+| Parámetro | Valor              | Unidad                  |
+| --------- | ------------------ | ----------------------- |
+| $a$     | 0.1                | min⁻¹                   |
+| $b$     | 0.02               | min⁻¹·(µU/mL)⁻¹         |
+| $c$     | 0.3                | min⁻¹                   |
+| $d$     | 0.5                | µU·mL⁻¹·min⁻¹·(mg/dL)⁻¹ |
+| $G_0$  | 90                 | mg/dL                   |
+| $I_0$  | 10                 | µU/mL                   |
+| $u(t)$  | $10 e^{-0.05 t}$ | mg/dL·min⁻¹             |
+
+Llamemos:
+
+$$
+\mathcal{L}\{G(t)\} = \hat{G}(s)
+$$
+$$
+\mathcal{L}\{I(t)\} = \hat{I}(s)
+$$
+$$
+\mathcal{L}\{u(t)\} = \hat{u}(s)
+$$
+
+Sabemos:
+
+$$
+\mathcal{L}\{10 e^{-0.05t}\} = \frac{10}{s + 0.05}
+$$
+
+Aplicando la transformada de Laplace al sistema:
+
+$$
+s\hat{G}(s) - G_0 = -a \hat{G}(s) - b \hat{I}(s) + \frac{10}{s + 0.05}
+$$
+
+$$
+s\hat{I}(s) - I_0 = -c \hat{I}(s) + d \hat{G}(s)
+$$
+
+Sustituyendo valores:
+
+$$
+(s + 0.1)\hat{G}(s) + 0.02 \hat{I}(s) = 90 + \frac{10}{s + 0.05} \tag{1}
+$$
+
+$$
+-0.5 \hat{G}(s) + (s + 0.3)\hat{I}(s) = 10 \tag{2}
+$$
+
+
+Despejamos $\hat{I}(s)$ de (2):
+
+$$
+\hat{I}(s) = \frac{0.5 \hat{G}(s) + 10}{s + 0.3}
+$$
+
+Sustituimos en (1):
+
+$$
+(s + 0.1) \hat{G}(s) + 0.02 \cdot \frac{0.5 \hat{G}(s) + 10}{s + 0.3} = 90 + \frac{10}{s + 0.05}
+$$
+
+Multiplicamos ambos lados por $(s + 0.3)$ para eliminar denominador:
+
+$$
+(s + 0.1)(s + 0.3) \hat{G}(s) + 0.01 \hat{G}(s) + 0.2 = (90 + \frac{10}{s + 0.05})(s + 0.3)
+$$
+
+Agrupamos términos para aislar $\hat{G}(s)$:
+
+$$
+\hat{G}(s) = \frac{(90 + \frac{10}{s + 0.05})(s + 0.3) - 0.2}{(s + 0.1)(s + 0.3) + 0.01}
+$$
+
+Ahora descomponiendo en fracciones parciales:
+
+$$
+\hat{G}(s) = \frac{-21.111}{s + 0.2} + \frac{2.133}{(s + 0.2)^2} + \frac{111.111}{s + 0.05}
+$$
+
+Aplicando transformadas inversas:
+
+$$
+\mathcal{L}^{-1}\left\{\frac{1}{s + \alpha}\right\} = e^{-\alpha t}, \quad \mathcal{L}^{-1}\left\{\frac{1}{(s + \alpha)^2}\right\} = t e^{-\alpha t}
+$$
+
+Se obtiene:
+
+$$
+G(t) = -21.111\, e^{-0.2 t} + 2.133\, t e^{-0.2 t} + 111.111\, e^{-0.05 t}
+$$
+
+
+Análogamente se puede obtener $I(t)$.
+
+
+## Modelo de Bergman (1981) – Modelo Minimal
+
+### Estructura
+
+$$
+\begin{aligned}
+\displaystyle \frac{dG}{dt} &= - (S_G + X(t)) G(t) + G_b S_G + u(t) \\
+\displaystyle \frac{dX}{dt} &= -p_2 X(t) + p_3 (I(t) - I_b) \\
+\displaystyle \frac{dI}{dt} &= -n I(t) + r(t)
+\end{aligned}
+$$
+
+donde:
+
+|         | Interpretación                                      | Unidades                         |
+|---------|-----------------------------------------------------|----------------------------------|
+| $G(t)$  | Glucosa en plasma                                  | mg/dL                            |
+| $X(t)$  | Acción efectiva de la insulina                     | min⁻¹                            |
+| $I(t)$  | Insulina en plasma                                 | µU/mL                            |
+| $G_b$   | Glucosa basal                                       | mg/dL                            |
+| $I_b$   | Insulina basal                                      | µU/mL                            |
+| $S_G$   | Tasa de eliminación basal de glucosa                | min⁻¹                            |
+| $p_2$   | Tasa de desaparición de la acción insulínica        | min⁻¹                            |
+| $p_3$   | Sensibilidad de acción insulínica a insulina        | min⁻²·(µU/mL)⁻¹                  |
+| $n$     | Tasa de eliminación de insulina                     | min⁻¹                            |
+| $u(t)$  | Entrada de glucosa                                  | mg/dL·min⁻¹                      |
+| $r(t)$  | Entrada de insulina (endógena o exógena)            | µU/mL·min⁻¹                      |
+
+
+### Características
+
+- No linealidad leve por producto $X(t) G(t)$.
+- Sin retardos explícitos.
+- Permite análisis mediante convolución.
+- Parámetros fisiológicos estimables clínicamente.
+
+### Aplicaciones
+
+- Evaluación clínica (IVGTT).
+- Modelado para diagnóstico y seguimiento.
+
+### Ejemplo
+
+| Parámetro | Valor   | Unidad          |
+| --------- | ------- | --------------- |
+| $p_1$  | 0.03    | min⁻¹           |
+| $p_2$  | 0.025   | min⁻¹           |
+| $p_3$  | 0.00013 | min⁻²·(µU/mL)⁻¹ |
+| $G_b$  | 90      | mg/dL           |
+| $I_b$  | 15      | µU/mL           |
+
+Condiciones iniciales:
+$$G(0) = 110$$
+$$X(0) = 0$$
+
+Supongamos que la insulina es constante: $I(t) = I\_b$ (sin estímulo externo).
+
+$$
+\frac{dG}{dt} = - (X(t) + 0.03) G(t) + 0.03 \cdot 90
+$$
+
+Como $I(t) = I_b$, su diferencia es 0:
+
+$$
+\frac{dX}{dt} = -0.025 X(t)
+$$
+
+La solución para $X(t)$ es inmediata:
+
+$$
+X(t) = 0 \Rightarrow \text{el sistema queda: } \frac{dG}{dt} = -0.03 G(t) + 2.7
+$$
+
+
+Resolvemos la EDO:
+
+$$
+\frac{dG}{dt} + 0.03 G = 2.7
+$$
+
+Usamos el método del factor integrante:
+
+Multiplicamos por $\mu(t) = e^{0.03 t}$:
+
+$$
+\frac{d}{dt} \left( e^{0.03 t} G(t) \right) = 2.7 e^{0.03 t}
+$$
+
+Integrando:
+
+$$
+e^{0.03 t} G(t) = \int 2.7 e^{0.03 t} dt = \frac{2.7}{0.03} e^{0.03 t} + C
+$$
+
+Despejando:
+
+$$
+G(t) = 90 + C e^{-0.03 t}
+$$
+
+Con $G(0) = 110$:
+
+$$
+110 = 90 + C \Rightarrow C = 20
+$$
+Finalmente:
+$$
+G(t) = 90 + 20 e^{-0.03 t}.
+$$
+
+
+## Modelo de Cobelli (1997) – Modelo con Retardos y No Linealidades
+
+### Estructura
+
+$$
+\begin{aligned}
+\displaystyle \frac{dG}{dt} &= -p_1 G(t) - f(X(t)) G(t) + D(t) \\
+\displaystyle \frac{dX}{dt} &= -p_2 X(t) + p_3 \sigma(I(t - \tau_1)) \\
+\displaystyle \frac{dI}{dt} &= -p_4 I(t) + p_5 \varphi(G(t - \tau_2))
+\end{aligned}
+$$
+
+donde:
+
+|         | Interpretación                                    | Unidades                          |
+|---------|---------------------------------------------------|-----------------------------------|
+| $G(t)$  | Glucosa en plasma                                | mg/dL                             |
+| $I(t)$  | Insulina en plasma                               | µU/mL                             |
+| $X(t)$  | Acción insulínica                                | min⁻¹                             |
+| $D(t)$  | Entrada exógena de glucosa                       | mg/dL·min⁻¹                       |
+| $\tau_1, \tau_2$ | Retardos temporales fisiológicos        | minutos                           |
+| $p_1$   | Tasa de eliminación basal de glucosa              | min⁻¹                             |
+| $p_2$   | Decaimiento de la acción insulínica               | min⁻¹                             |
+| $p_3$   | Ganancia de respuesta de $X$ a $\sigma(I)$        | min⁻²                             |
+| $p_4$   | Tasa de eliminación de insulina                   | min⁻¹                             |
+| $p_5$   | Producción de insulina inducida por glucosa       | µU·mL⁻¹·min⁻¹                     |
+| $K, M$  | Constantes de saturación para funciones sigmoides | µU/mL (K), mg/dL (M)              |
+
+### Características
+
+- Modelo no lineal con retardos.
+- Describe saturación y memoria fisiológica.
+- Soluciones requieren análisis funcional y métodos numéricos.
+
+### Aplicaciones
+
+- Modelado fisiológico detallado.
+- Estudio de diabetes tipo 2.
+- Diseño de sistemas de control (páncreas artificial).
+
+
+## Glosario de unidades de medida
+
+| Unidad           | Significado                                      |
+|------------------|--------------------------------------------------|
+| **mg/dL**        | miligramos por decilitro (concentración)         |
+| **µU/mL**        | micro-unidades por mililitro (concentración)     |
+| **min⁻¹**        | por minuto (frecuencia o tasa de cambio)         |
+| **min⁻²**        | por minuto al cuadrado                           |
+| **mg/dL·min⁻¹**  | entrada de glucosa por minuto                    |
+| **µU/mL·min⁻¹**  | entrada de insulina por minuto                   |
+| **µU·mL⁻¹·min⁻¹**| producción de insulina por concentración y tiempo|

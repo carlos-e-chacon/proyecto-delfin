@@ -1,5 +1,5 @@
 ---
-title: "Resumen"
+title: "Preliminares"
 format:
   html:
     toc: true
@@ -21,6 +21,10 @@ La interacción entre la glucosa y la insulina en el cuerpo humano constituye un
 - Las **células beta** del páncreas detectan el aumento de glucosa.
 - Como respuesta, **secretan insulina** al torrente sanguíneo.
 
+::: {.cell}
+![Respuesta del páncreas](pancreas.png){fig-align="center"}
+:::
+
 ### Acción de la insulina
 
 - La insulina permite que:
@@ -38,6 +42,14 @@ La interacción entre la glucosa y la insulina en el cuerpo humano constituye un
 ### Diabetes tipo 2: disrupción del sistema
 
 - En esta enfermedad, el sistema falla por dos razones principales:
-  - Las células **responden mal a la insulina** (*resistencia a la insulina*).
+  - Las células beta **responden mal a la insulina** (*resistencia a la insulina*).
   - Con el tiempo, el páncreas **produce menos insulina**.
 - Esto provoca un **estado crónico de hiperglucemia**, que puede dañar órganos y tejidos.
+
+#### Órganos afectados por la hiperglucemia crónica
+- **Cerebro:** mayor riesgo de deterioro cognitivo y accidente cerebrovascular.
+- **Ojos:** daño a la retina (**retinopatía diabética**), que puede conducir a ceguera.
+- **Corazón y vasos sanguíneos:** enfermedad cardiovascular, hipertensión y arteriosclerosis.
+- **Extremidades:** mala circulación, infecciones frecuentes y riesgo de amputaciones.
+- **Riñones:** daño progresivo (**nefropatía diabética**) que puede llevar a insuficiencia renal.
+- **Nervios:** **neuropatía diabética**, que provoca dolor, pérdida de sensibilidad o disfunción autonómica.

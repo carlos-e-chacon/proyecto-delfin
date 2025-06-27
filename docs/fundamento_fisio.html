@@ -24,12 +24,12 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./modelos.html" rel="next">
 <link href="./resumen.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-cb63c2260647764d169e7ffcd1d3dc73.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-86349a199a86a64d6b3dca11922b0a99.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -68,6 +68,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -99,6 +100,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar floating quarto-light">
@@ -123,7 +125,10 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./logo-DELFIN.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Modelado de la Diabetes Tipo 2</a> 
     </div>
@@ -144,13 +149,19 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./resumen.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Resumen</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preliminares</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./fundamento_fisio.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fundamento fisiológico</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./modelos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos clásicos</span></span></a>
   </div>
 </li>
     </ul>
@@ -162,14 +173,11 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
-  <ul>
-  <li><a href="#fundamento-fisiológico" id="toc-fundamento-fisiológico" class="nav-link active" data-scroll-target="#fundamento-fisiológico"><span class="header-section-number">3.1</span> Fundamento fisiológico</a>
   <ul class="collapse">
-  <li><a href="#eliminación-natural-de-glucosa" id="toc-eliminación-natural-de-glucosa" class="nav-link" data-scroll-target="#eliminación-natural-de-glucosa"><span class="header-section-number">3.1.1</span> Eliminación natural de glucosa</a></li>
-  <li><a href="#acción-de-la-insulina-sobre-la-glucosa" id="toc-acción-de-la-insulina-sobre-la-glucosa" class="nav-link" data-scroll-target="#acción-de-la-insulina-sobre-la-glucosa"><span class="header-section-number">3.1.2</span> Acción de la insulina sobre la glucosa</a></li>
-  <li><a href="#producción-de-insulina-dependiente-de-glucosa-con-retardo" id="toc-producción-de-insulina-dependiente-de-glucosa-con-retardo" class="nav-link" data-scroll-target="#producción-de-insulina-dependiente-de-glucosa-con-retardo"><span class="header-section-number">3.1.3</span> Producción de insulina dependiente de glucosa (con retardo)</a></li>
-  <li><a href="#degradación-de-insulina" id="toc-degradación-de-insulina" class="nav-link" data-scroll-target="#degradación-de-insulina"><span class="header-section-number">3.1.4</span> Degradación de insulina</a></li>
-  </ul></li>
+  <li><a href="#generalidades" id="toc-generalidades" class="nav-link active" data-scroll-target="#generalidades"><span class="header-section-number">3.1</span> Generalidades</a></li>
+  <li><a href="#papel-del-hígado" id="toc-papel-del-hígado" class="nav-link" data-scroll-target="#papel-del-hígado"><span class="header-section-number">3.2</span> Papel del hígado</a></li>
+  <li><a href="#papel-del-páncreas" id="toc-papel-del-páncreas" class="nav-link" data-scroll-target="#papel-del-páncreas"><span class="header-section-number">3.3</span> Papel del páncreas</a></li>
+  <li><a href="#papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa" id="toc-papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa" class="nav-link" data-scroll-target="#papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa"><span class="header-section-number">3.4</span> Papel de distintos órganos en el metabolismo de la glucosa</a></li>
   </ul>
 </nav>
     </div>
@@ -195,86 +203,152 @@ window.Quarto = {
 </header>
 
 
-<section id="fundamento-fisiológico" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="fundamento-fisiológico"><span class="header-section-number">3.1</span> Fundamento fisiológico</h2>
 <p>Pensamos en las interacciones entre glucosa e insulina como si fueran <strong>reacciones químicas</strong>, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:</p>
 <hr>
-<section id="eliminación-natural-de-glucosa" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="eliminación-natural-de-glucosa"><span class="header-section-number">3.1.1</span> Eliminación natural de glucosa</h3>
-<p>La glucosa se elimina del organismo por mecanismos basales como la absorción en células musculares, el sistema nervioso central y los riñones.</p>
+<section id="generalidades" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="generalidades"><span class="header-section-number">3.1</span> Generalidades</h2>
+<p>Las células realizan dos tipos fundamentales de reacciones químicas:</p>
+<ul>
+<li><strong>Síntesis (anabolismo):</strong> Construcción de moléculas complejas a partir de simples, usando energía.</li>
+<li><strong>Degradación (catabolismo):</strong> Descomposición de moléculas complejas para liberar energía.</li>
+</ul>
+<p>En el contexto de la glucosa, estos procesos permiten mantener la <strong>homeostasis glucémica</strong>.</p>
 <hr>
 </section>
-<section id="acción-de-la-insulina-sobre-la-glucosa" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="acción-de-la-insulina-sobre-la-glucosa"><span class="header-section-number">3.1.2</span> Acción de la insulina sobre la glucosa</h3>
-<p>La insulina potencia la captación de glucosa en tejidos sensibles como el hígado, músculos y tejido adiposo.</p>
+<section id="papel-del-hígado" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="papel-del-hígado"><span class="header-section-number">3.2</span> Papel del hígado</h2>
+<p>El <strong>hígado</strong> actúa como regulador clave de la glucemia, alternando entre almacenamiento y liberación de glucosa.</p>
+<section id="síntesis-en-el-hígado" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="síntesis-en-el-hígado"><span class="header-section-number">3.2.1</span> Síntesis en el hígado</h3>
+<ul>
+<li><strong>Glucogénesis</strong> (formación de glucógeno):</li>
+</ul>
+<p><span class="math display">\[
+\text{Glucosa} \xrightarrow{\text{glucógeno sintasa}} \text{Glucógeno}
+\]</span></p>
+<ul>
+<li><strong>Gluconeogénesis</strong> (formación de glucosa a partir de compuestos no glucídicos):</li>
+</ul>
+<p><span class="math display">\[
+\text{Piruvato / Lactato / Alanina} \rightarrow \text{Glucosa}
+\]</span></p>
+</section>
+<section id="degradación-en-el-hígado" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="degradación-en-el-hígado"><span class="header-section-number">3.2.2</span> Degradación en el hígado</h3>
+<ul>
+<li><strong>Glucogenólisis</strong> (degradación de glucógeno para liberar glucosa):</li>
+</ul>
+<p><span class="math display">\[
+\text{Glucógeno} \xrightarrow{\text{glucógeno fosforilasa}} \text{Glucosa}
+\]</span></p>
 <hr>
 </section>
-<section id="producción-de-insulina-dependiente-de-glucosa-con-retardo" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="producción-de-insulina-dependiente-de-glucosa-con-retardo"><span class="header-section-number">3.1.3</span> Producción de insulina dependiente de glucosa (con retardo)</h3>
-<p>La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de <strong>retardo</strong> <span class="math inline">\(\tau\)</span> debido al tiempo de procesamiento hormonal.</p>
-<hr>
 </section>
-<section id="degradación-de-insulina" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="degradación-de-insulina"><span class="header-section-number">3.1.4</span> Degradación de insulina</h3>
-<p>La insulina se degrada naturalmente, principalmente en el hígado y los riñones, o se elimina del torrente sanguíneo por otros mecanismos fisiológicos.</p>
+<section id="papel-del-páncreas" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="papel-del-páncreas"><span class="header-section-number">3.3</span> Papel del páncreas</h2>
+<p>El <strong>páncreas endocrino</strong> regula la glucosa mediante la producción de hormonas, pero no la metaboliza directamente.</p>
+<section id="síntesis-en-el-páncreas" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="síntesis-en-el-páncreas"><span class="header-section-number">3.3.1</span> Síntesis en el páncreas</h3>
+<ul>
+<li><strong>Síntesis de insulina (células β):</strong></li>
+</ul>
+<p><span class="math display">\[
+\text{ADN} \rightarrow \text{ARNm} \rightarrow \text{Preproinsulina} \rightarrow \text{Insulina activa}
+\]</span> La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de <strong>retardo</strong> <span class="math inline">\(\tau\)</span> debido al tiempo de procesamiento hormonal.</p>
+<ul>
+<li><strong>Síntesis de glucagón (células α):</strong></li>
+</ul>
+<p><span class="math display">\[
+\text{Glucagón} \rightarrow \text{Activa glucogenólisis y gluconeogénesis hepática}
+\]</span></p>
+</section>
+<section id="degradación-en-el-páncreas" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="degradación-en-el-páncreas"><span class="header-section-number">3.3.2</span> Degradación en el páncreas</h3>
+<p>El páncreas no degrada glucosa directamente, pero la <strong>insulina</strong> que secreta estimula la degradación de glucosa en otros órganos (glucólisis).</p>
+</section>
+</section>
+<section id="papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa"><span class="header-section-number">3.4</span> Papel de distintos órganos en el metabolismo de la glucosa</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 8%">
-<col style="width: 30%">
-<col style="width: 39%">
-<col style="width: 11%">
-<col style="width: 9%">
+<col style="width: 10%">
+<col style="width: 15%">
+<col style="width: 35%">
+<col style="width: 38%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Órgano</th>
-<th>Tipo de células principales</th>
-<th>Función principal respecto a la glucosa</th>
-<th>¿Sintetiza?</th>
-<th>¿Degrada?</th>
+<th>Reacción</th>
+<th>Ruta principal</th>
+<th>Molécula clave producida / consumida</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Páncreas</td>
-<td>Células β (islotes de Langerhans)</td>
-<td>Detectan glucosa y secretan insulina</td>
-<td>Sí (insulina)</td>
-<td>No</td>
+<td>Hígado</td>
+<td>Síntesis</td>
+<td>Glucogénesis</td>
+<td>Glucógeno</td>
 </tr>
 <tr class="even">
 <td>Hígado</td>
-<td>Hepatocitos</td>
-<td>Almacenan glucosa como glucógeno; producen glucosa en ayuno</td>
-<td>Sí (glucógeno/glucosa)</td>
-<td>Sí (glucógeno → glucosa)</td>
+<td>Síntesis</td>
+<td>Gluconeogénesis</td>
+<td>Glucosa</td>
+</tr>
+<tr class="odd">
+<td>Hígado</td>
+<td>Degradación</td>
+<td>Glucogenólisis</td>
+<td>Glucosa</td>
+</tr>
+<tr class="even">
+<td>Páncreas</td>
+<td>Síntesis</td>
+<td>Traducción hormonal</td>
+<td>Insulina / Glucagón</td>
+</tr>
+<tr class="odd">
+<td>Páncreas</td>
+<td>Regulación</td>
+<td>Estímulo a degradación</td>
+<td>(Indirecta vía insulina)</td>
+</tr>
+<tr class="even">
+<td>Músculo</td>
+<td>Síntesis</td>
+<td>Glucogénesis muscular</td>
+<td>Glucógeno</td>
 </tr>
 <tr class="odd">
 <td>Músculo</td>
-<td>Miocitos</td>
-<td>Captan glucosa e inducen su uso como energía o almacenamiento como glucógeno</td>
-<td>Sí (glucógeno)</td>
-<td>Sí</td>
+<td>Degradación</td>
+<td>Glucólisis</td>
+<td>ATP (energía)</td>
 </tr>
 <tr class="even">
 <td>Riñón</td>
-<td>Células tubulares renales</td>
-<td>Reabsorben glucosa; en ayuno prolongado sintetizan glucosa (gluconeogénesis)</td>
-<td>Sí (glucosa)</td>
-<td>Sí</td>
+<td>Síntesis</td>
+<td>Gluconeogénesis renal</td>
+<td>Glucosa</td>
 </tr>
 <tr class="odd">
+<td>Riñón</td>
+<td>Degradación</td>
+<td>Reabsorción y consumo</td>
+<td>Glucosa</td>
+</tr>
+<tr class="even">
 <td>Cerebro</td>
-<td>Neuronas</td>
-<td>Consumen glucosa como fuente principal de energía</td>
-<td>No</td>
-<td>Sí</td>
+<td>Degradación</td>
+<td>Glucólisis neuronal</td>
+<td>ATP (uso inmediato de glucosa)</td>
 </tr>
 </tbody>
 </table>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -364,6 +438,11 @@ window.Quarto = {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -679,16 +758,33 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./resumen.html" class="pagination-link" aria-label="Resumen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Resumen</span></span>
+      <a href="./resumen.html" class="pagination-link" aria-label="Preliminares">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preliminares</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./modelos.html" class="pagination-link" aria-label="Modelos clásicos">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos clásicos</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© 2025 Carlos Eduardo Chacón Rodríguez</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Hecho con <a href="https://quarto.org">Quarto</a></p>
+</div>
+  </div>
+</footer>
 
 
 
 
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
