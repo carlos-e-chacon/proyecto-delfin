@@ -12,7 +12,7 @@ book:
       email: yofre.garcia@unach.mx
       roles: [Revisor]
       corresponding: true
-  date: "junio 2025"
+  date: "26 de junio de 2025"
   chapters:
     - index.qmd
     - resumen.qmd
