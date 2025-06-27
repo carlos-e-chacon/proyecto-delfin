@@ -298,10 +298,10 @@ donde:
 
 | Unidad           | Significado                                      |
 |------------------|--------------------------------------------------|
-| **mg/dL**        | miligramos por decilitro (concentración)         |
-| **µU/mL**        | micro-unidades por mililitro (concentración)     |
-| **min⁻¹**        | por minuto (frecuencia o tasa de cambio)         |
-| **min⁻²**        | por minuto al cuadrado                           |
-| **mg/dL·min⁻¹**  | entrada de glucosa por minuto                    |
-| **µU/mL·min⁻¹**  | entrada de insulina por minuto                   |
-| **µU·mL⁻¹·min⁻¹**| producción de insulina por concentración y tiempo|
+| $mg/dL$        | miligramos por decilitro (concentración)         |
+| $\mu U/mL$        | micro-unidades por mililitro (concentración)     |
+| $min^{-1}$        | por minuto (frecuencia o tasa de cambio)         |
+| $min^{-2}$        | por minuto al cuadrado                           |
+| $mg/dL\cdot min^{-1}$ | entrada de glucosa por minuto                    |
+| $\mu U/mL \cdot min^{-1}$  | entrada de insulina por minuto                   |
+| $\mu UmL^{-1}\cdot min^{-1}$| producción de insulina por concentración y tiempo|

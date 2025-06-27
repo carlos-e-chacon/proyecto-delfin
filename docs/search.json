@@ -74,7 +74,7 @@
     "href": "fundamento_fisio.html#papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa",
     "title": "3  Fundamento fisiológico",
     "section": "3.4 Papel de distintos órganos en el metabolismo de la glucosa",
-    "text": "3.4 Papel de distintos órganos en el metabolismo de la glucosa\n\n\n\n\n\n\n\n\n\nÓrgano\nReacción\nRuta principal\nMolécula clave producida / consumida\n\n\n\n\nHígado\nSíntesis\nGlucogénesis\nGlucógeno\n\n\nHígado\nSíntesis\nGluconeogénesis\nGlucosa\n\n\nHígado\nDegradación\nGlucogenólisis\nGlucosa\n\n\nPáncreas\nSíntesis\nTraducción hormonal\nInsulina / Glucagón\n\n\nPáncreas\nRegulación\nEstímulo a degradación\n(Indirecta vía insulina)\n\n\nMúsculo\nSíntesis\nGlucogénesis muscular\nGlucógeno\n\n\nMúsculo\nDegradación\nGlucólisis\nATP (energía)\n\n\nRiñón\nSíntesis\nGluconeogénesis renal\nGlucosa\n\n\nRiñón\nDegradación\nReabsorción y consumo\nGlucosa\n\n\nCerebro\nDegradación\nGlucólisis neuronal\nATP (uso inmediato de glucosa)",
+    "text": "3.4 Papel de distintos órganos en el metabolismo de la glucosa\n\n\n\n\n\n\n\n\n\nÓrgano\nReacción\nRuta principal\nMolécula clave producida\n\n\n\n\nHígado\nSíntesis\nGlucogénesis\nGlucógeno\n\n\nHígado\nSíntesis\nGluconeogénesis\nGlucosa\n\n\nHígado\nDegradación\nGlucogenólisis\nGlucosa\n\n\nPáncreas\nSíntesis\nTraducción hormonal\nInsulina / Glucagón\n\n\nPáncreas\nRegulación\nEstímulo a degradación\n(Indirecta vía insulina)\n\n\nMúsculo\nSíntesis\nGlucogénesis muscular\nGlucógeno\n\n\nMúsculo\nDegradación\nGlucólisis\nATP (energía)\n\n\nRiñón\nSíntesis\nGluconeogénesis renal\nGlucosa\n\n\nRiñón\nDegradación\nReabsorción y consumo\nGlucosa\n\n\nCerebro\nDegradación\nGlucólisis neuronal\nATP (uso inmediato de glucosa)",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Fundamento fisiológico</span>"
     ]
@@ -124,7 +124,7 @@
     "href": "modelos.html#glosario-de-unidades-de-medida",
     "title": "4  Modelos clásicos",
     "section": "4.4 Glosario de unidades de medida",
-    "text": "4.4 Glosario de unidades de medida\n\n\n\nUnidad\nSignificado\n\n\n\n\nmg/dL\nmiligramos por decilitro (concentración)\n\n\nµU/mL\nmicro-unidades por mililitro (concentración)\n\n\nmin⁻¹\npor minuto (frecuencia o tasa de cambio)\n\n\nmin⁻²\npor minuto al cuadrado\n\n\nmg/dL·min⁻¹\nentrada de glucosa por minuto\n\n\nµU/mL·min⁻¹\nentrada de insulina por minuto\n\n\nµU·mL⁻¹·min⁻¹\nproducción de insulina por concentración y tiempo",
+    "text": "4.4 Glosario de unidades de medida\n\n\n\n\n\n\n\nUnidad\nSignificado\n\n\n\n\n\\(mg/dL\\)\nmiligramos por decilitro (concentración)\n\n\n\\(\\mu U/mL\\)\nmicro-unidades por mililitro (concentración)\n\n\n\\(min^{-1}\\)\npor minuto (frecuencia o tasa de cambio)\n\n\n\\(min^{-2}\\)\npor minuto al cuadrado\n\n\n\\(mg/dL\\cdot min^{-1}\\)\nentrada de glucosa por minuto\n\n\n\\(\\mu U/mL \\cdot min^{-1}\\)\nentrada de insulina por minuto\n\n\n\\(\\mu UmL^{-1}\\cdot min^{-1}\\)\nproducción de insulina por concentración y tiempo",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Modelos clásicos</span>"
     ]

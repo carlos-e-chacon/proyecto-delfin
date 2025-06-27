@@ -10,8 +10,6 @@ editor: visual
 
 Pensamos en las interacciones entre glucosa e insulina como si fueran **reacciones químicas**, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:
 
----
-
 ## Generalidades
 
 Las células realizan dos tipos fundamentales de reacciones químicas:
@@ -21,7 +19,6 @@ Las células realizan dos tipos fundamentales de reacciones químicas:
 
 En el contexto de la glucosa, estos procesos permiten mantener la **homeostasis glucémica**.
 
----
 
 ## Papel del hígado
 
@@ -49,7 +46,6 @@ $$
 \text{Glucógeno} \xrightarrow{\text{glucógeno fosforilasa}} \text{Glucosa}
 $$
 
----
 
 ## Papel del páncreas
 
@@ -78,7 +74,7 @@ El páncreas no degrada glucosa directamente, pero la **insulina** que secreta e
 
 ## Papel de distintos órganos en el metabolismo de la glucosa
 
-| Órgano   | Reacción      | Ruta principal                    | Molécula clave producida / consumida |
+| Órgano   | Reacción      | Ruta principal                    | Molécula clave producida |
 |----------|---------------|-----------------------------------|--------------------------------------|
 | Hígado   | Síntesis      | Glucogénesis                      | Glucógeno                            |
 | Hígado   | Síntesis      | Gluconeogénesis                   | Glucosa                              |
