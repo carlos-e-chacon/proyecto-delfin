@@ -16,7 +16,7 @@ book:
       email: yofre.garcia@unach.mx
       roles: [Revisor]
       corresponding: true
-  date: "09 de junio de 2025"
+  date: "junio 2025"
   cover-image: figuras/logo-DELFIN.png
   chapters:
     - index.qmd
