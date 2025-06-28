@@ -1,6 +1,4 @@
 - source: project
   quarto-pub:
-    - id: e7999fd8-5748-46bb-8ec8-8c5b26fb20ba
-      url: https://carlos-e-chacon.quarto.pub/httpscarlos-e-chacongithubioproyecto-delfin
     - id: 94d77332-1c89-4b18-ad2d-f1c595031d33
       url: https://carlos-e-chacon.quarto.pub/proyecto-delfin
