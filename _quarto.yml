@@ -6,7 +6,7 @@ project:
 
 book:
   title: "Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con retardo"
-  
+  favicon: figuras/logo-DELFIN.png
   author:
     - name: Carlos Eduardo Chacón Rodríguez
       email: carlos.chacon78@unach.mx
@@ -43,7 +43,6 @@ book:
 
 format:
   html:
-    favicon: figuras/logo-DELFIN.png
     theme: darkly
       #light: cosmo
       #dark: darkly
