@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Modelos clásicos – Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con retardo</title>
+<title>3&nbsp; Fundamento fisiológico – Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con retardo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,7 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./fundamento_fisio.html" rel="prev">
+<link href="./modelos.html" rel="next">
+<link href="./resumen.html" rel="prev">
 <link href="./figuras/logo-DELFIN.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -112,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./modelos.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos clásicos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fundamento_fisio.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fundamento fisiológico</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -157,14 +158,20 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fundamento_fisio.html" class="sidebar-item-text sidebar-link">
+  <a href="./fundamento_fisio.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fundamento fisiológico</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./modelos.html" class="sidebar-item-text sidebar-link active">
+  <a href="./modelos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos clásicos</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aproximacion.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aproximación interactiva</span></span></a>
   </div>
 </li>
     </ul>
@@ -177,11 +184,10 @@ window.Quarto = {
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul class="collapse">
-  <li><a href="#modelo-de-bolie-1961" id="toc-modelo-de-bolie-1961" class="nav-link active" data-scroll-target="#modelo-de-bolie-1961"><span class="header-section-number">4.1</span> Modelo de Bolie (1961)</a></li>
-  <li><a href="#modelo-de-bergman-1981-modelo-minimal" id="toc-modelo-de-bergman-1981-modelo-minimal" class="nav-link" data-scroll-target="#modelo-de-bergman-1981-modelo-minimal"><span class="header-section-number">4.2</span> Modelo de Bergman (1981) – Modelo Minimal</a></li>
-  <li><a href="#modelo-de-cobelli-1997-modelo-con-retardos-y-no-linealidades" id="toc-modelo-de-cobelli-1997-modelo-con-retardos-y-no-linealidades" class="nav-link" data-scroll-target="#modelo-de-cobelli-1997-modelo-con-retardos-y-no-linealidades"><span class="header-section-number">4.3</span> Modelo de Cobelli (1997) – Modelo con Retardos y No Linealidades</a></li>
-  <li><a href="#glosario-de-unidades-de-medida" id="toc-glosario-de-unidades-de-medida" class="nav-link" data-scroll-target="#glosario-de-unidades-de-medida"><span class="header-section-number">4.4</span> Glosario de unidades de medida</a></li>
-  <li><a href="#hola" id="toc-hola" class="nav-link" data-scroll-target="#hola"><span class="header-section-number">4.5</span> HOLA</a></li>
+  <li><a href="#generalidades" id="toc-generalidades" class="nav-link active" data-scroll-target="#generalidades"><span class="header-section-number">3.1</span> Generalidades</a></li>
+  <li><a href="#papel-del-hígado" id="toc-papel-del-hígado" class="nav-link" data-scroll-target="#papel-del-hígado"><span class="header-section-number">3.2</span> Papel del hígado</a></li>
+  <li><a href="#papel-del-páncreas" id="toc-papel-del-páncreas" class="nav-link" data-scroll-target="#papel-del-páncreas"><span class="header-section-number">3.3</span> Papel del páncreas</a></li>
+  <li><a href="#papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa" id="toc-papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa" class="nav-link" data-scroll-target="#papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa"><span class="header-section-number">3.4</span> Papel de distintos órganos en el metabolismo de la glucosa</a></li>
   </ul>
 </nav>
     </div>
@@ -190,7 +196,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos clásicos</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fundamento fisiológico</span></h1>
 </div>
 
 
@@ -207,615 +213,147 @@ window.Quarto = {
 </header>
 
 
-<section id="modelo-de-bolie-1961" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="modelo-de-bolie-1961"><span class="header-section-number">4.1</span> Modelo de Bolie (1961)</h2>
-<section id="estructura" class="level3" data-number="4.1.1">
-<h3 data-number="4.1.1" class="anchored" data-anchor-id="estructura"><span class="header-section-number">4.1.1</span> Estructura</h3>
-<p>El modelo es un sistema lineal sin retardos, dado por:</p>
+<p>Pensamos en las interacciones entre glucosa e insulina como si fueran <strong>reacciones químicas</strong>, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:</p>
+<section id="generalidades" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="generalidades"><span class="header-section-number">3.1</span> Generalidades</h2>
+<p>Las células realizan dos tipos fundamentales de reacciones químicas:</p>
+<ul>
+<li><strong>Síntesis (anabolismo):</strong> Construcción de moléculas complejas a partir de simples, usando energía.</li>
+<li><strong>Degradación (catabolismo):</strong> Descomposición de moléculas complejas para liberar energía.</li>
+</ul>
+<p>En el contexto de la glucosa, estos procesos permiten mantener la <strong>homeostasis glucémica</strong>.</p>
+</section>
+<section id="papel-del-hígado" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="papel-del-hígado"><span class="header-section-number">3.2</span> Papel del hígado</h2>
+<p>El <strong>hígado</strong> actúa como regulador clave de la glucemia, alternando entre almacenamiento y liberación de glucosa.</p>
+<section id="síntesis-en-el-hígado" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="síntesis-en-el-hígado"><span class="header-section-number">3.2.1</span> Síntesis en el hígado</h3>
+<ul>
+<li><strong>Glucogénesis</strong> (formación de glucógeno):</li>
+</ul>
 <p><span class="math display">\[
-\begin{aligned}
-\displaystyle \frac{dG}{dt} &amp;= -a G(t) - b I(t) + u(t) \\
-\displaystyle \frac{dI}{dt} &amp;= -c I(t) + d G(t)
-\end{aligned}
+\text{Glucosa} \xrightarrow{\text{glucógeno sintasa}} \text{Glucógeno}
 \]</span></p>
-<p>donde:</p>
+<ul>
+<li><strong>Gluconeogénesis</strong> (formación de glucosa a partir de compuestos no glucídicos):</li>
+</ul>
+<p><span class="math display">\[
+\text{Piruvato / Lactato / Alanina} \rightarrow \text{Glucosa}
+\]</span></p>
+</section>
+<section id="degradación-en-el-hígado" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="degradación-en-el-hígado"><span class="header-section-number">3.2.2</span> Degradación en el hígado</h3>
+<ul>
+<li><strong>Glucogenólisis</strong> (degradación de glucógeno para liberar glucosa):</li>
+</ul>
+<p><span class="math display">\[
+\text{Glucógeno} \xrightarrow{\text{glucógeno fosforilasa}} \text{Glucosa}
+\]</span></p>
+</section>
+</section>
+<section id="papel-del-páncreas" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="papel-del-páncreas"><span class="header-section-number">3.3</span> Papel del páncreas</h2>
+<p>El <strong>páncreas endocrino</strong> regula la glucosa mediante la producción de hormonas, pero no la metaboliza directamente.</p>
+<section id="síntesis-en-el-páncreas" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="síntesis-en-el-páncreas"><span class="header-section-number">3.3.1</span> Síntesis en el páncreas</h3>
+<ul>
+<li><strong>Síntesis de insulina (células β):</strong></li>
+</ul>
+<p><span class="math display">\[
+\text{ADN} \rightarrow \text{ARNm} \rightarrow \text{Preproinsulina} \rightarrow \text{Insulina activa}
+\]</span> La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de <strong>retardo</strong> <span class="math inline">\(\tau\)</span> debido al tiempo de procesamiento hormonal.</p>
+<ul>
+<li><strong>Síntesis de glucagón (células α):</strong></li>
+</ul>
+<p><span class="math display">\[
+\text{Glucagón} \rightarrow \text{Activa glucogenólisis y gluconeogénesis hepática}
+\]</span></p>
+</section>
+<section id="degradación-en-el-páncreas" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="degradación-en-el-páncreas"><span class="header-section-number">3.3.2</span> Degradación en el páncreas</h3>
+<p>El páncreas no degrada glucosa directamente, pero la <strong>insulina</strong> que secreta estimula la degradación de glucosa en otros órganos (glucólisis).</p>
+</section>
+</section>
+<section id="papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa"><span class="header-section-number">3.4</span> Papel de distintos órganos en el metabolismo de la glucosa</h2>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 11%">
-<col style="width: 50%">
-<col style="width: 37%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Interpretación</th>
-<th>Unidades</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(G(t)\)</span></td>
-<td>Glucosa en sangre</td>
-<td>mg/dL</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(I(t)\)</span></td>
-<td>Insulina en plasma</td>
-<td>µU/mL</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(u(t)\)</span></td>
-<td>Aporte externo de glucosa</td>
-<td>mg/dL·min⁻¹</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(a\)</span></td>
-<td>Tasa de eliminación basal de glucosa</td>
-<td>min⁻¹</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(b\)</span></td>
-<td>Efecto de la insulina sobre la glucosa</td>
-<td>min⁻¹·(µU/mL)⁻¹</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(c\)</span></td>
-<td>Tasa de eliminación de insulina</td>
-<td>min⁻¹</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(d\)</span></td>
-<td>Producción de insulina por glucosa</td>
-<td>µU·mL⁻¹·min⁻¹·(mg/dL)⁻¹</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="características" class="level3" data-number="4.1.2">
-<h3 data-number="4.1.2" class="anchored" data-anchor-id="características"><span class="header-section-number">4.1.2</span> Características</h3>
-<ul>
-<li>Modelo lineal de primer orden.</li>
-<li>Parámetros constantes.</li>
-<li>Sin retardos ni saturaciones.</li>
-<li>Se puede resolver analíticamente mediante transformadas de Laplace.</li>
-</ul>
-</section>
-<section id="aplicaciones" class="level3" data-number="4.1.3">
-<h3 data-number="4.1.3" class="anchored" data-anchor-id="aplicaciones"><span class="header-section-number">4.1.3</span> Aplicaciones</h3>
-<ul>
-<li>Modelado básico y análisis teórico inicial.</li>
-<li>Base para estudio de estabilidad local.</li>
-</ul>
-</section>
-<section id="ejemplo" class="level3" data-number="4.1.4">
-<h3 data-number="4.1.4" class="anchored" data-anchor-id="ejemplo"><span class="header-section-number">4.1.4</span> Ejemplo</h3>
-<p>Consideremos los siguientes parámetros y condiciones iniciales:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Parámetro</th>
-<th>Valor</th>
-<th>Unidad</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(a\)</span></td>
-<td>0.1</td>
-<td>min⁻¹</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(b\)</span></td>
-<td>0.02</td>
-<td>min⁻¹·(µU/mL)⁻¹</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(c\)</span></td>
-<td>0.3</td>
-<td>min⁻¹</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(d\)</span></td>
-<td>0.5</td>
-<td>µU·mL⁻¹·min⁻¹·(mg/dL)⁻¹</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(G_0\)</span></td>
-<td>90</td>
-<td>mg/dL</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(I_0\)</span></td>
-<td>10</td>
-<td>µU/mL</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(u(t)\)</span></td>
-<td><span class="math inline">\(10 e^{-0.05 t}\)</span></td>
-<td>mg/dL·min⁻¹</td>
-</tr>
-</tbody>
-</table>
-<p>Llamemos:</p>
-<p><span class="math display">\[
-\mathcal{L}\{G(t)\} = \hat{G}(s)
-\]</span> <span class="math display">\[
-\mathcal{L}\{I(t)\} = \hat{I}(s)
-\]</span> <span class="math display">\[
-\mathcal{L}\{u(t)\} = \hat{u}(s)
-\]</span></p>
-<p>Sabemos:</p>
-<p><span class="math display">\[
-\mathcal{L}\{10 e^{-0.05t}\} = \frac{10}{s + 0.05}
-\]</span></p>
-<p>Aplicando la transformada de Laplace al sistema:</p>
-<p><span class="math display">\[
-s\hat{G}(s) - G_0 = -a \hat{G}(s) - b \hat{I}(s) + \frac{10}{s + 0.05}
-\]</span></p>
-<p><span class="math display">\[
-s\hat{I}(s) - I_0 = -c \hat{I}(s) + d \hat{G}(s)
-\]</span></p>
-<p>Sustituyendo valores:</p>
-<p><span class="math display">\[
-(s + 0.1)\hat{G}(s) + 0.02 \hat{I}(s) = 90 + \frac{10}{s + 0.05} \tag{1}
-\]</span></p>
-<p><span class="math display">\[
--0.5 \hat{G}(s) + (s + 0.3)\hat{I}(s) = 10 \tag{2}
-\]</span></p>
-<p>Despejamos <span class="math inline">\(\hat{I}(s)\)</span> de (2):</p>
-<p><span class="math display">\[
-\hat{I}(s) = \frac{0.5 \hat{G}(s) + 10}{s + 0.3}
-\]</span></p>
-<p>Sustituimos en (1):</p>
-<p><span class="math display">\[
-(s + 0.1) \hat{G}(s) + 0.02 \cdot \frac{0.5 \hat{G}(s) + 10}{s + 0.3} = 90 + \frac{10}{s + 0.05}
-\]</span></p>
-<p>Multiplicamos ambos lados por <span class="math inline">\((s + 0.3)\)</span> para eliminar denominador:</p>
-<p><span class="math display">\[
-(s + 0.1)(s + 0.3) \hat{G}(s) + 0.01 \hat{G}(s) + 0.2 = (90 + \frac{10}{s + 0.05})(s + 0.3)
-\]</span></p>
-<p>Agrupamos términos para aislar <span class="math inline">\(\hat{G}(s)\)</span>:</p>
-<p><span class="math display">\[
-\hat{G}(s) = \frac{(90 + \frac{10}{s + 0.05})(s + 0.3) - 0.2}{(s + 0.1)(s + 0.3) + 0.01}
-\]</span></p>
-<p>Ahora descomponiendo en fracciones parciales:</p>
-<p><span class="math display">\[
-\hat{G}(s) = \frac{-21.111}{s + 0.2} + \frac{2.133}{(s + 0.2)^2} + \frac{111.111}{s + 0.05}
-\]</span></p>
-<p>Aplicando transformadas inversas:</p>
-<p><span class="math display">\[
-\mathcal{L}^{-1}\left\{\frac{1}{s + \alpha}\right\} = e^{-\alpha t}, \quad \mathcal{L}^{-1}\left\{\frac{1}{(s + \alpha)^2}\right\} = t e^{-\alpha t}
-\]</span></p>
-<p>Se obtiene:</p>
-<p><span class="math display">\[
-G(t) = -21.111\, e^{-0.2 t} + 2.133\, t e^{-0.2 t} + 111.111\, e^{-0.05 t}
-\]</span></p>
-<p>Análogamente se puede obtener <span class="math inline">\(I(t)\)</span>.</p>
-</section>
-</section>
-<section id="modelo-de-bergman-1981-modelo-minimal" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="modelo-de-bergman-1981-modelo-minimal"><span class="header-section-number">4.2</span> Modelo de Bergman (1981) – Modelo Minimal</h2>
-<section id="estructura-1" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="estructura-1"><span class="header-section-number">4.2.1</span> Estructura</h3>
-<p><span class="math display">\[
-\begin{aligned}
-\displaystyle \frac{dG}{dt} &amp;= - (S_G + X(t)) G(t) + G_b S_G + u(t) \\
-\displaystyle \frac{dX}{dt} &amp;= -p_2 X(t) + p_3 (I(t) - I_b) \\
-\displaystyle \frac{dI}{dt} &amp;= -n I(t) + r(t)
-\end{aligned}
-\]</span></p>
-<p>donde:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 9%">
-<col style="width: 55%">
+<col style="width: 10%">
+<col style="width: 15%">
 <col style="width: 35%">
+<col style="width: 38%">
 </colgroup>
 <thead>
 <tr class="header">
-<th></th>
-<th>Interpretación</th>
-<th>Unidades</th>
+<th>Órgano</th>
+<th>Reacción</th>
+<th>Ruta principal</th>
+<th>Molécula clave producida</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td><span class="math inline">\(G(t)\)</span></td>
-<td>Glucosa en plasma</td>
-<td>mg/dL</td>
+<td>Hígado</td>
+<td>Síntesis</td>
+<td>Glucogénesis</td>
+<td>Glucógeno</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(X(t)\)</span></td>
-<td>Acción efectiva de la insulina</td>
-<td>min⁻¹</td>
+<td>Hígado</td>
+<td>Síntesis</td>
+<td>Gluconeogénesis</td>
+<td>Glucosa</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(I(t)\)</span></td>
-<td>Insulina en plasma</td>
-<td>µU/mL</td>
+<td>Hígado</td>
+<td>Degradación</td>
+<td>Glucogenólisis</td>
+<td>Glucosa</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(G_b\)</span></td>
-<td>Glucosa basal</td>
-<td>mg/dL</td>
+<td>Páncreas</td>
+<td>Síntesis</td>
+<td>Traducción hormonal</td>
+<td>Insulina / Glucagón</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(I_b\)</span></td>
-<td>Insulina basal</td>
-<td>µU/mL</td>
+<td>Páncreas</td>
+<td>Regulación</td>
+<td>Estímulo a degradación</td>
+<td>(Indirecta vía insulina)</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(S_G\)</span></td>
-<td>Tasa de eliminación basal de glucosa</td>
-<td>min⁻¹</td>
+<td>Músculo</td>
+<td>Síntesis</td>
+<td>Glucogénesis muscular</td>
+<td>Glucógeno</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(p_2\)</span></td>
-<td>Tasa de desaparición de la acción insulínica</td>
-<td>min⁻¹</td>
+<td>Músculo</td>
+<td>Degradación</td>
+<td>Glucólisis</td>
+<td>ATP (energía)</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(p_3\)</span></td>
-<td>Sensibilidad de acción insulínica a insulina</td>
-<td>min⁻²·(µU/mL)⁻¹</td>
+<td>Riñón</td>
+<td>Síntesis</td>
+<td>Gluconeogénesis renal</td>
+<td>Glucosa</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(n\)</span></td>
-<td>Tasa de eliminación de insulina</td>
-<td>min⁻¹</td>
+<td>Riñón</td>
+<td>Degradación</td>
+<td>Reabsorción y consumo</td>
+<td>Glucosa</td>
 </tr>
 <tr class="even">
-<td><span class="math inline">\(u(t)\)</span></td>
-<td>Entrada de glucosa</td>
-<td>mg/dL·min⁻¹</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(r(t)\)</span></td>
-<td>Entrada de insulina (endógena o exógena)</td>
-<td>µU/mL·min⁻¹</td>
+<td>Cerebro</td>
+<td>Degradación</td>
+<td>Glucólisis neuronal</td>
+<td>ATP (uso inmediato de glucosa)</td>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="características-1" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="características-1"><span class="header-section-number">4.2.2</span> Características</h3>
-<ul>
-<li>No linealidad leve por producto <span class="math inline">\(X(t) G(t)\)</span>.</li>
-<li>Sin retardos explícitos.</li>
-<li>Permite análisis mediante convolución.</li>
-<li>Parámetros fisiológicos estimables clínicamente.</li>
-</ul>
-</section>
-<section id="aplicaciones-1" class="level3" data-number="4.2.3">
-<h3 data-number="4.2.3" class="anchored" data-anchor-id="aplicaciones-1"><span class="header-section-number">4.2.3</span> Aplicaciones</h3>
-<ul>
-<li>Evaluación clínica (IVGTT).</li>
-<li>Modelado para diagnóstico y seguimiento.</li>
-</ul>
-</section>
-<section id="ejemplo-1" class="level3" data-number="4.2.4">
-<h3 data-number="4.2.4" class="anchored" data-anchor-id="ejemplo-1"><span class="header-section-number">4.2.4</span> Ejemplo</h3>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Parámetro</th>
-<th>Valor</th>
-<th>Unidad</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(p_1\)</span></td>
-<td>0.03</td>
-<td>min⁻¹</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(p_2\)</span></td>
-<td>0.025</td>
-<td>min⁻¹</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(p_3\)</span></td>
-<td>0.00013</td>
-<td>min⁻²·(µU/mL)⁻¹</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(G_b\)</span></td>
-<td>90</td>
-<td>mg/dL</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(I_b\)</span></td>
-<td>15</td>
-<td>µU/mL</td>
-</tr>
-</tbody>
-</table>
-<p>Condiciones iniciales: <span class="math display">\[G(0) = 110\]</span> <span class="math display">\[X(0) = 0\]</span></p>
-<p>Supongamos que la insulina es constante: <span class="math inline">\(I(t) = I\_b\)</span> (sin estímulo externo).</p>
-<p><span class="math display">\[
-\frac{dG}{dt} = - (X(t) + 0.03) G(t) + 0.03 \cdot 90
-\]</span></p>
-<p>Como <span class="math inline">\(I(t) = I_b\)</span>, su diferencia es 0:</p>
-<p><span class="math display">\[
-\frac{dX}{dt} = -0.025 X(t)
-\]</span></p>
-<p>La solución para <span class="math inline">\(X(t)\)</span> es inmediata:</p>
-<p><span class="math display">\[
-X(t) = 0 \Rightarrow \text{el sistema queda: } \frac{dG}{dt} = -0.03 G(t) + 2.7
-\]</span></p>
-<p>Resolvemos la EDO:</p>
-<p><span class="math display">\[
-\frac{dG}{dt} + 0.03 G = 2.7
-\]</span></p>
-<p>Usamos el método del factor integrante:</p>
-<p>Multiplicamos por <span class="math inline">\(\mu(t) = e^{0.03 t}\)</span>:</p>
-<p><span class="math display">\[
-\frac{d}{dt} \left( e^{0.03 t} G(t) \right) = 2.7 e^{0.03 t}
-\]</span></p>
-<p>Integrando:</p>
-<p><span class="math display">\[
-e^{0.03 t} G(t) = \int 2.7 e^{0.03 t} dt = \frac{2.7}{0.03} e^{0.03 t} + C
-\]</span></p>
-<p>Despejando:</p>
-<p><span class="math display">\[
-G(t) = 90 + C e^{-0.03 t}
-\]</span></p>
-<p>Con <span class="math inline">\(G(0) = 110\)</span>:</p>
-<p><span class="math display">\[
-110 = 90 + C \Rightarrow C = 20
-\]</span> Finalmente: <span class="math display">\[
-G(t) = 90 + 20 e^{-0.03 t}.
-\]</span></p>
-</section>
-</section>
-<section id="modelo-de-cobelli-1997-modelo-con-retardos-y-no-linealidades" class="level2" data-number="4.3">
-<h2 data-number="4.3" class="anchored" data-anchor-id="modelo-de-cobelli-1997-modelo-con-retardos-y-no-linealidades"><span class="header-section-number">4.3</span> Modelo de Cobelli (1997) – Modelo con Retardos y No Linealidades</h2>
-<section id="estructura-2" class="level3" data-number="4.3.1">
-<h3 data-number="4.3.1" class="anchored" data-anchor-id="estructura-2"><span class="header-section-number">4.3.1</span> Estructura</h3>
-<p><span class="math display">\[
-\begin{aligned}
-\displaystyle \frac{dG}{dt} &amp;= -p_1 G(t) - f(X(t)) G(t) + D(t) \\
-\displaystyle \frac{dX}{dt} &amp;= -p_2 X(t) + p_3 \sigma(I(t - \tau_1)) \\
-\displaystyle \frac{dI}{dt} &amp;= -p_4 I(t) + p_5 \varphi(G(t - \tau_2))
-\end{aligned}
-\]</span></p>
-<p>donde:</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 9%">
-<col style="width: 53%">
-<col style="width: 36%">
-</colgroup>
-<thead>
-<tr class="header">
-<th></th>
-<th>Interpretación</th>
-<th>Unidades</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(G(t)\)</span></td>
-<td>Glucosa en plasma</td>
-<td>mg/dL</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(I(t)\)</span></td>
-<td>Insulina en plasma</td>
-<td>µU/mL</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(X(t)\)</span></td>
-<td>Acción insulínica</td>
-<td>min⁻¹</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(D(t)\)</span></td>
-<td>Entrada exógena de glucosa</td>
-<td>mg/dL·min⁻¹</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\tau_1, \tau_2\)</span></td>
-<td>Retardos temporales fisiológicos</td>
-<td>minutos</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(p_1\)</span></td>
-<td>Tasa de eliminación basal de glucosa</td>
-<td>min⁻¹</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(p_2\)</span></td>
-<td>Decaimiento de la acción insulínica</td>
-<td>min⁻¹</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(p_3\)</span></td>
-<td>Ganancia de respuesta de <span class="math inline">\(X\)</span> a <span class="math inline">\(\sigma(I)\)</span></td>
-<td>min⁻²</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(p_4\)</span></td>
-<td>Tasa de eliminación de insulina</td>
-<td>min⁻¹</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(p_5\)</span></td>
-<td>Producción de insulina inducida por glucosa</td>
-<td>µU·mL⁻¹·min⁻¹</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(K, M\)</span></td>
-<td>Constantes de saturación para funciones sigmoides</td>
-<td>µU/mL (K), mg/dL (M)</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="características-2" class="level3" data-number="4.3.2">
-<h3 data-number="4.3.2" class="anchored" data-anchor-id="características-2"><span class="header-section-number">4.3.2</span> Características</h3>
-<ul>
-<li>Modelo no lineal con retardos.</li>
-<li>Describe saturación y memoria fisiológica.</li>
-<li>Soluciones requieren análisis funcional y métodos numéricos.</li>
-</ul>
-</section>
-<section id="aplicaciones-2" class="level3" data-number="4.3.3">
-<h3 data-number="4.3.3" class="anchored" data-anchor-id="aplicaciones-2"><span class="header-section-number">4.3.3</span> Aplicaciones</h3>
-<ul>
-<li>Modelado fisiológico detallado.</li>
-<li>Estudio de diabetes tipo 2.</li>
-<li>Diseño de sistemas de control (páncreas artificial).</li>
-</ul>
-</section>
-<section id="intentando-hallar-solución-analítica" class="level3" data-number="4.3.4">
-<h3 data-number="4.3.4" class="anchored" data-anchor-id="intentando-hallar-solución-analítica"><span class="header-section-number">4.3.4</span> Intentando hallar solución analítica</h3>
-<p>Se supone que el sistema alcanza un equilibrio <span class="math inline">\((G^*, X^*, I^*)\)</span> donde:</p>
-<p><span class="math display">\[
-\frac{dG}{dt} = \frac{dX}{dt} = \frac{dI}{dt} = 0
-\]</span></p>
-<p>Suponemos también que <span class="math inline">\(D(t) = D^*\)</span> es constante. Luego, definimos nuevas variables como desviaciones respecto al equilibrio:</p>
-<p><span class="math display">\[
-\begin{aligned}
-g(t) &amp;= G(t) - G^* \\
-x(t) &amp;= X(t) - X^* \\
-i(t) &amp;= I(t) - I^*
-\end{aligned}
-\]</span></p>
-<p>Después, aproximamos las funciones no lineales por su expansión lineal de Taylor en el punto de equilibrio:</p>
-<p><span class="math display">\[
-\begin{aligned}
-f(X(t)) &amp;\approx f(X^*) + f'(X^*) x(t) \\
-\sigma(I(t - \tau_1)) &amp;\approx \sigma(I^*) + \sigma'(I^*) i(t - \tau_1) \\
-\varphi(G(t - \tau_2)) &amp;\approx \varphi(G^*) + \varphi'(G^*) g(t - \tau_2)
-\end{aligned}
-\]</span></p>
-<p>Simplificamos, nuestras ecuaciones, así para la ecuación de la glucosa se tiene que: <span class="math display">\[
-\begin{aligned}
-\frac{dG}{dt} &amp;= -p_1 G(t) - f(X(t)) G(t) + D^* \\
-&amp;= -p_1(G^* + g(t)) - [f^* + f'_X x(t)](G^* + g(t)) + D^*
-\end{aligned}
-\]</span></p>
-<p>Desarrollamos y descartamos términos constantes (que se anulan en equilibrio):</p>
-<p><span class="math display">\[
-\frac{dg}{dt} = - (p_1 + f^*) g(t) - f'_X G^* x(t)
-\]</span></p>
-<p>Ahora para la acción remota de la insulina: <span class="math display">\[
-\begin{aligned}
-\frac{dX}{dt} &amp;= -p_2 X(t) + p_3 \sigma(I(t - \tau_1)) \\
-\Rightarrow \frac{dx}{dt} &amp;= -p_2 x(t) + p_3 \sigma'_I i(t - \tau_1)
-\end{aligned}
-\]</span></p>
-<p>Y finalmente para la ecuación de la insulina plasmática (en la sangre): <span class="math display">\[
-\begin{aligned}
-\frac{dI}{dt} &amp;= -p_4 I(t) + p_5 \varphi(G(t - \tau_2)) \\
-\Rightarrow \frac{di}{dt} &amp;= -p_4 i(t) + p_5 \varphi'_G g(t - \tau_2)
-\end{aligned}
-\]</span></p>
-<p>De este modo el sistema linealizado es:</p>
-<p><span class="math display">\[
-\begin{aligned}
-\frac{dg}{dt} &amp;= - (p_1 + f^*) g(t) - f'_X G^* x(t) \\
-\frac{dx}{dt} &amp;= -p_2 x(t) + p_3 \sigma'_I i(t - \tau_1) \\
-\frac{di}{dt} &amp;= -p_4 i(t) + p_5 \varphi'_G g(t - \tau_2)
-\end{aligned}
-\]</span></p>
-<p>Para representarlo matricialmente hacemos <span class="math inline">\(y(t) = \displaystyle \begin{bmatrix} g(t) \\ x(t) \\ i(t) \end{bmatrix}\)</span>, entonces:</p>
-<p><span class="math display">\[
-\frac{d}{dt} y(t) = A_0 y(t) + A_1 y(t - \tau_1) + A_2 y(t - \tau_2)
-\]</span></p>
-<p>Donde:</p>
-<p><span class="math display">\[
-A_0 =
-\begin{bmatrix}
--(p_1 + f^*) &amp; -f'_X G^* &amp; 0 \\
-0 &amp; -p_2 &amp; 0 \\
-0 &amp; 0 &amp; -p_4
-\end{bmatrix}, \quad
-A_1 =
-\begin{bmatrix}
-0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; p_3 \sigma'_I \\
-0 &amp; 0 &amp; 0
-\end{bmatrix}, \quad
-A_2 =
-\begin{bmatrix}
-0 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0 \\
-p_5 \varphi'_G &amp; 0 &amp; 0
-\end{bmatrix}
-\]</span></p>
-<p>Existe una solución formal del tipo:</p>
-<p><span class="math display">\[
-y(t) = e^{\lambda t} v
-\]</span></p>
-<p>Al sustituir esta forma en la ecuación, obtenemos la <strong>ecuación característica trascendental</strong>:</p>
-<p><span class="math display">\[
-\lambda v = A_0 v + A_1 e^{-\lambda \tau_1} v + A_2 e^{-\lambda \tau_2} v
-\]</span></p>
-<p>Lo cual lleva a la condición:</p>
-<p><span class="math display">\[
-\det\left( \lambda I - A_0 - A_1 e^{-\lambda \tau_1} - A_2 e^{-\lambda \tau_2} \right) = 0
-\]</span></p>
-<p>Este determinante define una <strong>función trascendental</strong> en <span class="math inline">\(\lambda\)</span>, difícil de resolver de forma cerrada.</p>
-<section id="dificultades-que-surgen" class="level4" data-number="4.3.4.1">
-<h4 data-number="4.3.4.1" class="anchored" data-anchor-id="dificultades-que-surgen"><span class="header-section-number">4.3.4.1</span> Dificultades que surgen</h4>
-<ul>
-<li>La ecuación característica no es un polinomio (como en sistemas sin retardo), sino una combinación de funciones exponenciales con retardos.</li>
-<li>No se puede encontrar una expresión explícita de <span class="math inline">\(\lambda\)</span> en general.</li>
-<li>Incluso si se determinan los valores de <span class="math inline">\(\lambda\)</span>, se requiere conocer funciones iniciales <span class="math inline">\(y(t)\)</span> para <span class="math inline">\(t \in [-\tau_{\max}, 0]\)</span> para construir la solución completa.</li>
-</ul>
-</section>
-</section>
-</section>
-<section id="glosario-de-unidades-de-medida" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="glosario-de-unidades-de-medida"><span class="header-section-number">4.4</span> Glosario de unidades de medida</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 73%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Unidad</th>
-<th>Significado</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><span class="math inline">\(mg/dL\)</span></td>
-<td>miligramos por decilitro (concentración)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\mu U/mL\)</span></td>
-<td>micro-unidades por mililitro (concentración)</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(min^{-1}\)</span></td>
-<td>por minuto (frecuencia o tasa de cambio)</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(min^{-2}\)</span></td>
-<td>por minuto al cuadrado</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(mg/dL\cdot min^{-1}\)</span></td>
-<td>entrada de glucosa por minuto</td>
-</tr>
-<tr class="even">
-<td><span class="math inline">\(\mu U/mL \cdot min^{-1}\)</span></td>
-<td>entrada de insulina por minuto</td>
-</tr>
-<tr class="odd">
-<td><span class="math inline">\(\mu UmL^{-1}\cdot min^{-1}\)</span></td>
-<td>producción de insulina por concentración y tiempo</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="hola" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="hola"><span class="header-section-number">4.5</span> HOLA</h2>
 
 
 </section>
@@ -1227,11 +765,14 @@ y(t) = e^{\lambda t} v
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./fundamento_fisio.html" class="pagination-link" aria-label="Fundamento fisiológico">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fundamento fisiológico</span></span>
+      <a href="./resumen.html" class="pagination-link" aria-label="Preliminares">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preliminares</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./modelos.html" class="pagination-link" aria-label="Modelos clásicos">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos clásicos</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->

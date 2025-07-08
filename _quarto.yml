@@ -23,7 +23,7 @@ book:
     - resumen.qmd
     - fundamento_fisio.qmd
     - modelos.qmd
-    # - resultados.qmd
+    - aproximacion.qmd
     # - conclusiones.qmd
 
   sidebar:
@@ -63,3 +63,6 @@ format:
     fontsize: 12pt
     geometry: a4paper
     output-file: proyecto_delfin
+execute:
+  enabled: true
+  engine: julia

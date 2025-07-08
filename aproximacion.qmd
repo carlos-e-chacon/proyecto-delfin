@@ -1,0 +1,17 @@
+---
+title: "Aproximación interactiva"
+format: html
+engine: julia
+---
+
+## Gráfica desde archivo externo
+
+```{julia}
+using Pkg
+Pkg.activate("C:/Users/cechr/OneDrive/proyecto-delfin")  # Ruta al entorno donde está Roots
+Pkg.instantiate()  # Asegura que todos los paquetes se instalen
+
+include("Oscilacion de retardos 3D.jl")  # carga la función
+p = generar_grafica()         # genera la figura
+p                             # muestra la figura en Quarto
+```
