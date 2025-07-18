@@ -1,0 +1,9 @@
+---
+title: "Test Julia Quarto"
+format: html
+engine: julia
+---
+
+```{julia}
+1 + 1  # prueba básica
+```

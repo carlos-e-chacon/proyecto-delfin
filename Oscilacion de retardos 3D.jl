@@ -5,8 +5,8 @@ function generar_grafica()
     τ2_vals = 15.0     # gran retardo en producción de insulina
 
     # Rango de retardos
-    τ1_vals = 0.0:1.0:20.0
-    τ2_vals = 0.0:1.0:20.0
+    τ1_vals = 0.0:5.0:20.0
+    τ2_vals = 0.0:5.0:20.0
 
     #Algoritmo detectó parámetros que generan inestabilidad
     p1 = 0.01027805603962313
@@ -83,6 +83,5 @@ function generar_grafica()
         height = 700
     )
 
-    p = plot(trace, layout)
-    return p
+    return plot(trace, layout)
 end

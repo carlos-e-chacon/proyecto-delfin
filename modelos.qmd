@@ -428,5 +428,3 @@ Este determinante define una **función trascendental** en $\lambda$, difícil d
 | $mg/dL\cdot min^{-1}$ | entrada de glucosa por minuto                    |
 | $\mu U/mL \cdot min^{-1}$  | entrada de insulina por minuto                   |
 | $\mu UmL^{-1}\cdot min^{-1}$| producción de insulina por concentración y tiempo|
-
-## HOLA
