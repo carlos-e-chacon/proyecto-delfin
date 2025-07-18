@@ -5,6 +5,9 @@ format:
     toc: true
     toc-depth: 2
     number-sections: true
+  pdf:
+    dpi: 300
+    fig-format: png
 engine: julia
 ---
 
@@ -12,34 +15,22 @@ engine: julia
 
 ::: {.cell}
 ```{julia}
-using LinearAlgebra, Roots, PlotlyJS
-
+using LinearAlgebra
+using Plots
+using Roots
 function generar_grafica()
-    τ1_vals = 10.0     # gran retardo de insulina
-    τ2_vals = 15.0     # gran retardo en producción de insulina
+    # Parámetros
+    τ1_vals = 0.0:2.0:20.0
+    τ2_vals = 0.0:2.0:20.0
 
-    # Rango de retardos
-    τ1_vals = 0.0:5.0:20.0
-    τ2_vals = 0.0:5.0:20.0
-
-    #Algoritmo detectó parámetros que generan inestabilidad
-    p1 = 0.01027805603962313
-    p2 = 0.010200427281483475
-    p3 = 0.027081209428250527
-    p4 = 0.010000921134245718
-    p5 = 0.014363624547753803
-    #τ1_vals = 1.521496870453525
-    #τ2_vals = 2.970903119673876
-
-
-    #Parámetro que tienden a generar inestabilidad (no exactos)
+    # Parámetros del modelo (generan inestabilidad)
     p1 = 0.02     # captación de glucosa
     p2 = 0.03     # degradación de X
-    p3 = 0.05     # MUY baja respuesta a insulina
+    p3 = 0.05     # baja respuesta a insulina
     p4 = 0.2      # alta degradación de insulina
-    p5 = 0.05     # muy baja secreción de insulina
+    p5 = 0.05     # baja secreción de insulina
 
-    # Evaluar Re(λ) dominante para cada par (τ1, τ2)
+    # Función que calcula la parte real de la raíz dominante
     function raiz_dominante(τ1, τ2)
         A0 = [-p1 -1.0 0.0; 0.0 -p2 0.0; 0.0 0.0 -p4]
         A1 = [0.0 0.0 0.0; 0.0 0.0 p3; 0.0 0.0 0.0]
@@ -62,48 +53,134 @@ function generar_grafica()
         end
     end
 
-    # Recolectar datos para 3D
-    x, y, z = Float64[], Float64[], Float64[]
-    for τ2 in τ2_vals, τ1 in τ1_vals
-        push!(x, τ1)
-        push!(y, τ2)
-        push!(z, raiz_dominante(τ1, τ2))
-    end
+    # Recolectar datos para superficie 3D
+    τ1_grid = collect(τ1_vals)
+    τ2_grid = collect(τ2_vals)
+    z_vals = [raiz_dominante(τ1, τ2) for τ2 in τ2_grid, τ1 in τ1_grid]
 
-    push!(x, 1.521496870453525)
-    push!(y, 2.970903119673876)
-    push!(z, raiz_dominante(1.521496870453525, 2.970903119673876))
-
-    # Visualización 3D
-    trace = scatter3d(
-        x = x, y = y, z = z,
-        mode = "markers",
-        marker = attr(
-            size = 5,
-            color = z,
-            colorscale = "RdBu",
-            colorbar = attr(title = "Re(λ)")
-        )
+    # Gráfico de superficie (no interactivo)
+    surface(
+        τ1_grid, τ2_grid, z_vals;
+        xlabel = "τ₁",
+        ylabel = "τ₂",
+        zlabel = "Re(λ)",
+        title = "Superficie de Re(λ) dominante según τ₁ y τ₂",
+        c = :RdBu,
+        legend = false,
+        size = (800, 600)
     )
-
-    layout = Layout(
-        title = "Visualización 3D de Re(λ) dominante según τ₁ y τ₂",
-        scene = attr(
-            xaxis = attr(title = "τ₁"),
-            yaxis = attr(title = "τ₂"),
-            zaxis = attr(title = "Re(λ)")
-        ),
-        width = 800,
-        height = 700
-    )
-    return plot(trace, layout)
 end
-# Genera y muestra la gráfica (sólo se mostrará si el formato es HTML)
+
+# Generar la gráfica
 grafica = generar_grafica()
-grafica  # Forzar visualización
+savefig("grafica.png")  # guarda el gráfico como imagen
 ```
 :::
 
-::: {.content-hidden when-format="pdf"}
-**Nota:** Este gráfico interactivo solo está disponible al compilar en formato HTML.
+![Gráfica de Re(λ)](grafica.png)
+
+
+::: {.cell}
+```{julia}
+# dde_cobelli_debug.jl - Simulación con estimación de retardos
+
+using DifferentialEquations, Plots, Optim, Random, Statistics
+
+# 1. Definición de parámetros fisiológicos (conocidos)
+p1, p2, p3, p4, p5 = 0.02, 0.03, 0.5, 0.1, 0.4
+τ1_true, τ2_true = 10.0, 15.0
+A, τd = 25 * 1000, 30.0
+
+# 2. Funciones auxiliares
+D_func(t) = t < 0 ? 0.0 : (A / τd) * t * exp(-t / τd)  # respuesta de ingesta
+
+# 3. Historia inicial
+G0, X0, I0 = 90.0, 0.0, 10.0
+historia(t, _) = [G0, X0, I0]  # acepta segundo argumento requerido por HistoryFunction
+
+# 4. Paquete de parámetros (con τ1, τ2 conocidos para simular datos)
+params_true = (
+    p1 = p1,
+    p2 = p2,
+    p3 = p3,
+    p4 = p4,
+    p5 = p5,
+    τ1 = τ1_true,
+    τ2 = τ2_true,
+    D = D_func
+)
+
+# 5. Definición del sistema Cobelli
+function cobelli!(du, u, h, p, t)
+    G, X, I = u
+    ε = 1e-8
+
+    G_τ = try h(t - p.τ2 - ε, nothing)[1] catch; G end
+    I_τ = try h(t - p.τ1 - ε, nothing)[3] catch; I end
+
+    f(x) = x / (1 + x)
+    σ(i) = i / (1 + i)
+    φ(g) = g / (1 + g / 100)
+
+    D_val = try p.D(t) catch; 0.0 end
+
+    du[1] = -p.p1 * G - f(X) * G + D_val
+    du[2] = -p.p2 * X + p.p3 * σ(I_τ)
+    du[3] = -p.p4 * I + p.p5 * φ(G_τ)
+end
+
+# 6. Simular datos reales sintéticos
+tspan = (0.0, 300.0)
+lags = [τ1_true, τ2_true]
+prob = DDEProblem(cobelli!, historia, tspan, params_true; constant_lags = lags)
+sol = solve(prob, MethodOfSteps(Tsit5()), saveat=1.0)
+
+# 7. Datos simulados con ruido realista
+Random.seed!(123)
+σG, σI = 5.0, 2.0  # desviación típica del error experimental
+G_obs = sol[1, :] .+ randn(length(sol.t)) .* σG
+I_obs = sol[3, :] .+ randn(length(sol.t)) .* σI
+
+# 8. Función de pérdida: error cuadrático entre datos simulados y predichos
+function loss(τ)
+    τ1, τ2 = τ
+    if τ1 <= 0 || τ2 <= 0
+        return Inf
+    end
+    p_est = merge(params_true, (τ1 = τ1, τ2 = τ2))
+    try
+        prob_est = remake(prob; p=p_est, constant_lags=[τ1, τ2])
+        sol_est = solve(prob_est, MethodOfSteps(Tsit5()), saveat=1.0, sensealg=InterpolatingAdjoint())
+        G_pred = sol_est[1, :]
+        I_pred = sol_est[3, :]
+        return mean((G_obs .- G_pred).^2 .+ (I_obs .- I_pred).^2)
+    catch
+        return Inf
+    end
+end
+
+# 9. Estimación de retardos con Optim
+τ0 = [5.0, 5.0]  # inicial
+result = optimize(
+    loss, [10.0, 15.0], NelderMead(),
+    Optim.Options(; iterations = 100)
+)
+τ_est = Optim.minimizer(result)
+println("\nEstimación de retardos:")
+println("τ1 estimado = $(round(τ_est[1], digits=2)) (real: $τ1_true)")
+println("τ2 estimado = $(round(τ_est[2], digits=2)) (real: $τ2_true)")
+
+# 10. Visualización final
+plot(sol.t, G_obs, label="Glucosa observada", lw=2)
+plot!(sol.t, I_obs, label="Insulina observada", lw=2)
+plot!(sol, idxs=1, label="Glucosa verdadera", lw=2, ls=:dash)
+plot!(sol, idxs=3, label="Insulina verdadera", lw=2, ls=:dash)
+plot!(
+    xlabel="Tiempo (min)", ylabel="Concentración", 
+    title="Simulación y estimación de retardos", legend=:topright
+)
+# Guardar la figura como PNG, PDF, etc.
+savefig("estimacion_retardos.png")  
+```
 :::
+![Estimaciones óptimas del retardo](estimacion_retardos.png)

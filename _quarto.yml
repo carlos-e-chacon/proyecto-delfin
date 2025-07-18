@@ -61,6 +61,8 @@ format:
     fontsize: 12pt
     geometry: a4paper
     output-file: proyecto_delfin
+    dpi: 300
+    fig-format: png
 execute:
   enabled: true
   engine: julia

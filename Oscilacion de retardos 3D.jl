@@ -85,3 +85,5 @@ function generar_grafica()
 
     return plot(trace, layout)
 end
+grafica = generar_grafica()
+grafica

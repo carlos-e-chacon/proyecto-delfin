@@ -77,7 +77,10 @@ end
 
 # 9. Estimación de retardos con Optim
 τ0 = [5.0, 5.0]  # inicial
-result = optimize(loss, τ0, NelderMead(); iterations=100)
+result = optimize(
+    loss, [10.0, 15.0], NelderMead(),
+    Optim.Options(; iterations = 100)
+)
 τ_est = Optim.minimizer(result)
 println("\nEstimación de retardos:")
 println("τ1 estimado = $(round(τ_est[1], digits=2)) (real: $τ1_true)")
@@ -86,6 +89,11 @@ println("τ2 estimado = $(round(τ_est[2], digits=2)) (real: $τ2_true)")
 # 10. Visualización final
 plot(sol.t, G_obs, label="Glucosa observada", lw=2)
 plot!(sol.t, I_obs, label="Insulina observada", lw=2)
-plot!(sol, vars=(1,), label="Glucosa verdadera", lw=2, ls=:dash)
-plot!(sol, vars=(3,), label="Insulina verdadera", lw=2, ls=:dash)
-plot!(xlabel="Tiempo (min)", ylabel="Concentración", title="Simulación y estimación de retardos", legend=:topright)
+plot!(sol, idxs=1, label="Glucosa verdadera", lw=2, ls=:dash)
+plot!(sol, idxs=3, label="Insulina verdadera", lw=2, ls=:dash)
+plot!(
+    xlabel="Tiempo (min)", ylabel="Concentración", 
+    title="Simulación y estimación de retardos", legend=:topright
+)
+# Guardar la figura como PNG, PDF, etc.
+savefig("estimacion_retardos.png")  
