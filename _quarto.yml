@@ -1,22 +1,14 @@
 lang: es
+bibliography: bibliografia.bib
+csl: apa.csl
 
 project:
   type: book
   output-dir: docs
 
 book:
-  title: "Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con retardo"
+  title: "Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con Retardo"
   favicon: figuras/logo-DELFIN.png
-  author:
-    - name: Carlos Eduardo Chacón Rodríguez
-      email: carlos.chacon78@unach.mx
-      corresponding: true
-    - name: Yofre Hernán García Gómez
-      degrees: PhD
-      email: yofre.garcia@unach.mx
-      roles: [Revisor]
-      corresponding: true
-  date: "junio 2025"
   cover-image: figuras/logo-DELFIN.png
   chapters:
     - index.qmd
@@ -24,7 +16,8 @@ book:
     - fundamento_fisio.qmd
     - modelos.qmd
     - aproximacion.qmd
-    # - conclusiones.qmd
+    - conclusiones.qmd
+    - bibliografia.qmd
 
   sidebar:
     logo: figuras/logo-DELFIN.png
@@ -52,17 +45,29 @@ format:
     link-external-newwindow: true
     css: styles.css
   
-  pdf:
+  pdf:  
     documentclass: book
     include-in-header: latex/preamble.tex
+    include-before-body: latex/portada.tex
+    include-after-body: latex/hoja_final.tex
+    titlepage: false
     toc: true
-    number-sections: true
+    number-sections: false
     mainfont: Latin Modern Roman
     fontsize: 12pt
     geometry: a4paper
     output-file: proyecto_delfin
     dpi: 300
     fig-format: png
+    link-citations: true       # ← Activa enlaces en citas
+    urlcolor: blue 
+
 execute:
   enabled: true
   engine: julia
+  echo: true       # Muestra el código fuente
+  results: show    # Muestra los resultados formateados
+  output: true     # Muestra la salida estándar
+  warning: false   # Oculta advertencias (como DeprecationWarnings)
+  message: false   # Oculta mensajes de carga de paquetes, etc.
+  eval: true       # Asegura que el bloque se ejecute

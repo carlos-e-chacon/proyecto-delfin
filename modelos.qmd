@@ -24,13 +24,13 @@ donde:
 
 |         | Interpretación                         | Unidades                     |
 |---------|----------------------------------------|------------------------------|
-| $G(t)$  | Glucosa en sangre                     | mg/dL                        |
-| $I(t)$  | Insulina en plasma                    | µU/mL                        |
-| $u(t)$  | Aporte externo de glucosa             | mg/dL·min⁻¹                  |
-| $a$     | Tasa de eliminación basal de glucosa   | min⁻¹                        |
-| $b$     | Efecto de la insulina sobre la glucosa | min⁻¹·(µU/mL)⁻¹              |
-| $c$     | Tasa de eliminación de insulina        | min⁻¹                        |
-| $d$     | Producción de insulina por glucosa     | µU·mL⁻¹·min⁻¹·(mg/dL)⁻¹      |
+| $G(t)$  | Glucosa en sangre                     |$mg/dL$                        |
+| $I(t)$  | Insulina en plasma                    |$\mu U/mL$                        |
+| $u(t)$  | Aporte externo de glucosa             | $mg/dL\cdot min^{-1}$                  |
+| $a$     | Tasa de eliminación basal de glucosa   | $min^{-1}$                      |
+| $b$     | Efecto de la insulina sobre la glucosa | $min^{-1}\cdot(\mu U/mL)^{-1}$              |
+| $c$     | Tasa de eliminación de insulina        | $min^{-1}$                       |
+| $d$     | Producción de insulina por glucosa     | $\mu U\cdot mL^{-1}\cdot min^{-1}\cdot(mg/dL)^{-1}$      |
 
 ### Características
 
@@ -49,13 +49,13 @@ Consideremos los siguientes parámetros y condiciones iniciales:
 
 | Parámetro | Valor              | Unidad                  |
 | --------- | ------------------ | ----------------------- |
-| $a$     | 0.1                | min⁻¹                   |
-| $b$     | 0.02               | min⁻¹·(µU/mL)⁻¹         |
-| $c$     | 0.3                | min⁻¹                   |
-| $d$     | 0.5                | µU·mL⁻¹·min⁻¹·(mg/dL)⁻¹ |
-| $G_0$  | 90                 | mg/dL                   |
-| $I_0$  | 10                 | µU/mL                   |
-| $u(t)$  | $10 e^{-0.05 t}$ | mg/dL·min⁻¹             |
+| $a$     | 0.1                | $min^{-1}$                   |
+| $b$     | 0.02               | $min^{-1}\cdot(µU/mL)^{-1}$        |
+| $c$     | 0.3                | $min^{-1}$                   |
+| $d$     | 0.5                | $\mu U\cdot mL^{-1}\cdot min^{-1}\cdot(mg/dL)^{-1}$ |
+| $G_0$  | 90                 | $mg/dL$                   |
+| $I_0$  | 10                 | $\mu U/mL$                   |
+| $u(t)$  | $10 e^{-0.05 t}$ | $mg/dL\cdot min^{-1}$             |
 
 Llamemos:
 
@@ -75,7 +75,7 @@ $$
 \mathcal{L}\{10 e^{-0.05t}\} = \frac{10}{s + 0.05}
 $$
 
-Aplicando la transformada de Laplace al sistema:
+Aplicando la transformada de Laplace al sistema [@BellmanCooke1963]:
 
 $$
 s\hat{G}(s) - G_0 = -a \hat{G}(s) - b \hat{I}(s) + \frac{10}{s + 0.05}
@@ -158,17 +158,17 @@ donde:
 
 |         | Interpretación                                      | Unidades                         |
 |---------|-----------------------------------------------------|----------------------------------|
-| $G(t)$  | Glucosa en plasma                                  | mg/dL                            |
-| $X(t)$  | Acción efectiva de la insulina                     | min⁻¹                            |
-| $I(t)$  | Insulina en plasma                                 | µU/mL                            |
-| $G_b$   | Glucosa basal                                       | mg/dL                            |
-| $I_b$   | Insulina basal                                      | µU/mL                            |
-| $S_G$   | Tasa de eliminación basal de glucosa                | min⁻¹                            |
-| $p_2$   | Tasa de desaparición de la acción insulínica        | min⁻¹                            |
-| $p_3$   | Sensibilidad de acción insulínica a insulina        | min⁻²·(µU/mL)⁻¹                  |
-| $n$     | Tasa de eliminación de insulina                     | min⁻¹                            |
-| $u(t)$  | Entrada de glucosa                                  | mg/dL·min⁻¹                      |
-| $r(t)$  | Entrada de insulina (endógena o exógena)            | µU/mL·min⁻¹                      |
+| $G(t)$  | Glucosa en plasma                                  | $mg/dL$                            |
+| $X(t)$  | Acción efectiva de la insulina                     | $min^{-1}$                           |
+| $I(t)$  | Insulina en plasma                                 | $\mu U/mL$                            |
+| $G_b$   | Glucosa basal                                       |$ mg/dL$                            |
+| $I_b$   | Insulina basal                                      | $\mu U/mL$                            |
+| $S_G$   | Tasa de eliminación basal de glucosa                | $min^{-1}$                      |
+| $p_2$   | Tasa de desaparición de la acción insulínica        | $min^{-1}$                            |
+| $p_3$   | Sensibilidad de acción insulínica a insulina        | $min^{-2}\cdot(\mu U/mL)^{-1}$                  |
+| $n$     | Tasa de eliminación de insulina                     | $min^{-1}$                            |
+| $u(t)$  | Entrada de glucosa                                  | $mg/dL\cdot min^{-1} $                     |
+| $r(t)$  | Entrada de insulina (endógena o exógena)            | $\mu U/mL\cdot min^{-1}$           |
 
 
 ### Características
@@ -187,17 +187,21 @@ donde:
 
 | Parámetro | Valor   | Unidad          |
 | --------- | ------- | --------------- |
-| $p_1$  | 0.03    | min⁻¹           |
-| $p_2$  | 0.025   | min⁻¹           |
-| $p_3$  | 0.00013 | min⁻²·(µU/mL)⁻¹ |
-| $G_b$  | 90      | mg/dL           |
-| $I_b$  | 15      | µU/mL           |
+| $p_1$  | 0.03    | $min^{-1}$          |
+| $p_2$  | 0.025   | $min^{-1}$           |
+| $p_3$  | 0.00013 | $min^{-2}\cdot(\mu U/mL)^{-1}$ |
+| $G_b$  | 90      | $mg/dL$           |
+| $I_b$  | 15      | $\mu U/mL$           |
 
 Condiciones iniciales:
-$$G(0) = 110$$
-$$X(0) = 0$$
+$$ 
+G(0) = 110 
+$$
+$$ 
+X(0) = 0 
+$$
 
-Supongamos que la insulina es constante: $I(t) = I\_b$ (sin estímulo externo).
+Supongamos que la insulina es constante: $I(t) = I_b$ (sin estímulo externo).
 
 $$
 \frac{dG}{dt} = - (X(t) + 0.03) G(t) + 0.03 \cdot 90
@@ -269,22 +273,21 @@ donde:
 
 |         | Interpretación                                    | Unidades                          |
 |---------|---------------------------------------------------|-----------------------------------|
-| $G(t)$  | Glucosa en plasma                                | mg/dL                             |
-| $I(t)$  | Insulina en plasma                               | µU/mL                             |
-| $X(t)$  | Acción insulínica                                | min⁻¹                             |
-| $D(t)$  | Entrada exógena de glucosa                       | mg/dL·min⁻¹                       |
+| $G(t)$  | Glucosa en plasma                                |$ mg/dL $                            |
+| $I(t)$  | Insulina en plasma                               | $\mu U/mL$                             |
+| $X(t)$  | Acción insulínica         | $min^{-1}$          |
+| $D(t)$  | Entrada exógena de glucosa                       | $mg/dL\cdot min^{-1}$                       |
 | $\tau_1, \tau_2$ | Retardos temporales fisiológicos        | minutos                           |
-| $p_1$   | Tasa de eliminación basal de glucosa              | min⁻¹                             |
-| $p_2$   | Decaimiento de la acción insulínica               | min⁻¹                             |
-| $p_3$   | Ganancia de respuesta de $X$ a $\sigma(I)$        | min⁻²                             |
-| $p_4$   | Tasa de eliminación de insulina                   | min⁻¹                             |
-| $p_5$   | Producción de insulina inducida por glucosa       | µU·mL⁻¹·min⁻¹                     |
-| $K, M$  | Constantes de saturación para funciones sigmoides | µU/mL (K), mg/dL (M)              |
+| $p_1$   | Tasa de eliminación basal de glucosa              |$ min^{-1}$                             |
+| $p_2$   | Decaimiento de la acción insulínica               | $min^{-1}$                             |
+| $p_3$   | Ganancia de respuesta de $X$ a $\sigma(I)$        | $min^{-1}$            |
+| $p_4$   | Tasa de eliminación de insulina              | $min^{-1}$                          |
+| $p_5$   | Producción de insulina inducida por glucosa       | $\mu U\cdot mL^{-1}\cdot min^{-1}$                     |
+| $K, M$  | Constantes de saturación para funciones sigmoides | $\mu U/mL\, (K),\, mg/dL\, (M)$              |
 
 ### Características
 
-- Modelo no lineal con retardos.
-- Describe saturación y memoria fisiológica.
+- Modelo no lineal con retardos [@cobelli1982integrated; @Diekmann1995] permite describir saturación y memoria fisiológica.
 - Soluciones requieren análisis funcional y métodos numéricos.
 
 ### Aplicaciones
@@ -412,7 +415,7 @@ Este determinante define una **función trascendental** en $\lambda$, difícil d
 #### Dificultades que surgen
 
 - La ecuación característica no es un polinomio (como en sistemas sin retardo), sino una combinación de funciones exponenciales con retardos.
-- No se puede encontrar una expresión explícita de $\lambda$ en general.
+- No se puede encontrar una expresión explícita de $\lambda$ en general [@Banks2009InverseChapter].
 - Incluso si se determinan los valores de $\lambda$, se requiere conocer funciones iniciales $y(t)$ para $t \in [-\tau_{\max}, 0]$ para construir la solución completa.
 
 
@@ -427,4 +430,4 @@ Este determinante define una **función trascendental** en $\lambda$, difícil d
 | $min^{-2}$        | por minuto al cuadrado                           |
 | $mg/dL\cdot min^{-1}$ | entrada de glucosa por minuto                    |
 | $\mu U/mL \cdot min^{-1}$  | entrada de insulina por minuto                   |
-| $\mu UmL^{-1}\cdot min^{-1}$| producción de insulina por concentración y tiempo|
+| $\mu U \cdot mL^{-1}\cdot min^{-1}$| producción de insulina por concentración y tiempo|

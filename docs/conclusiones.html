@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Fundamento fisiológico – Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con Retardo</title>
+<title>6&nbsp; Conclusiones – Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con Retardo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,8 +29,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./modelos.html" rel="next">
-<link href="./resumen.html" rel="prev">
+<link href="./bibliografia.html" rel="next">
+<link href="./aproximacion.html" rel="prev">
 <link href="./figuras/logo-DELFIN.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -133,7 +113,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./fundamento_fisio.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fundamento fisiológico</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./conclusiones.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusiones</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
@@ -178,7 +158,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./fundamento_fisio.html" class="sidebar-item-text sidebar-link active">
+  <a href="./fundamento_fisio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fundamento fisiológico</span></span></a>
   </div>
 </li>
@@ -196,7 +176,7 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./conclusiones.html" class="sidebar-item-text sidebar-link">
+  <a href="./conclusiones.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusiones</span></span></a>
   </div>
 </li>
@@ -211,24 +191,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul class="collapse">
-  <li><a href="#generalidades" id="toc-generalidades" class="nav-link active" data-scroll-target="#generalidades"><span class="header-section-number">3.1</span> Generalidades</a></li>
-  <li><a href="#papel-del-hígado" id="toc-papel-del-hígado" class="nav-link" data-scroll-target="#papel-del-hígado"><span class="header-section-number">3.2</span> Papel del hígado</a></li>
-  <li><a href="#papel-del-páncreas" id="toc-papel-del-páncreas" class="nav-link" data-scroll-target="#papel-del-páncreas"><span class="header-section-number">3.3</span> Papel del páncreas</a></li>
-  <li><a href="#papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa" id="toc-papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa" class="nav-link" data-scroll-target="#papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa"><span class="header-section-number">3.4</span> Papel de distintos órganos en el metabolismo de la glucosa</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Fundamento fisiológico</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusiones</span></h1>
 </div>
 
 
@@ -245,168 +216,14 @@ window.Quarto = {
 </header>
 
 
-<p>Pensamos en las interacciones entre glucosa e insulina como si fueran <strong>reacciones químicas</strong>, lo cual facilita su representación y modelado mediante ecuaciones diferenciales <span class="citation" data-cites="BellmanCooke1963 Diekmann1995">(<a href="bibliografia.html#ref-BellmanCooke1963" role="doc-biblioref">Bellman &amp; Cooke, 1963</a>; <a href="bibliografia.html#ref-Diekmann1995" role="doc-biblioref">Odo Diekmann &amp; Smith, 1995</a>)</span>.</p>
-<section id="generalidades" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="generalidades"><span class="header-section-number">3.1</span> Generalidades</h2>
-<p>Las células realizan dos tipos fundamentales de reacciones químicas:</p>
-<ul>
-<li><strong>Síntesis (anabolismo):</strong> Construcción de moléculas complejas a partir de simples, usando energía.</li>
-<li><strong>Degradación (catabolismo):</strong> Descomposición de moléculas complejas para liberar energía.</li>
-</ul>
-<p>En el contexto de la glucosa <span class="citation" data-cites="DallaMan2007">(<a href="bibliografia.html#ref-DallaMan2007" role="doc-biblioref">Dalla Man et&nbsp;al., 2007</a>)</span>, estos procesos permiten mantener la <strong>homeostasis glucémica</strong>.</p>
-</section>
-<section id="papel-del-hígado" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="papel-del-hígado"><span class="header-section-number">3.2</span> Papel del hígado</h2>
-<p>El <strong>hígado</strong> actúa como regulador clave de la glucemia, alternando entre almacenamiento y liberación de glucosa.</p>
-<section id="síntesis-en-el-hígado" class="level3" data-number="3.2.1">
-<h3 data-number="3.2.1" class="anchored" data-anchor-id="síntesis-en-el-hígado"><span class="header-section-number">3.2.1</span> Síntesis en el hígado</h3>
-<ul>
-<li><strong>Glucogénesis</strong> (formación de glucógeno):</li>
-</ul>
-<p><span class="math display">\[
-\text{Glucosa} \xrightarrow{\text{glucógeno sintasa}} \text{Glucógeno}
-\]</span></p>
-<ul>
-<li><strong>Gluconeogénesis</strong> (formación de glucosa a partir de compuestos no glucídicos):</li>
-</ul>
-<p><span class="math display">\[
-\text{Piruvato / Lactato / Alanina} \rightarrow \text{Glucosa}
-\]</span></p>
-</section>
-<section id="degradación-en-el-hígado" class="level3" data-number="3.2.2">
-<h3 data-number="3.2.2" class="anchored" data-anchor-id="degradación-en-el-hígado"><span class="header-section-number">3.2.2</span> Degradación en el hígado</h3>
-<ul>
-<li><strong>Glucogenólisis</strong> (degradación de glucógeno para liberar glucosa):</li>
-</ul>
-<p><span class="math display">\[
-\text{Glucógeno} \xrightarrow{\text{glucógeno fosforilasa}} \text{Glucosa}
-\]</span></p>
-</section>
-</section>
-<section id="papel-del-páncreas" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="papel-del-páncreas"><span class="header-section-number">3.3</span> Papel del páncreas</h2>
-<p>El <strong>páncreas endocrino</strong> regula la glucosa mediante la producción de hormonas, pero no la metaboliza directamente.</p>
-<section id="síntesis-en-el-páncreas" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="síntesis-en-el-páncreas"><span class="header-section-number">3.3.1</span> Síntesis en el páncreas</h3>
-<ul>
-<li><strong>Síntesis de insulina (células β):</strong></li>
-</ul>
-<p><span class="math display">\[
-\text{ADN} \rightarrow \text{ARNm} \rightarrow \text{Preproinsulina} \rightarrow \text{Insulina activa}
-\]</span></p>
-<p>La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de <strong>retardo</strong> <span class="math inline">\(\tau\)</span> debido al tiempo de procesamiento hormonal <span class="citation" data-cites="cobelli1982integrated Herrero2012">(<a href="bibliografia.html#ref-cobelli1982integrated" role="doc-biblioref">Cobelli et&nbsp;al., 1982</a>; <a href="bibliografia.html#ref-Herrero2012" role="doc-biblioref">Herrero et&nbsp;al., 2012</a>)</span>.</p>
-<ul>
-<li><strong>Síntesis de glucagón (células α):</strong></li>
-</ul>
-<p><span class="math display">\[
-\text{Glucagón} \rightarrow \text{Activa glucogenólisis y gluconeogénesis hepática}
-\]</span></p>
-</section>
-<section id="degradación-en-el-páncreas" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="degradación-en-el-páncreas"><span class="header-section-number">3.3.2</span> Degradación en el páncreas</h3>
-<p>El páncreas no degrada glucosa directamente, pero la <strong>insulina</strong> que secreta estimula la degradación de glucosa en otros órganos (glucólisis).</p>
-</section>
-</section>
-<section id="papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="papel-de-distintos-órganos-en-el-metabolismo-de-la-glucosa"><span class="header-section-number">3.4</span> Papel de distintos órganos en el metabolismo de la glucosa</h2>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 19%">
-<col style="width: 19%">
-<col style="width: 29%">
-<col style="width: 31%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Órgano</th>
-<th>Reacción</th>
-<th>Ruta principal</th>
-<th>Molécula clave producida</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Hígado</td>
-<td>Síntesis</td>
-<td>Glucogénesis</td>
-<td>Glucógeno</td>
-</tr>
-<tr class="even">
-<td>Hígado</td>
-<td>Síntesis</td>
-<td>Gluconeogénesis</td>
-<td>Glucosa</td>
-</tr>
-<tr class="odd">
-<td>Hígado</td>
-<td>Degradación</td>
-<td>Glucogenólisis</td>
-<td>Glucosa</td>
-</tr>
-<tr class="even">
-<td>Páncreas</td>
-<td>Síntesis</td>
-<td>Traducción hormonal</td>
-<td>Insulina / Glucagón</td>
-</tr>
-<tr class="odd">
-<td>Páncreas</td>
-<td>Regulación</td>
-<td>Estímulo a degradación</td>
-<td>(Indirecta vía insulina)</td>
-</tr>
-<tr class="even">
-<td>Músculo</td>
-<td>Síntesis</td>
-<td>Glucogénesis muscular</td>
-<td>Glucógeno</td>
-</tr>
-<tr class="odd">
-<td>Músculo</td>
-<td>Degradación</td>
-<td>Glucólisis</td>
-<td>ATP (energía)</td>
-</tr>
-<tr class="even">
-<td>Riñón</td>
-<td>Síntesis</td>
-<td>Gluconeogénesis renal</td>
-<td>Glucosa</td>
-</tr>
-<tr class="odd">
-<td>Riñón</td>
-<td>Degradación</td>
-<td>Reabsorción y consumo</td>
-<td>Glucosa</td>
-</tr>
-<tr class="even">
-<td>Cerebro</td>
-<td>Degradación</td>
-<td>Glucólisis neuronal</td>
-<td>ATP (uso inmediato de glucosa)</td>
-</tr>
-</tbody>
-</table>
+<p>Los resultados obtenidos muestran que la introducción de retardos en el sistema modifica profundamente su comportamiento dinámico. Para valores bajos de <span class="math inline">\(\tau\)</span>, el sistema tiende a estabilizarse hacia un punto de equilibrio, lo que representa una regulación adecuada de la glucosa en sangre. No obstante, conforme el retardo se incrementa, se identifica una transición a un régimen oscilatorio, en el cual los niveles de glucosa e insulina fluctúan periódicamente, incluso ante condiciones iniciales cercanas al equilibrio.</p>
+<p>Este fenómeno es coherente con lo observado clínicamente en pacientes con diabetes tipo 2 mal controlada, donde pueden presentarse <strong>oscilaciones crónicas en la glucosa</strong> que comprometen seriamente la salud. En el análisis del sistema linealizado se encontró que estas oscilaciones emergen como consecuencia de la aparición de raíces complejas con parte real positiva en la ecuación característica, lo cual indica pérdida de estabilidad. Para ciertos valores de <span class="math inline">\(\tau\)</span>, se observó una bifurcación de Hopf, lo que sugiere que el sistema puede transitar desde un comportamiento estable a uno cíclico mediante cambios suaves en el retardo.</p>
+<p>Desde el punto de vista fisiológico, estos resultados refuerzan la importancia del <strong>tiempo de respuesta del páncreas y los tejidos</strong> como un factor crítico en la estabilidad del metabolismo. Un retardo excesivo, ya sea por disfunción pancreática o resistencia a la insulina, puede conducir a dinámicas peligrosas, incluso si los parámetros metabólicos de base no han cambiado drásticamente.</p>
+<p>En términos de modelado, este trabajo demuestra que las ecuaciones diferenciales con retardo ofrecen una herramienta más potente y realista que los modelos ODEs para capturar fenómenos temporales en el metabolismo. Además, el uso de simulaciones numéricas permite prever el efecto de variaciones en los parámetros fisiológicos y orientar decisiones terapéuticas.</p>
+<p>En resumen, el uso de ecuaciones diferenciales con retardo (DDEs) brinda una visión más detallada de la dinámica entre la glucosa y la insulina, al integrar no solo los niveles de las variables involucradas, sino también los <strong>tiempos</strong> en los que ocurren las respuestas fisiológicas. Esto permite una mejor comprensión del desarrollo de la diabetes tipo 2 y abre la posibilidad de diseñar estrategias terapéuticas más precisas y adaptadas al paciente.</p>
+<p>En conclusión, durante la estancia de investigación en el verano, se adquirieron habilidades teóricas y prácticas en la modelación matemática de sistemas biológicos complejos, como el sistema glucosa-insulina. Esta experiencia permitió explorar nuevas alternativas para el estudio y tratamiento de enfermedades crónicas de alta prevalencia y sin cura definitiva. Con ello, el proyecto se alinea con los Objetivos de Desarrollo Sostenible (ODS) de la ONU hacia el año 2030, contribuyendo específicamente al <strong>ODS 3: Salud y bienestar</strong>, mediante la promoción de soluciones innovadoras basadas en ciencia aplicada.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
-<div id="ref-BellmanCooke1963" class="csl-entry" role="listitem">
-Bellman, R., &amp; Cooke, K. L. (1963). <em>Differential-Difference Equations</em>. Academic Press.
-</div>
-<div id="ref-cobelli1982integrated" class="csl-entry" role="listitem">
-Cobelli, C., Federspil, G., Pacini, G., Salvan, A., &amp; Scandellari, C. (1982). An integrated mathematical model of the dynamics of blood glucose and its hormonal control. <em>Mathematical Biosciences</em>, <em>58</em>(1), 27-60.
-</div>
-<div id="ref-DallaMan2007" class="csl-entry" role="listitem">
-Dalla Man, C., Rizza, R. A., &amp; Cobelli, C. (2007). Meal Simulation Model of the Glucose-Insulin System. <em>IEEE Transactions on Biomedical Engineering</em>, <em>54</em>(10), 1740-1749. <a href="https://doi.org/10.1109/TBME.2007.893506">https://doi.org/10.1109/TBME.2007.893506</a>
-</div>
-<div id="ref-Herrero2012" class="csl-entry" role="listitem">
-Herrero, P., Georgiou, P., Oliver, N., &amp; Johnston, D. (2012). A Bio-Inspired Glucose Controller Based on Pancreatic <span class="math inline">\(\beta\)</span>-Cell Physiology. <em>Journal of Diabetes Science and Technology</em>, <em>6</em>(3), 606-616. <a href="https://doi.org/10.1177/193229681200600316">https://doi.org/10.1177/193229681200600316</a>
-</div>
-<div id="ref-Diekmann1995" class="csl-entry" role="listitem">
-Odo Diekmann, Hans Heijmans, &amp; Smith, H. L. (1995). <em>Delay Equations: Functional-, Complex-, and Nonlinear Analysis</em> (Vol. 110). Springer-Verlag.
-</div>
-</div>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -815,13 +632,13 @@ Odo Diekmann, Hans Heijmans, &amp; Smith, H. L. (1995). <em>Delay Equations: Fun
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./resumen.html" class="pagination-link" aria-label="Preliminares">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Preliminares</span></span>
+      <a href="./aproximacion.html" class="pagination-link" aria-label="Aproximación de Retardos en el Modelo de Cobelli para la Dinámica de la Glucosa">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aproximación de Retardos en el Modelo de Cobelli para la Dinámica de la Glucosa</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./modelos.html" class="pagination-link" aria-label="Modelos clásicos">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modelos clásicos</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./bibliografia.html" class="pagination-link" aria-label="Bibliografía">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bibliografía</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -1,15 +1,14 @@
 ---
-title: "Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con retardo"
+title: "Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con Retardo"
 author:
   - name: Carlos Eduardo Chacón Rodríguez
     email: carlos.chacon78@unach.mx
     corresponding: true
-  - name: Yofre Hernán García Gómez
-    degrees: PhD
+  - name: Dr. Yofre Hernán García Gómez
     email: yofre.garcia@unach.mx
-    roles: investigador
-    corresponding: true
-date: "junio de 2025"
+    roles: Asesor
+    degrees: Asesor
+date: "Junio de 2025"
 format:
   html:
     toc: true
@@ -17,5 +16,10 @@ format:
 ---
 
 # Introducción
+La diabetes mellitus tipo 2 representa uno de los principales retos de salud pública a nivel mundial debido a su alta prevalencia, progresión crónica y múltiples complicaciones asociadas. Esta enfermedad se caracteriza por una alteración en la regulación de la glucosa en sangre, producto de una combinación de resistencia a la insulina en los tejidos periféricos y un deterioro progresivo de la función de las células β del páncreas. La complejidad del sistema endocrino involucrado en el metabolismo de la glucosa hace que el estudio de su dinámica requiera herramientas matemáticas que permitan representar con precisión los procesos fisiológicos implicados.
 
-Este sitio forma parte del proyecto de investigación Delfín 2025. Se presenta un modelo basado en ecuaciones diferenciales con retardo para describir la evolución de la glucosa en sangre en pacientes con diabetes tipo 2.
+En este contexto, los modelos matemáticos han emergido como una herramienta fundamental para describir y predecir la evolución de los niveles de glucosa en el organismo. Entre estos modelos, los sistemas de ecuaciones diferenciales ordinarias han sido ampliamente utilizados. Sin embargo, muchos de los procesos que intervienen en la regulación glucémica, como la secreción de insulina o la absorción intestinal de glucosa, presentan retardos inherentes en el tiempo que no pueden ser capturados adecuadamente con modelos convencionales.
+
+El presente trabajo propone el uso de ecuaciones diferenciales con retardo (DDEs, por sus siglas en inglés) para modelar de manera más realista la dinámica de la glucosa en pacientes con DM2. Estos modelos permiten incorporar explícitamente los efectos de latencias fisiológicas, lo cual puede mejorar la precisión de las predicciones y la comprensión del sistema. En particular, se exploran aproximaciones del modelo de Cobelli, ampliamente utilizado en la literatura biomédica, adaptándolo para incluir términos con retardo.
+
+Este enfoque no solo contribuye al análisis teórico de la estabilidad y comportamiento de las soluciones del sistema, sino que también sienta las bases para aplicaciones clínicas, como el diseño de estrategias de control glucémico personalizado. Así, el modelado con ecuaciones diferenciales con retardo se presenta como una herramienta poderosa en la intersección entre la matemática aplicada, la fisiología y la medicina.

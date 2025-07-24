@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; Modelos clásicos – Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con retardo</title>
+<title>4&nbsp; Modelos clásicos – Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con Retardo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -131,9 +151,9 @@ window.Quarto = {
       <img src="./figuras/logo-DELFIN.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con retardo</a> 
+      <a href="./">Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con Retardo</a> 
         <div class="sidebar-tools-main">
-    <a href="./Modelado-de-la-Diabetes-Tipo-2-mediante-Ecuaciones-Diferenciales-con-retardo.pdf" title="Descargar PDF" class="quarto-navigation-tool px-1" aria-label="Descargar PDF"><i class="bi bi-file-pdf"></i></a>
+    <a href="./Modelado-de-la-Diabetes-Tipo-2-mediante-Ecuaciones-Diferenciales-con-Retardo.pdf" title="Descargar PDF" class="quarto-navigation-tool px-1" aria-label="Descargar PDF"><i class="bi bi-file-pdf"></i></a>
 </div>
     </div>
       </div>
@@ -147,7 +167,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con retardo</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Modelado de la Diabetes Tipo 2 mediante Ecuaciones Diferenciales con Retardo</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -171,7 +191,19 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./aproximacion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aproximación interactiva</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aproximación de Retardos en el Modelo de Cobelli para la Dinámica de la Glucosa</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./conclusiones.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Conclusiones</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bibliografia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Bibliografía</span></span></a>
   </div>
 </li>
     </ul>
@@ -242,37 +274,37 @@ window.Quarto = {
 <tr class="odd">
 <td><span class="math inline">\(G(t)\)</span></td>
 <td>Glucosa en sangre</td>
-<td>mg/dL</td>
+<td><span class="math inline">\(mg/dL\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(I(t)\)</span></td>
 <td>Insulina en plasma</td>
-<td>µU/mL</td>
+<td><span class="math inline">\(\mu U/mL\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(u(t)\)</span></td>
 <td>Aporte externo de glucosa</td>
-<td>mg/dL·min⁻¹</td>
+<td><span class="math inline">\(mg/dL\cdot min^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(a\)</span></td>
 <td>Tasa de eliminación basal de glucosa</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(b\)</span></td>
 <td>Efecto de la insulina sobre la glucosa</td>
-<td>min⁻¹·(µU/mL)⁻¹</td>
+<td><span class="math inline">\(min^{-1}\cdot(\mu U/mL)^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(c\)</span></td>
 <td>Tasa de eliminación de insulina</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(d\)</span></td>
 <td>Producción de insulina por glucosa</td>
-<td>µU·mL⁻¹·min⁻¹·(mg/dL)⁻¹</td>
+<td><span class="math inline">\(\mu U\cdot mL^{-1}\cdot min^{-1}\cdot(mg/dL)^{-1}\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -297,6 +329,11 @@ window.Quarto = {
 <h3 data-number="4.1.4" class="anchored" data-anchor-id="ejemplo"><span class="header-section-number">4.1.4</span> Ejemplo</h3>
 <p>Consideremos los siguientes parámetros y condiciones iniciales:</p>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 36%">
+<col style="width: 46%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Parámetro</th>
@@ -308,37 +345,37 @@ window.Quarto = {
 <tr class="odd">
 <td><span class="math inline">\(a\)</span></td>
 <td>0.1</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(b\)</span></td>
 <td>0.02</td>
-<td>min⁻¹·(µU/mL)⁻¹</td>
+<td><span class="math inline">\(min^{-1}\cdot(µU/mL)^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(c\)</span></td>
 <td>0.3</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(d\)</span></td>
 <td>0.5</td>
-<td>µU·mL⁻¹·min⁻¹·(mg/dL)⁻¹</td>
+<td><span class="math inline">\(\mu U\cdot mL^{-1}\cdot min^{-1}\cdot(mg/dL)^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(G_0\)</span></td>
 <td>90</td>
-<td>mg/dL</td>
+<td><span class="math inline">\(mg/dL\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(I_0\)</span></td>
 <td>10</td>
-<td>µU/mL</td>
+<td><span class="math inline">\(\mu U/mL\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(u(t)\)</span></td>
 <td><span class="math inline">\(10 e^{-0.05 t}\)</span></td>
-<td>mg/dL·min⁻¹</td>
+<td><span class="math inline">\(mg/dL\cdot min^{-1}\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -354,7 +391,7 @@ window.Quarto = {
 <p><span class="math display">\[
 \mathcal{L}\{10 e^{-0.05t}\} = \frac{10}{s + 0.05}
 \]</span></p>
-<p>Aplicando la transformada de Laplace al sistema:</p>
+<p>Aplicando la transformada de Laplace al sistema <span class="citation" data-cites="BellmanCooke1963">(<a href="bibliografia.html#ref-BellmanCooke1963" role="doc-biblioref">Bellman &amp; Cooke, 1963</a>)</span>:</p>
 <p><span class="math display">\[
 s\hat{G}(s) - G_0 = -a \hat{G}(s) - b \hat{I}(s) + \frac{10}{s + 0.05}
 \]</span></p>
@@ -428,57 +465,57 @@ G(t) = -21.111\, e^{-0.2 t} + 2.133\, t e^{-0.2 t} + 111.111\, e^{-0.05 t}
 <tr class="odd">
 <td><span class="math inline">\(G(t)\)</span></td>
 <td>Glucosa en plasma</td>
-<td>mg/dL</td>
+<td><span class="math inline">\(mg/dL\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(X(t)\)</span></td>
 <td>Acción efectiva de la insulina</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(I(t)\)</span></td>
 <td>Insulina en plasma</td>
-<td>µU/mL</td>
+<td><span class="math inline">\(\mu U/mL\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(G_b\)</span></td>
 <td>Glucosa basal</td>
-<td>mg/dL</td>
+<td>$ mg/dL$</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(I_b\)</span></td>
 <td>Insulina basal</td>
-<td>µU/mL</td>
+<td><span class="math inline">\(\mu U/mL\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(S_G\)</span></td>
 <td>Tasa de eliminación basal de glucosa</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(p_2\)</span></td>
 <td>Tasa de desaparición de la acción insulínica</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(p_3\)</span></td>
 <td>Sensibilidad de acción insulínica a insulina</td>
-<td>min⁻²·(µU/mL)⁻¹</td>
+<td><span class="math inline">\(min^{-2}\cdot(\mu U/mL)^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(n\)</span></td>
 <td>Tasa de eliminación de insulina</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(u(t)\)</span></td>
 <td>Entrada de glucosa</td>
-<td>mg/dL·min⁻¹</td>
+<td>$mg/dLmin^{-1} $</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(r(t)\)</span></td>
 <td>Entrada de insulina (endógena o exógena)</td>
-<td>µU/mL·min⁻¹</td>
+<td><span class="math inline">\(\mu U/mL\cdot min^{-1}\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -513,32 +550,36 @@ G(t) = -21.111\, e^{-0.2 t} + 2.133\, t e^{-0.2 t} + 111.111\, e^{-0.05 t}
 <tr class="odd">
 <td><span class="math inline">\(p_1\)</span></td>
 <td>0.03</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(p_2\)</span></td>
 <td>0.025</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(p_3\)</span></td>
 <td>0.00013</td>
-<td>min⁻²·(µU/mL)⁻¹</td>
+<td><span class="math inline">\(min^{-2}\cdot(\mu U/mL)^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(G_b\)</span></td>
 <td>90</td>
-<td>mg/dL</td>
+<td><span class="math inline">\(mg/dL\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(I_b\)</span></td>
 <td>15</td>
-<td>µU/mL</td>
+<td><span class="math inline">\(\mu U/mL\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>Condiciones iniciales: <span class="math display">\[G(0) = 110\]</span> <span class="math display">\[X(0) = 0\]</span></p>
-<p>Supongamos que la insulina es constante: <span class="math inline">\(I(t) = I\_b\)</span> (sin estímulo externo).</p>
+<p>Condiciones iniciales: <span class="math display">\[
+G(0) = 110
+\]</span> <span class="math display">\[
+X(0) = 0
+\]</span></p>
+<p>Supongamos que la insulina es constante: <span class="math inline">\(I(t) = I_b\)</span> (sin estímulo externo).</p>
 <p><span class="math display">\[
 \frac{dG}{dt} = - (X(t) + 0.03) G(t) + 0.03 \cdot 90
 \]</span></p>
@@ -604,22 +645,22 @@ G(t) = 90 + 20 e^{-0.03 t}.
 <tr class="odd">
 <td><span class="math inline">\(G(t)\)</span></td>
 <td>Glucosa en plasma</td>
-<td>mg/dL</td>
+<td>$ mg/dL $</td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(I(t)\)</span></td>
 <td>Insulina en plasma</td>
-<td>µU/mL</td>
+<td><span class="math inline">\(\mu U/mL\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(X(t)\)</span></td>
 <td>Acción insulínica</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(D(t)\)</span></td>
 <td>Entrada exógena de glucosa</td>
-<td>mg/dL·min⁻¹</td>
+<td><span class="math inline">\(mg/dL\cdot min^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(\tau_1, \tau_2\)</span></td>
@@ -629,32 +670,32 @@ G(t) = 90 + 20 e^{-0.03 t}.
 <tr class="even">
 <td><span class="math inline">\(p_1\)</span></td>
 <td>Tasa de eliminación basal de glucosa</td>
-<td>min⁻¹</td>
+<td>$ min^{-1}$</td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(p_2\)</span></td>
 <td>Decaimiento de la acción insulínica</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(p_3\)</span></td>
 <td>Ganancia de respuesta de <span class="math inline">\(X\)</span> a <span class="math inline">\(\sigma(I)\)</span></td>
-<td>min⁻²</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(p_4\)</span></td>
 <td>Tasa de eliminación de insulina</td>
-<td>min⁻¹</td>
+<td><span class="math inline">\(min^{-1}\)</span></td>
 </tr>
 <tr class="even">
 <td><span class="math inline">\(p_5\)</span></td>
 <td>Producción de insulina inducida por glucosa</td>
-<td>µU·mL⁻¹·min⁻¹</td>
+<td><span class="math inline">\(\mu U\cdot mL^{-1}\cdot min^{-1}\)</span></td>
 </tr>
 <tr class="odd">
 <td><span class="math inline">\(K, M\)</span></td>
 <td>Constantes de saturación para funciones sigmoides</td>
-<td>µU/mL (K), mg/dL (M)</td>
+<td><span class="math inline">\(\mu U/mL\, (K),\, mg/dL\, (M)\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -662,8 +703,7 @@ G(t) = 90 + 20 e^{-0.03 t}.
 <section id="características-2" class="level3" data-number="4.3.2">
 <h3 data-number="4.3.2" class="anchored" data-anchor-id="características-2"><span class="header-section-number">4.3.2</span> Características</h3>
 <ul>
-<li>Modelo no lineal con retardos.</li>
-<li>Describe saturación y memoria fisiológica.</li>
+<li>Modelo no lineal con retardos <span class="citation" data-cites="cobelli1982integrated Diekmann1995">(<a href="bibliografia.html#ref-cobelli1982integrated" role="doc-biblioref">Cobelli et&nbsp;al., 1982</a>; <a href="bibliografia.html#ref-Diekmann1995" role="doc-biblioref">Odo Diekmann &amp; Smith, 1995</a>)</span> permite describir saturación y memoria fisiológica.</li>
 <li>Soluciones requieren análisis funcional y métodos numéricos.</li>
 </ul>
 </section>
@@ -769,7 +809,7 @@ y(t) = e^{\lambda t} v
 <h4 data-number="4.3.4.1" class="anchored" data-anchor-id="dificultades-que-surgen"><span class="header-section-number">4.3.4.1</span> Dificultades que surgen</h4>
 <ul>
 <li>La ecuación característica no es un polinomio (como en sistemas sin retardo), sino una combinación de funciones exponenciales con retardos.</li>
-<li>No se puede encontrar una expresión explícita de <span class="math inline">\(\lambda\)</span> en general.</li>
+<li>No se puede encontrar una expresión explícita de <span class="math inline">\(\lambda\)</span> en general <span class="citation" data-cites="Banks2009InverseChapter">(<a href="bibliografia.html#ref-Banks2009InverseChapter" role="doc-biblioref">Banks et&nbsp;al., 2009</a>)</span>.</li>
 <li>Incluso si se determinan los valores de <span class="math inline">\(\lambda\)</span>, se requiere conocer funciones iniciales <span class="math inline">\(y(t)\)</span> para <span class="math inline">\(t \in [-\tau_{\max}, 0]\)</span> para construir la solución completa.</li>
 </ul>
 </section>
@@ -814,13 +854,27 @@ y(t) = e^{\lambda t} v
 <td>entrada de insulina por minuto</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(\mu UmL^{-1}\cdot min^{-1}\)</span></td>
+<td><span class="math inline">\(\mu U \cdot mL^{-1}\cdot min^{-1}\)</span></td>
 <td>producción de insulina por concentración y tiempo</td>
 </tr>
 </tbody>
 </table>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-Banks2009InverseChapter" class="csl-entry" role="listitem">
+Banks, H. T., Davidian, M., Samuels, J. R., &amp; Sutton, K. L. (2009). An Inverse Problem Statistical Methodology Summary. En G. Chowell, J. M. Hyman, L. M. A. Bettencourt, &amp; C. Castillo‐Chavez (Eds.), <em>Mathematical and Statistical Estimation Approaches in Epidemiology</em> (pp. 249-302). Springer, Dordrecht. <a href="https://doi.org/10.1007/978-90-481-2313-1_11">https://doi.org/10.1007/978-90-481-2313-1_11</a>
+</div>
+<div id="ref-BellmanCooke1963" class="csl-entry" role="listitem">
+Bellman, R., &amp; Cooke, K. L. (1963). <em>Differential-Difference Equations</em>. Academic Press.
+</div>
+<div id="ref-cobelli1982integrated" class="csl-entry" role="listitem">
+Cobelli, C., Federspil, G., Pacini, G., Salvan, A., &amp; Scandellari, C. (1982). An integrated mathematical model of the dynamics of blood glucose and its hormonal control. <em>Mathematical Biosciences</em>, <em>58</em>(1), 27-60.
+</div>
+<div id="ref-Diekmann1995" class="csl-entry" role="listitem">
+Odo Diekmann, Hans Heijmans, &amp; Smith, H. L. (1995). <em>Delay Equations: Functional-, Complex-, and Nonlinear Analysis</em> (Vol. 110). Springer-Verlag.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
@@ -1235,8 +1289,8 @@ y(t) = e^{\lambda t} v
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./aproximacion.html" class="pagination-link" aria-label="Aproximación interactiva">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aproximación interactiva</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./aproximacion.html" class="pagination-link" aria-label="Aproximación de Retardos en el Modelo de Cobelli para la Dinámica de la Glucosa">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Aproximación de Retardos en el Modelo de Cobelli para la Dinámica de la Glucosa</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

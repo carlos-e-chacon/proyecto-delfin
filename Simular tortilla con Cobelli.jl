@@ -30,41 +30,34 @@ params = (
     D = D_func
 )
 
-# 5. Definición del sistema Cobelli con chequeo de errores
+# Redefinir la dinámica con retardos reales
 function cobelli!(du, u, h, p, t)
     G, X, I = u
-    ε = 1e-8  # Evitar evaluación justo en el borde de t = 0
+    ε = 1e-8
 
-    G_τ = G
-
-    I_τ = I
+    # Retardos: uso del historial
+    G_τ = try h(t - p.τ2 - ε, nothing)[1] catch; G end
+    I_τ = try h(t - p.τ1 - ε, nothing)[3] catch; I end
 
     f(x) = x / (1 + x)
     σ(i) = i / (1 + i)
     φ(g) = g / (1 + g / 100)
 
     D_val = p.D(t)
-    
 
     du[1] = -p.p1 * G - f(X) * G + D_val
     du[2] = -p.p2 * X + p.p3 * σ(I_τ)
     du[3] = -p.p4 * I + p.p5 * φ(G_τ)
 end
 
-# 6. Tiempo y retardos
+# Simulación con mismos parámetros y entrada de Coca-Cola
 lags = [params.τ1, params.τ2]
-tspan = (0.0, 300.0)
-
-# 7. Construcción del problema
-prob = DDEProblem(cobelli!, historia, tspan, params; constant_lags = lags)
-
-# 8. Resolución del problema
+prob = DDEProblem(cobelli!, historia, tspan, params; constant_lags=lags)
 sol = solve(prob, MethodOfSteps(Tsit5()))
 
-# 9. Visualización de tortilla
-#plot(sol, xlabel="Tiempo (min)", ylabel="Concentración", lw=2, label=["Glucosa G(t)" "X(t)" "Insulina I(t)"], legend=:topright)
-
-#Visualización de Coca-Cola 600 ml
-plot(t -> D_func(t)/1000, 0, 60, xlabel="Tiempo (min)", ylabel="D(t)", lw=2, title="Entrada de glucosa por Coca-Cola")
-
-#plot(sol, xlabel="Tiempo (min)", ylabel="Concentración", lw=2, label=["Glucosa G(t)" "X(t)" "Insulina I(t)"], legend=:topright)
+# Graficar los resultados
+plot(sol, xlabel="Tiempo (min)", ylabel="Concentración (mg/dL o mU/L)", lw=2,
+    label=["Glucosa G(t)" "X(t)" "Insulina I(t)"],
+    legend=:topright,
+    title="Respuesta del sistema con retardos (Coca-Cola 600 ml)"
+)

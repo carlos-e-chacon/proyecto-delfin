@@ -1,5 +1,5 @@
 ---
-title: "Aproximación interactiva"
+title: "Aproximación de Retardos en el Modelo de Cobelli para la Dinámica de la Glucosa"
 format:
   html:
     toc: true
@@ -8,109 +8,161 @@ format:
   pdf:
     dpi: 300
     fig-format: png
+    number-sections: true
 engine: julia
+execute:
+  echo: true
+  results: show
+  output: true
+  warning: false
+  message: false
+  eval: true
 ---
 
-## Gráfica desde archivo externo
+## Análisis espectral del modelo con retardos
+Se analiza la estabilidad del modelo de Cobelli en función de los valores de retardo $\tau_1$ y $\tau_2$, mediante la parte real de la raíz dominante $Re(\lambda)$ del polinomio característico.
+Esta gráfica permite visualizar regiones donde el sistema puede volverse inestable debido al efecto del retardo.
 
-::: {.cell}
 ```{julia}
 using LinearAlgebra
 using Plots
 using Roots
-function generar_grafica()
-    # Parámetros
-    τ1_vals = 0.0:2.0:20.0
-    τ2_vals = 0.0:2.0:20.0
 
-    # Parámetros del modelo (generan inestabilidad)
-    p1 = 0.02     # captación de glucosa
-    p2 = 0.03     # degradación de X
-    p3 = 0.05     # baja respuesta a insulina
-    p4 = 0.2      # alta degradación de insulina
-    p5 = 0.05     # baja secreción de insulina
+# --- Parámetros del modelo ---
+p1 = 0.02     # Captación de glucosa
+p2 = 0.03     # Degradación de X
+p3 = 0.05     # Baja respuesta a insulina
+p4 = 0.2      # Alta degradación de insulina
+p5 = 0.05     # Baja secreción de insulina
 
-    # Función que calcula la parte real de la raíz dominante
-    function raiz_dominante(τ1, τ2)
-        A0 = [-p1 -1.0 0.0; 0.0 -p2 0.0; 0.0 0.0 -p4]
-        A1 = [0.0 0.0 0.0; 0.0 0.0 p3; 0.0 0.0 0.0]
-        A2 = [0.0 0.0 0.0; 0.0 0.0 0.0; p5 0.0 0.0]
+# --- Construcción de matrices del modelo linealizado ---
+function construir_matrices(τ1, τ2)
+    A0 = [-p1 -1.0 0.0;
+           0.0 -p2 0.0;
+           0.0  0.0 -p4]
 
-        B0 = A0 + A1 + A2
-        B1 = I + A1 * τ1 + A2 * τ2
-        B2 = (A1 * τ1^2 + A2 * τ2^2) / 2
+    A1 = [0.0 0.0 0.0;
+          0.0 0.0 p3;
+          0.0 0.0 0.0]
 
-        P(λ) = det(-B0 + λ * B1 - λ^2 * B2)
-        h = 1e-6
-        dP(λ) = (P(λ + h) - P(λ - h)) / (2h)
-        λ0 = -0.05 + 0.1im
+    A2 = [0.0 0.0 0.0;
+          0.0 0.0 0.0;
+          p5 0.0 0.0]
 
-        try
-            λ = find_zero((P, dP), λ0, Roots.Newton())
-            return real(λ)
-        catch
-            return NaN
-        end
+    B0 = A0 + A1 + A2
+    B1 = I + A1 * τ1 + A2 * τ2
+    B2 = (A1 * τ1^2 + A2 * τ2^2) / 2
+
+    return B0, B1, B2
+end
+
+# --- Cálculo de la parte real de la raíz dominante ---
+function raiz_dominante(τ1, τ2; λ0 = -0.05 + 0.1im, h = 1e-6)
+    B0, B1, B2 = construir_matrices(τ1, τ2)
+
+    P(λ) = det(-B0 + λ * B1 - λ^2 * B2)
+    dP(λ) = (P(λ + h) - P(λ - h)) / (2h)
+
+    try
+        λ = find_zero((P, dP), λ0, Roots.Newton())
+        return real(λ)
+    catch
+        return NaN
     end
+end
 
-    # Recolectar datos para superficie 3D
+# --- Generación de la superficie Re(λ) ---
+function generar_superficie_λ(τ1_vals, τ2_vals)
     τ1_grid = collect(τ1_vals)
     τ2_grid = collect(τ2_vals)
     z_vals = [raiz_dominante(τ1, τ2) for τ2 in τ2_grid, τ1 in τ1_grid]
+    return τ1_grid, τ2_grid, z_vals
+end
 
-    # Gráfico de superficie (no interactivo)
+# --- Graficar la superficie ---
+function graficar_superficie(τ1_grid, τ2_grid, z_vals)
     surface(
         τ1_grid, τ2_grid, z_vals;
-        xlabel = "τ₁",
-        ylabel = "τ₂",
+        xlabel = "τ_1 (min)",
+        ylabel = "τ_2 (min)",
         zlabel = "Re(λ)",
-        title = "Superficie de Re(λ) dominante según τ₁ y τ₂",
+        title = "Superficie de Re(λ) dominante según retardos τ_1 y τ_2",
         c = :RdBu,
+        camera = (60, 60),
+        colorbar_title = "Re(λ)",
         legend = false,
-        size = (800, 600)
+        size = (900, 600),
+        fontfamily = "Computer Modern"
     )
 end
 
-# Generar la gráfica
-grafica = generar_grafica()
-savefig("grafica.png")  # guarda el gráfico como imagen
+# --- Ejecutar todo ---
+τ1_vals = 0.0:2.0:20.0
+τ2_vals = 0.0:2.0:20.0
+
+τ1_grid, τ2_grid, z_vals = generar_superficie_λ(τ1_vals, τ2_vals)
+plot_λ = graficar_superficie(τ1_grid, τ2_grid, z_vals)
+savefig(plot_λ, "grafica.png")  # Guarda la imagen
+nothing
 ```
-:::
 
 ![Gráfica de Re(λ)](grafica.png)
 
+## Simulación del modelo de Cobelli con una Coca-Cola de 600 ml
 
-::: {.cell}
+En esta simulación se analiza la respuesta del sistema fisiológico glucosa–insulina modelado por Cobelli ante la ingesta de una **Coca-Cola de 600 ml**, equivalente a aproximadamente **63 gramos de glucosa**. La entrada de glucosa se modela mediante una función tipo gamma, definida como:
+
+$$
+D(t) = 
+\begin{cases}
+0, & t < 0 \\
+\frac{A}{\tau_d} \, t \, e^{-t/\tau_d}, & t \geq 0
+\end{cases}
+$$
+
+donde $A = 63\,000$ representa la carga total de glucosa (en mg) y $\tau_d = 15$ minutos es el tiempo característico de absorción.
+
+Se mantienen constantes los parámetros fisiológicos:
+
+- $p_1 = 0.02$: captación basal de glucosa.
+- $p_2 = 0.03$: degradación de la variable $X$.
+- $p_3 = 0.5$: respuesta a insulina.
+- $p_4 = 0.1$: degradación de insulina.
+- $p_5 = 0.4$: secreción de insulina inducida por glucosa.
+
+En esta simulación del modelo, se incorporan retardos explícitos en los mecanismos fisiológicos. En particular:
+
+- $\tau_1 = 10$ minutos representa el **retardo en la acción de la insulina** sobre la captación de glucosa.
+- $\tau_2 = 15$ minutos representa el **retardo en la secreción de insulina** provocada por la glucosa en sangre.
+
+Estos retardos se implementan mediante una función de historial $ h(t - \tau) $, la cual accede al estado pasado del sistema en los instantes correspondientes.
+
+A continuación, se presenta el código de simulación:
+
 ```{julia}
-# dde_cobelli_debug.jl - Simulación con estimación de retardos
+using DifferentialEquations, Plots
 
-using DifferentialEquations, Plots, Optim, Random, Statistics
-
-# 1. Definición de parámetros fisiológicos (conocidos)
+# Definición de parámetros fisiológicos
 p1, p2, p3, p4, p5 = 0.02, 0.03, 0.5, 0.1, 0.4
-τ1_true, τ2_true = 10.0, 15.0
-A, τd = 25 * 1000, 30.0
+τ1, τ2 = 10.0, 15.0
 
-# 2. Funciones auxiliares
-D_func(t) = t < 0 ? 0.0 : (A / τd) * t * exp(-t / τd)  # respuesta de ingesta
+# Entrada de glucosa: Coca-Cola 600 ml
+A, τd = 63 * 1000, 15.0
+D_func(t) = t < 0 ? 0.0 : (A / τd) * t * exp(-t / τd)
 
-# 3. Historia inicial
+# Historia inicial constante
 G0, X0, I0 = 90.0, 0.0, 10.0
-historia(t, _) = [G0, X0, I0]  # acepta segundo argumento requerido por HistoryFunction
+historia(t, _) = [G0, X0, I0]
 
-# 4. Paquete de parámetros (con τ1, τ2 conocidos para simular datos)
-params_true = (
-    p1 = p1,
-    p2 = p2,
-    p3 = p3,
-    p4 = p4,
-    p5 = p5,
-    τ1 = τ1_true,
-    τ2 = τ2_true,
+# Paquete de parámetros
+params = (
+    p1 = p1, p2 = p2, p3 = p3,
+    p4 = p4, p5 = p5,
+    τ1 = τ1, τ2 = τ2,
     D = D_func
 )
 
-# 5. Definición del sistema Cobelli
+# Función con retardos implementados
 function cobelli!(du, u, h, p, t)
     G, X, I = u
     ε = 1e-8
@@ -122,65 +174,34 @@ function cobelli!(du, u, h, p, t)
     σ(i) = i / (1 + i)
     φ(g) = g / (1 + g / 100)
 
-    D_val = try p.D(t) catch; 0.0 end
+    D_val = p.D(t)
 
     du[1] = -p.p1 * G - f(X) * G + D_val
     du[2] = -p.p2 * X + p.p3 * σ(I_τ)
     du[3] = -p.p4 * I + p.p5 * φ(G_τ)
 end
 
-# 6. Simular datos reales sintéticos
+# Definición del problema con retardos
+lags = [params.τ1, params.τ2]
 tspan = (0.0, 300.0)
-lags = [τ1_true, τ2_true]
-prob = DDEProblem(cobelli!, historia, tspan, params_true; constant_lags = lags)
-sol = solve(prob, MethodOfSteps(Tsit5()), saveat=1.0)
-
-# 7. Datos simulados con ruido realista
-Random.seed!(123)
-σG, σI = 5.0, 2.0  # desviación típica del error experimental
-G_obs = sol[1, :] .+ randn(length(sol.t)) .* σG
-I_obs = sol[3, :] .+ randn(length(sol.t)) .* σI
-
-# 8. Función de pérdida: error cuadrático entre datos simulados y predichos
-function loss(τ)
-    τ1, τ2 = τ
-    if τ1 <= 0 || τ2 <= 0
-        return Inf
-    end
-    p_est = merge(params_true, (τ1 = τ1, τ2 = τ2))
-    try
-        prob_est = remake(prob; p=p_est, constant_lags=[τ1, τ2])
-        sol_est = solve(prob_est, MethodOfSteps(Tsit5()), saveat=1.0, sensealg=InterpolatingAdjoint())
-        G_pred = sol_est[1, :]
-        I_pred = sol_est[3, :]
-        return mean((G_obs .- G_pred).^2 .+ (I_obs .- I_pred).^2)
-    catch
-        return Inf
-    end
-end
-
-# 9. Estimación de retardos con Optim
-τ0 = [5.0, 5.0]  # inicial
-result = optimize(
-    loss, [10.0, 15.0], NelderMead(),
-    Optim.Options(; iterations = 100)
+prob = DDEProblem(cobelli!, historia, tspan, params; 
+    constant_lags = lags
 )
-τ_est = Optim.minimizer(result)
-println("\nEstimación de retardos:")
-println("τ1 estimado = $(round(τ_est[1], digits=2)) (real: $τ1_true)")
-println("τ2 estimado = $(round(τ_est[2], digits=2)) (real: $τ2_true)")
 
-# 10. Visualización final
-plot(sol.t, G_obs, label="Glucosa observada", lw=2)
-plot!(sol.t, I_obs, label="Insulina observada", lw=2)
-plot!(sol, idxs=1, label="Glucosa verdadera", lw=2, ls=:dash)
-plot!(sol, idxs=3, label="Insulina verdadera", lw=2, ls=:dash)
-plot!(
-    xlabel="Tiempo (min)", ylabel="Concentración", 
-    title="Simulación y estimación de retardos", legend=:topright
+# Solución numérica
+sol = solve(prob, MethodOfSteps(Tsit5()))
+
+# Gráfica de resultados
+plot(sol,
+    xlabel = "Tiempo (min)",
+    ylabel = "Concentración (mg/dL o mU/L)",
+    lw = 2,
+    label = ["Glucosa G(t)" "X(t)" "Insulina I(t)"],
+    legend = :topright,
+    title = "Respuesta del sistema con retardos"
 )
-# Guardar la figura como PNG, PDF, etc.
-savefig("estimacion_retardos.png")  
+savefig("glucosa.png") 
+nothing
 ```
-:::
-![Estimaciones óptimas del retardo](estimacion_retardos.png)
+
+![Gráfica de sistema con retardos](glucosa.png)

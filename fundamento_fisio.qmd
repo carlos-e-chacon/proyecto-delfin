@@ -8,17 +8,16 @@ format:
 editor: visual
 ---
 
-Pensamos en las interacciones entre glucosa e insulina como si fueran **reacciones químicas**, lo cual facilita su representación y modelado mediante ecuaciones diferenciales:
+Pensamos en las interacciones entre glucosa e insulina como si fueran **reacciones químicas**, lo cual facilita su representación y modelado mediante ecuaciones diferenciales [@BellmanCooke1963; @Diekmann1995].
 
 ## Generalidades
 
 Las células realizan dos tipos fundamentales de reacciones químicas:
 
-- **Síntesis (anabolismo):** Construcción de moléculas complejas a partir de simples, usando energía.
-- **Degradación (catabolismo):** Descomposición de moléculas complejas para liberar energía.
+-   **Síntesis (anabolismo):** Construcción de moléculas complejas a partir de simples, usando energía.
+-   **Degradación (catabolismo):** Descomposición de moléculas complejas para liberar energía.
 
-En el contexto de la glucosa, estos procesos permiten mantener la **homeostasis glucémica**.
-
+En el contexto de la glucosa [@DallaMan2007], estos procesos permiten mantener la **homeostasis glucémica**.
 
 ## Papel del hígado
 
@@ -26,13 +25,13 @@ El **hígado** actúa como regulador clave de la glucemia, alternando entre alma
 
 ### Síntesis en el hígado
 
-- **Glucogénesis** (formación de glucógeno):
+-   **Glucogénesis** (formación de glucógeno):
 
 $$
 \text{Glucosa} \xrightarrow{\text{glucógeno sintasa}} \text{Glucógeno}
 $$
 
-- **Gluconeogénesis** (formación de glucosa a partir de compuestos no glucídicos):
+-   **Gluconeogénesis** (formación de glucosa a partir de compuestos no glucídicos):
 
 $$
 \text{Piruvato / Lactato / Alanina} \rightarrow \text{Glucosa}
@@ -40,12 +39,11 @@ $$
 
 ### Degradación en el hígado
 
-- **Glucogenólisis** (degradación de glucógeno para liberar glucosa):
+-   **Glucogenólisis** (degradación de glucógeno para liberar glucosa):
 
 $$
 \text{Glucógeno} \xrightarrow{\text{glucógeno fosforilasa}} \text{Glucosa}
 $$
-
 
 ## Papel del páncreas
 
@@ -53,15 +51,15 @@ El **páncreas endocrino** regula la glucosa mediante la producción de hormonas
 
 ### Síntesis en el páncreas
 
-- **Síntesis de insulina (células β):**
+-   **Síntesis de insulina (células β):**
 
 $$
 \text{ADN} \rightarrow \text{ARNm} \rightarrow \text{Preproinsulina} \rightarrow \text{Insulina activa}
-$$
-La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de **retardo** $\tau$ debido al tiempo de procesamiento hormonal.
+$$ 
 
+La presencia de glucosa estimula al páncreas a secretar insulina. Este proceso no es instantáneo: existe un tiempo de **retardo** $\tau$ debido al tiempo de procesamiento hormonal [@cobelli1982integrated; @Herrero2012].
 
-- **Síntesis de glucagón (células α):**
+-   **Síntesis de glucagón (células α):**
 
 $$
 \text{Glucagón} \rightarrow \text{Activa glucogenólisis y gluconeogénesis hepática}
@@ -71,18 +69,17 @@ $$
 
 El páncreas no degrada glucosa directamente, pero la **insulina** que secreta estimula la degradación de glucosa en otros órganos (glucólisis).
 
-
 ## Papel de distintos órganos en el metabolismo de la glucosa
 
-| Órgano   | Reacción      | Ruta principal                    | Molécula clave producida |
-|----------|---------------|-----------------------------------|--------------------------------------|
-| Hígado   | Síntesis      | Glucogénesis                      | Glucógeno                            |
-| Hígado   | Síntesis      | Gluconeogénesis                   | Glucosa                              |
-| Hígado   | Degradación   | Glucogenólisis                    | Glucosa                              |
-| Páncreas | Síntesis      | Traducción hormonal               | Insulina / Glucagón                  |
-| Páncreas | Regulación    | Estímulo a degradación            | (Indirecta vía insulina)             |
-| Músculo  | Síntesis      | Glucogénesis muscular             | Glucógeno                            |
-| Músculo  | Degradación   | Glucólisis                        | ATP (energía)                        |
-| Riñón    | Síntesis      | Gluconeogénesis renal             | Glucosa                              |
-| Riñón    | Degradación   | Reabsorción y consumo             | Glucosa                              |
-| Cerebro  | Degradación   | Glucólisis neuronal               | ATP (uso inmediato de glucosa)       |
+| Órgano   | Reacción    | Ruta principal         | Molécula clave producida       |
+|--------------|--------------|---------------------|-----------------------|
+| Hígado   | Síntesis    | Glucogénesis           | Glucógeno                      |
+| Hígado   | Síntesis    | Gluconeogénesis        | Glucosa                        |
+| Hígado   | Degradación | Glucogenólisis         | Glucosa                        |
+| Páncreas | Síntesis    | Traducción hormonal    | Insulina / Glucagón            |
+| Páncreas | Regulación  | Estímulo a degradación | (Indirecta vía insulina)       |
+| Músculo  | Síntesis    | Glucogénesis muscular  | Glucógeno                      |
+| Músculo  | Degradación | Glucólisis             | ATP (energía)                  |
+| Riñón    | Síntesis    | Gluconeogénesis renal  | Glucosa                        |
+| Riñón    | Degradación | Reabsorción y consumo  | Glucosa                        |
+| Cerebro  | Degradación | Glucólisis neuronal    | ATP (uso inmediato de glucosa) |
